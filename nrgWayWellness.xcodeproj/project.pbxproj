@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA06825533DA200F88201 /* AppDelegate.swift */; };
+		C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA06A25533DA200F88201 /* SceneDelegate.swift */; };
+		C68AA06E25533DA200F88201 /* nrgWayWellness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C68AA06C25533DA200F88201 /* nrgWayWellness.xcdatamodeld */; };
+		C68AA07025533DA200F88201 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA06F25533DA200F88201 /* ContentView.swift */; };
+		C68AA07225533DA700F88201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68AA07125533DA700F88201 /* Assets.xcassets */; };
+		C68AA07525533DA700F88201 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68AA07425533DA700F88201 /* Preview Assets.xcassets */; };
+		C68AA07825533DA700F88201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68AA07625533DA700F88201 /* LaunchScreen.storyboard */; };
+		C68AA08325533DA700F88201 /* nrgWayWellnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA08225533DA700F88201 /* nrgWayWellnessTests.swift */; };
+		C68AA08E25533DA700F88201 /* nrgWayWellnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA08D25533DA700F88201 /* nrgWayWellnessUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C68AA07F25533DA700F88201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C68AA05D25533DA200F88201 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C68AA06425533DA200F88201;
+			remoteInfo = nrgWayWellness;
+		};
+		C68AA08A25533DA700F88201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C68AA05D25533DA200F88201 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C68AA06425533DA200F88201;
+			remoteInfo = nrgWayWellness;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C68AA06525533DA200F88201 /* nrgWayWellness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nrgWayWellness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C68AA06825533DA200F88201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C68AA06A25533DA200F88201 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C68AA06D25533DA200F88201 /* nrgWayWellness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nrgWayWellness.xcdatamodel; sourceTree = "<group>"; };
+		C68AA06F25533DA200F88201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C68AA07125533DA700F88201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C68AA07425533DA700F88201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C68AA07725533DA700F88201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C68AA07925533DA700F88201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68AA07E25533DA700F88201 /* nrgWayWellnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nrgWayWellnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C68AA08225533DA700F88201 /* nrgWayWellnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nrgWayWellnessTests.swift; sourceTree = "<group>"; };
+		C68AA08425533DA700F88201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68AA08925533DA700F88201 /* nrgWayWellnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nrgWayWellnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C68AA08D25533DA700F88201 /* nrgWayWellnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nrgWayWellnessUITests.swift; sourceTree = "<group>"; };
+		C68AA08F25533DA700F88201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C68AA06225533DA200F88201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68AA07B25533DA700F88201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68AA08625533DA700F88201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C68AA05C25533DA200F88201 = {
+			isa = PBXGroup;
+			children = (
+				C68AA06725533DA200F88201 /* nrgWayWellness */,
+				C68AA08125533DA700F88201 /* nrgWayWellnessTests */,
+				C68AA08C25533DA700F88201 /* nrgWayWellnessUITests */,
+				C68AA06625533DA200F88201 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C68AA06625533DA200F88201 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA06525533DA200F88201 /* nrgWayWellness.app */,
+				C68AA07E25533DA700F88201 /* nrgWayWellnessTests.xctest */,
+				C68AA08925533DA700F88201 /* nrgWayWellnessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C68AA06725533DA200F88201 /* nrgWayWellness */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA06825533DA200F88201 /* AppDelegate.swift */,
+				C68AA06A25533DA200F88201 /* SceneDelegate.swift */,
+				C68AA06F25533DA200F88201 /* ContentView.swift */,
+				C68AA07125533DA700F88201 /* Assets.xcassets */,
+				C68AA07625533DA700F88201 /* LaunchScreen.storyboard */,
+				C68AA07925533DA700F88201 /* Info.plist */,
+				C68AA06C25533DA200F88201 /* nrgWayWellness.xcdatamodeld */,
+				C68AA07325533DA700F88201 /* Preview Content */,
+			);
+			path = nrgWayWellness;
+			sourceTree = "<group>";
+		};
+		C68AA07325533DA700F88201 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA07425533DA700F88201 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C68AA08125533DA700F88201 /* nrgWayWellnessTests */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA08225533DA700F88201 /* nrgWayWellnessTests.swift */,
+				C68AA08425533DA700F88201 /* Info.plist */,
+			);
+			path = nrgWayWellnessTests;
+			sourceTree = "<group>";
+		};
+		C68AA08C25533DA700F88201 /* nrgWayWellnessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA08D25533DA700F88201 /* nrgWayWellnessUITests.swift */,
+				C68AA08F25533DA700F88201 /* Info.plist */,
+			);
+			path = nrgWayWellnessUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C68AA06425533DA200F88201 /* nrgWayWellness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C68AA09225533DA700F88201 /* Build configuration list for PBXNativeTarget "nrgWayWellness" */;
+			buildPhases = (
+				C68AA06125533DA200F88201 /* Sources */,
+				C68AA06225533DA200F88201 /* Frameworks */,
+				C68AA06325533DA200F88201 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nrgWayWellness;
+			productName = nrgWayWellness;
+			productReference = C68AA06525533DA200F88201 /* nrgWayWellness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C68AA07D25533DA700F88201 /* nrgWayWellnessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C68AA09525533DA700F88201 /* Build configuration list for PBXNativeTarget "nrgWayWellnessTests" */;
+			buildPhases = (
+				C68AA07A25533DA700F88201 /* Sources */,
+				C68AA07B25533DA700F88201 /* Frameworks */,
+				C68AA07C25533DA700F88201 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C68AA08025533DA700F88201 /* PBXTargetDependency */,
+			);
+			name = nrgWayWellnessTests;
+			productName = nrgWayWellnessTests;
+			productReference = C68AA07E25533DA700F88201 /* nrgWayWellnessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C68AA08825533DA700F88201 /* nrgWayWellnessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C68AA09825533DA700F88201 /* Build configuration list for PBXNativeTarget "nrgWayWellnessUITests" */;
+			buildPhases = (
+				C68AA08525533DA700F88201 /* Sources */,
+				C68AA08625533DA700F88201 /* Frameworks */,
+				C68AA08725533DA700F88201 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C68AA08B25533DA700F88201 /* PBXTargetDependency */,
+			);
+			name = nrgWayWellnessUITests;
+			productName = nrgWayWellnessUITests;
+			productReference = C68AA08925533DA700F88201 /* nrgWayWellnessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C68AA05D25533DA200F88201 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = wellness;
+				TargetAttributes = {
+					C68AA06425533DA200F88201 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					C68AA07D25533DA700F88201 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = C68AA06425533DA200F88201;
+					};
+					C68AA08825533DA700F88201 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = C68AA06425533DA200F88201;
+					};
+				};
+			};
+			buildConfigurationList = C68AA06025533DA200F88201 /* Build configuration list for PBXProject "nrgWayWellness" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C68AA05C25533DA200F88201;
+			productRefGroup = C68AA06625533DA200F88201 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C68AA06425533DA200F88201 /* nrgWayWellness */,
+				C68AA07D25533DA700F88201 /* nrgWayWellnessTests */,
+				C68AA08825533DA700F88201 /* nrgWayWellnessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C68AA06325533DA200F88201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68AA07825533DA700F88201 /* LaunchScreen.storyboard in Resources */,
+				C68AA07525533DA700F88201 /* Preview Assets.xcassets in Resources */,
+				C68AA07225533DA700F88201 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68AA07C25533DA700F88201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68AA08725533DA700F88201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C68AA06125533DA200F88201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */,
+				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
+				C68AA07025533DA200F88201 /* ContentView.swift in Sources */,
+				C68AA06E25533DA200F88201 /* nrgWayWellness.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68AA07A25533DA700F88201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68AA08325533DA700F88201 /* nrgWayWellnessTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68AA08525533DA700F88201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68AA08E25533DA700F88201 /* nrgWayWellnessUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C68AA08025533DA700F88201 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C68AA06425533DA200F88201 /* nrgWayWellness */;
+			targetProxy = C68AA07F25533DA700F88201 /* PBXContainerItemProxy */;
+		};
+		C68AA08B25533DA700F88201 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C68AA06425533DA200F88201 /* nrgWayWellness */;
+			targetProxy = C68AA08A25533DA700F88201 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C68AA07625533DA700F88201 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C68AA07725533DA700F88201 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C68AA09025533DA700F88201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C68AA09125533DA700F88201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C68AA09325533DA700F88201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"nrgWayWellness/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = nrgWayWellness/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nrgWayWellness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C68AA09425533DA700F88201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"nrgWayWellness/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = nrgWayWellness/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nrgWayWellness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C68AA09625533DA700F88201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nrgWayWellnessTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nrgWayWellnessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nrgWayWellness.app/nrgWayWellness";
+			};
+			name = Debug;
+		};
+		C68AA09725533DA700F88201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nrgWayWellnessTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nrgWayWellnessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nrgWayWellness.app/nrgWayWellness";
+			};
+			name = Release;
+		};
+		C68AA09925533DA700F88201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nrgWayWellnessUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nrgWayWellnessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nrgWayWellness;
+			};
+			name = Debug;
+		};
+		C68AA09A25533DA700F88201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = nrgWayWellnessUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nrgWayWellnessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nrgWayWellness;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C68AA06025533DA200F88201 /* Build configuration list for PBXProject "nrgWayWellness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C68AA09025533DA700F88201 /* Debug */,
+				C68AA09125533DA700F88201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C68AA09225533DA700F88201 /* Build configuration list for PBXNativeTarget "nrgWayWellness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C68AA09325533DA700F88201 /* Debug */,
+				C68AA09425533DA700F88201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C68AA09525533DA700F88201 /* Build configuration list for PBXNativeTarget "nrgWayWellnessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C68AA09625533DA700F88201 /* Debug */,
+				C68AA09725533DA700F88201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C68AA09825533DA700F88201 /* Build configuration list for PBXNativeTarget "nrgWayWellnessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C68AA09925533DA700F88201 /* Debug */,
+				C68AA09A25533DA700F88201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C68AA06C25533DA200F88201 /* nrgWayWellness.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C68AA06D25533DA200F88201 /* nrgWayWellness.xcdatamodel */,
+			);
+			currentVersion = C68AA06D25533DA200F88201 /* nrgWayWellness.xcdatamodel */;
+			path = nrgWayWellness.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C68AA05D25533DA200F88201 /* Project object */;
+}
