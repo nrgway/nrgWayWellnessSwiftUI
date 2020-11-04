@@ -16,6 +16,18 @@
 		C68AA07825533DA700F88201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68AA07625533DA700F88201 /* LaunchScreen.storyboard */; };
 		C68AA08325533DA700F88201 /* nrgWayWellnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA08225533DA700F88201 /* nrgWayWellnessTests.swift */; };
 		C68AA08E25533DA700F88201 /* nrgWayWellnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA08D25533DA700F88201 /* nrgWayWellnessUITests.swift */; };
+		C68AA09D255341EF00F88201 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA09C255341EF00F88201 /* OnboardingView.swift */; };
+		C68AA09F2553420800F88201 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA09E2553420800F88201 /* PageControl.swift */; };
+		C68AA0A12553423200F88201 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0A02553423200F88201 /* PageViewController.swift */; };
+		C68AA0A32553424700F88201 /* Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0A22553424700F88201 /* Subview.swift */; };
+		C68AA0A52553425700F88201 /* PagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0A42553425700F88201 /* PagesView.swift */; };
+		C68AA0A82553440100F88201 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0A72553440100F88201 /* DataStore.swift */; };
+		C68AA0AA2553443A00F88201 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0A92553443A00F88201 /* UserDefault.swift */; };
+		C68AA0AD2553499700F88201 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0AC2553499700F88201 /* SignUpView.swift */; };
+		C68AA0AF255349A600F88201 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0AE255349A600F88201 /* ForgotPasswordView.swift */; };
+		C68AA0B1255349B500F88201 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B0255349B500F88201 /* LoginView.swift */; };
+		C68AA0B325534A9200F88201 /* OtherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B225534A9200F88201 /* OtherData.swift */; };
+		C68AA0B7255359C000F88201 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B6255359C000F88201 /* TabbarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,18 @@
 		C68AA08925533DA700F88201 /* nrgWayWellnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nrgWayWellnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68AA08D25533DA700F88201 /* nrgWayWellnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nrgWayWellnessUITests.swift; sourceTree = "<group>"; };
 		C68AA08F25533DA700F88201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68AA09C255341EF00F88201 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		C68AA09E2553420800F88201 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		C68AA0A02553423200F88201 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		C68AA0A22553424700F88201 /* Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subview.swift; sourceTree = "<group>"; };
+		C68AA0A42553425700F88201 /* PagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesView.swift; sourceTree = "<group>"; };
+		C68AA0A72553440100F88201 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		C68AA0A92553443A00F88201 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		C68AA0AC2553499700F88201 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C68AA0AE255349A600F88201 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		C68AA0B0255349B500F88201 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C68AA0B225534A9200F88201 /* OtherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherData.swift; sourceTree = "<group>"; };
+		C68AA0B6255359C000F88201 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +125,20 @@
 		C68AA06725533DA200F88201 /* nrgWayWellness */ = {
 			isa = PBXGroup;
 			children = (
+				C68AA0B42553584E00F88201 /* main */,
 				C68AA06825533DA200F88201 /* AppDelegate.swift */,
-				C68AA06A25533DA200F88201 /* SceneDelegate.swift */,
-				C68AA06F25533DA200F88201 /* ContentView.swift */,
 				C68AA07125533DA700F88201 /* Assets.xcassets */,
-				C68AA07625533DA700F88201 /* LaunchScreen.storyboard */,
+				C68AA06F25533DA200F88201 /* ContentView.swift */,
+				C68AA0A72553440100F88201 /* DataStore.swift */,
 				C68AA07925533DA700F88201 /* Info.plist */,
+				C68AA07625533DA700F88201 /* LaunchScreen.storyboard */,
+				C68AA0AB255348DE00F88201 /* login */,
 				C68AA06C25533DA200F88201 /* nrgWayWellness.xcdatamodeld */,
+				C68AA09B255341BD00F88201 /* onboarding */,
 				C68AA07325533DA700F88201 /* Preview Content */,
+				C68AA06A25533DA200F88201 /* SceneDelegate.swift */,
+				C68AA0A92553443A00F88201 /* UserDefault.swift */,
+				C68AA0B225534A9200F88201 /* OtherData.swift */,
 			);
 			path = nrgWayWellness;
 			sourceTree = "<group>";
@@ -137,6 +167,36 @@
 				C68AA08F25533DA700F88201 /* Info.plist */,
 			);
 			path = nrgWayWellnessUITests;
+			sourceTree = "<group>";
+		};
+		C68AA09B255341BD00F88201 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA09C255341EF00F88201 /* OnboardingView.swift */,
+				C68AA09E2553420800F88201 /* PageControl.swift */,
+				C68AA0A02553423200F88201 /* PageViewController.swift */,
+				C68AA0A22553424700F88201 /* Subview.swift */,
+				C68AA0A42553425700F88201 /* PagesView.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		C68AA0AB255348DE00F88201 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA0AC2553499700F88201 /* SignUpView.swift */,
+				C68AA0AE255349A600F88201 /* ForgotPasswordView.swift */,
+				C68AA0B0255349B500F88201 /* LoginView.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		C68AA0B42553584E00F88201 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA0B6255359C000F88201 /* TabbarVC.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +331,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */,
+				C68AA0A12553423200F88201 /* PageViewController.swift in Sources */,
+				C68AA0A52553425700F88201 /* PagesView.swift in Sources */,
+				C68AA0AA2553443A00F88201 /* UserDefault.swift in Sources */,
+				C68AA0AD2553499700F88201 /* SignUpView.swift in Sources */,
+				C68AA0A82553440100F88201 /* DataStore.swift in Sources */,
+				C68AA0B325534A9200F88201 /* OtherData.swift in Sources */,
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
+				C68AA09F2553420800F88201 /* PageControl.swift in Sources */,
+				C68AA0B1255349B500F88201 /* LoginView.swift in Sources */,
+				C68AA0AF255349A600F88201 /* ForgotPasswordView.swift in Sources */,
 				C68AA07025533DA200F88201 /* ContentView.swift in Sources */,
+				C68AA0A32553424700F88201 /* Subview.swift in Sources */,
+				C68AA09D255341EF00F88201 /* OnboardingView.swift in Sources */,
+				C68AA0B7255359C000F88201 /* TabbarVC.swift in Sources */,
 				C68AA06E25533DA200F88201 /* nrgWayWellness.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

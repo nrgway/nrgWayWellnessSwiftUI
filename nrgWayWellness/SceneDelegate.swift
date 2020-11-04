@@ -9,31 +9,85 @@
 import UIKit
 import SwiftUI
 
+class UserSettings: ObservableObject {
+    
+    @Published var loggedIn : Bool = false
+}
+
+class UserOnboard: ObservableObject {
+    
+    @Published var onboardComplete : Bool = false
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Get the managed object context from the shared persistent container.
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        // Create the SwiftUI view that provides the window contents.
+        // For use without property wrapper
+        //        let contentView = StartView()
+        //        let settings = UserSettings()
+        //
+        //        if UserDefaults.standard.bool(forKey: "Loggedin") {
+        //            settings.loggedIn = true
+        //        } else {
+        //            settings.loggedIn = false
+        //        }
+        //
+        //        // Use a UIHostingController as window root view controller.
+        //        if let windowScene = scene as? UIWindowScene {
+        //            let window = UIWindow(windowScene: windowScene)
+        //            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(settings))
+        //            self.window = window
+        //            window.makeKeyAndVisible()
+        //        }
+                
+                let contentView = StartOnboardView()
+                let onboard = UserOnboard()
 
-        // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
-        // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, context)
-
-        // Use a UIHostingController as window root view controller.
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
-        }
+                // Use a UIHostingController as window root view controller.
+                if let windowScene = scene as? UIWindowScene {
+                    let window = UIWindow(windowScene: windowScene)
+                    window.rootViewController = UIHostingController(rootView: contentView.environmentObject(onboard))
+        //            window.rootViewController = UIHostingController(rootView: ContentView())
+                    self.window = window
+                    window.makeKeyAndVisible()
+                }
+                
+                // ==========
+                
+                
+                // For with use of property wrapper
+        //        let contentView = StartViewUsingPropertyWrappers()
+        //        let dataStore = DataStore()
+        //
+        //        // Use a UIHostingController as window root view controller.
+        //        if let windowScene = scene as? UIWindowScene {
+        //            let window = UIWindow(windowScene: windowScene)
+        //            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(dataStore))
+        //            self.window = window
+        //            window.makeKeyAndVisible()
+        //        }
+        //
+        //        let contentView = StartOnboard()
+        //        let dataOnboard = DataOnboarding()
+        //
+        //        // Use a UIHostingController as window root view controller.
+        //        if let windowScene = scene as? UIWindowScene {
+        //            let window = UIWindow(windowScene: windowScene)
+        //            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(dataOnboard))
+        //            self.window = window
+        //            window.makeKeyAndVisible()
+        //        }
+                // ==========
     }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -67,5 +121,76 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+}
+
+struct StartView: View {
+    
+    @EnvironmentObject var settings: UserSettings
+    
+    var body: some View {
+                
+        if settings.loggedIn {
+            //return AnyView(TabbarVC())
+            return AnyView(LoginView())
+        } else {
+            return AnyView(LoginView())
+        }
+    }
+}
+
+struct StartOnboardView: View {
+    
+    @EnvironmentObject var userOnboard: UserOnboard
+    
+    var body: some View {
+        
+        let contentView = StartView()
+        let settings = UserSettings()
+                
+        if userOnboard.onboardComplete {
+            return AnyView(contentView.environmentObject(settings))
+        } else {
+            if UserDefaults.standard.bool(forKey: "Loggedin") {
+                settings.loggedIn = true
+                //return AnyView(TabbarVC())
+                return AnyView(OnboardingView())
+            } else {
+                settings.loggedIn = false
+                return AnyView(OnboardingView())
+            }
+        }
+    }
+}
+
+struct StartViewUsingPropertyWrappers: View {
+    
+    @EnvironmentObject var dataStore: DataStore
+    
+    var body: some View {
+                
+        if dataStore.login {
+            //return AnyView(TabbarVC())
+            return AnyView(LoginView())
+        } else {
+            return AnyView(LoginView())
+        }
+    }
+}
+
+struct StartOnboard: View {
+    
+    @EnvironmentObject var dataOnboard: DataOnboarding
+    
+    var body: some View {
+        
+        let contentView = StartViewUsingPropertyWrappers()
+        let dataStore = DataStore()
+        
+        if dataOnboard.onboard {
+            return AnyView(contentView.environmentObject(dataStore))
+        } else {
+            return AnyView(OnboardingView())
+        }
+    }
 }
 
