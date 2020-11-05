@@ -28,6 +28,66 @@
 		C68AA0B1255349B500F88201 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B0255349B500F88201 /* LoginView.swift */; };
 		C68AA0B325534A9200F88201 /* OtherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B225534A9200F88201 /* OtherData.swift */; };
 		C68AA0B7255359C000F88201 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B6255359C000F88201 /* TabbarVC.swift */; };
+		C6E6CF6C2554623400326093 /* ResAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF6B2554623400326093 /* ResAchievements.swift */; };
+		C6E6CF74255462A000326093 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF73255462A000326093 /* AchievementData.swift */; };
+		C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */; };
+		C6E6CF822554646900326093 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF812554646900326093 /* Creator.swift */; };
+		C6E6CF872554655F00326093 /* FormulaVideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF862554655F00326093 /* FormulaVideoData.swift */; };
+		C6E6CF8C2554667A00326093 /* ResFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF8B2554667A00326093 /* ResFormula.swift */; };
+		C6E6CF91255466C400326093 /* FormulaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF90255466C400326093 /* FormulaData.swift */; };
+		C6E6CF962554677300326093 /* ResFormulas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF952554677300326093 /* ResFormulas.swift */; };
+		C6E6CF9C25547C1800326093 /* ResInstructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF9B25547C1800326093 /* ResInstructors.swift */; };
+		C6E6CFA425547C8B00326093 /* InstructorListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFA325547C8B00326093 /* InstructorListData.swift */; };
+		C6E6CFA925547CDF00326093 /* ResInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFA825547CDF00326093 /* ResInstructor.swift */; };
+		C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFB025547D9A00326093 /* InstructorData.swift */; };
+		C6E6CFBA2554810A00326093 /* ResVideosForTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFB92554810A00326093 /* ResVideosForTrainer.swift */; };
+		C6E6CFBF2554814600326093 /* VideosForTrainerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFBE2554814600326093 /* VideosForTrainerData.swift */; };
+		C6E6CFC42554819700326093 /* VideosForTrainerDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFC32554819700326093 /* VideosForTrainerDataCreator.swift */; };
+		C6E6CFD22554853400326093 /* ResCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFD12554853400326093 /* ResCategories.swift */; };
+		C6E6CFDA2554856100326093 /* CategoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFD92554856100326093 /* CategoriesData.swift */; };
+		C6E6CFE0255486A000326093 /* ResCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFDF255486A000326093 /* ResCategory.swift */; };
+		C6E6CFE5255486C400326093 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFE4255486C400326093 /* CategoryData.swift */; };
+		C6E6CFEB255487BB00326093 /* ResVideosForCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFEA255487BB00326093 /* ResVideosForCategory.swift */; };
+		C6E6CFF0255487EA00326093 /* VideosForCategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFEF255487EA00326093 /* VideosForCategoryData.swift */; };
+		C6E6CFF52554882300326093 /* VideosForCategoryDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFF42554882300326093 /* VideosForCategoryDataCreator.swift */; };
+		C6E6CFFC255495F000326093 /* ResVideosLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFFB255495F000326093 /* ResVideosLog.swift */; };
+		C6E6D0012554965C00326093 /* VideosLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0002554965C00326093 /* VideosLogData.swift */; };
+		C6E6D00D2554989D00326093 /* ResListOfvideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D00C2554989D00326093 /* ResListOfvideos.swift */; };
+		C6E6D0122554991800326093 /* ListOfvideosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0112554991800326093 /* ListOfvideosData.swift */; };
+		C6E6D0172554995E00326093 /* ListOfvideosDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0162554995E00326093 /* ListOfvideosDataCreator.swift */; };
+		C6E6D01C255499D200326093 /* ResSingleVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D01B255499D200326093 /* ResSingleVideo.swift */; };
+		C6E6D02125549A2700326093 /* SingleVideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D02025549A2700326093 /* SingleVideoData.swift */; };
+		C6E6D02625549A5F00326093 /* SingleVideoDataRelatedVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D02525549A5F00326093 /* SingleVideoDataRelatedVideo.swift */; };
+		C6E6D02B25549ADB00326093 /* SingleVideoDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D02A25549ADB00326093 /* SingleVideoDataCreator.swift */; };
+		C6E6D03025549B1200326093 /* SingleVideoDataVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D02F25549B1200326093 /* SingleVideoDataVideo.swift */; };
+		C6E6D03925549D6500326093 /* ResVideosFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D03825549D6500326093 /* ResVideosFavorites.swift */; };
+		C6E6D03E25549DA900326093 /* VideosFavoritesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D03D25549DA900326093 /* VideosFavoritesData.swift */; };
+		C6E6D04325549DD100326093 /* VideosFavoritesDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D04225549DD100326093 /* VideosFavoritesDataCreator.swift */; };
+		C6E6D04825549E3900326093 /* ResLikeToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D04725549E3900326093 /* ResLikeToVideo.swift */; };
+		C6E6D04D25549E9500326093 /* LikeToVideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D04C25549E9500326093 /* LikeToVideoData.swift */; };
+		C6E6D05225549ED300326093 /* ReqLikeToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D05125549ED300326093 /* ReqLikeToVideo.swift */; };
+		C6E6D05725549F4700326093 /* ResChallengeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D05625549F4700326093 /* ResChallengeVideo.swift */; };
+		C6E6D05C2554A21700326093 /* ReqChallengeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D05B2554A21700326093 /* ReqChallengeVideo.swift */; };
+		C6E6D0612554A2A800326093 /* ResCheckChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0602554A2A800326093 /* ResCheckChallenge.swift */; };
+		C6E6D0662554A2F800326093 /* CheckChallengeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0652554A2F800326093 /* CheckChallengeData.swift */; };
+		C6E6D0712554AAEE00326093 /* ResGetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0702554AAEE00326093 /* ResGetInfo.swift */; };
+		C6E6D0762554AB6F00326093 /* GetInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0752554AB6F00326093 /* GetInfoData.swift */; };
+		C6E6D07B2554ABDD00326093 /* ReqUpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D07A2554ABDD00326093 /* ReqUpdateProfile.swift */; };
+		C6E6D0802554ACAF00326093 /* ResUpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D07F2554ACAF00326093 /* ResUpdateProfile.swift */; };
+		C6E6D0852554AD1A00326093 /* UpdateProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0842554AD1A00326093 /* UpdateProfileData.swift */; };
+		C6E6D08A2554ADD600326093 /* ResLevelInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0892554ADD600326093 /* ResLevelInformation.swift */; };
+		C6E6D08F2554AE1900326093 /* LevelInformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D08E2554AE1900326093 /* LevelInformationData.swift */; };
+		C6E6D09C2554B02400326093 /* ResPointsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D09B2554B02400326093 /* ResPointsInformation.swift */; };
+		C6E6D0A12554B0FE00326093 /* PointsInformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0A02554B0FE00326093 /* PointsInformationData.swift */; };
+		C6E6D0A62554B2FE00326093 /* ResResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0A52554B2FE00326093 /* ResResetPassword.swift */; };
+		C6E6D0AC2554B40400326093 /* ReqLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0AB2554B40400326093 /* ReqLogin.swift */; };
+		C6E6D0B12554B49200326093 /* ResLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0B02554B49200326093 /* ResLogin.swift */; };
+		C6E6D0B82554B54800326093 /* ResRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0B72554B54800326093 /* ResRegister.swift */; };
+		C6E6D0BD2554B58400326093 /* ReqRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0BC2554B58400326093 /* ReqRegister.swift */; };
+		C6E6D0C22554B60200326093 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0C12554B60200326093 /* RegisterData.swift */; };
+		C6E6D0C82554B69C00326093 /* ResLogOut .swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0C72554B69C00326093 /* ResLogOut .swift */; };
+		C6E6D0CE2554B7C200326093 /* ResAuthResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0CD2554B7C200326093 /* ResAuthResetPassword.swift */; };
+		C6E6D0D32554B80600326093 /* ReqAuthResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0D22554B80600326093 /* ReqAuthResetPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +135,66 @@
 		C68AA0B0255349B500F88201 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C68AA0B225534A9200F88201 /* OtherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherData.swift; sourceTree = "<group>"; };
 		C68AA0B6255359C000F88201 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		C6E6CF6B2554623400326093 /* ResAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResAchievements.swift; sourceTree = "<group>"; };
+		C6E6CF73255462A000326093 /* AchievementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
+		C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResFormulaVideo.swift; sourceTree = "<group>"; };
+		C6E6CF812554646900326093 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
+		C6E6CF862554655F00326093 /* FormulaVideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaVideoData.swift; sourceTree = "<group>"; };
+		C6E6CF8B2554667A00326093 /* ResFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResFormula.swift; sourceTree = "<group>"; };
+		C6E6CF90255466C400326093 /* FormulaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaData.swift; sourceTree = "<group>"; };
+		C6E6CF952554677300326093 /* ResFormulas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResFormulas.swift; sourceTree = "<group>"; };
+		C6E6CF9B25547C1800326093 /* ResInstructors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResInstructors.swift; sourceTree = "<group>"; };
+		C6E6CFA325547C8B00326093 /* InstructorListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorListData.swift; sourceTree = "<group>"; };
+		C6E6CFA825547CDF00326093 /* ResInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResInstructor.swift; sourceTree = "<group>"; };
+		C6E6CFB025547D9A00326093 /* InstructorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorData.swift; sourceTree = "<group>"; };
+		C6E6CFB92554810A00326093 /* ResVideosForTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResVideosForTrainer.swift; sourceTree = "<group>"; };
+		C6E6CFBE2554814600326093 /* VideosForTrainerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForTrainerData.swift; sourceTree = "<group>"; };
+		C6E6CFC32554819700326093 /* VideosForTrainerDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForTrainerDataCreator.swift; sourceTree = "<group>"; };
+		C6E6CFD12554853400326093 /* ResCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResCategories.swift; sourceTree = "<group>"; };
+		C6E6CFD92554856100326093 /* CategoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesData.swift; sourceTree = "<group>"; };
+		C6E6CFDF255486A000326093 /* ResCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResCategory.swift; sourceTree = "<group>"; };
+		C6E6CFE4255486C400326093 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		C6E6CFEA255487BB00326093 /* ResVideosForCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResVideosForCategory.swift; sourceTree = "<group>"; };
+		C6E6CFEF255487EA00326093 /* VideosForCategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForCategoryData.swift; sourceTree = "<group>"; };
+		C6E6CFF42554882300326093 /* VideosForCategoryDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForCategoryDataCreator.swift; sourceTree = "<group>"; };
+		C6E6CFFB255495F000326093 /* ResVideosLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResVideosLog.swift; sourceTree = "<group>"; };
+		C6E6D0002554965C00326093 /* VideosLogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosLogData.swift; sourceTree = "<group>"; };
+		C6E6D00C2554989D00326093 /* ResListOfvideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResListOfvideos.swift; sourceTree = "<group>"; };
+		C6E6D0112554991800326093 /* ListOfvideosData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfvideosData.swift; sourceTree = "<group>"; };
+		C6E6D0162554995E00326093 /* ListOfvideosDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfvideosDataCreator.swift; sourceTree = "<group>"; };
+		C6E6D01B255499D200326093 /* ResSingleVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResSingleVideo.swift; sourceTree = "<group>"; };
+		C6E6D02025549A2700326093 /* SingleVideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleVideoData.swift; sourceTree = "<group>"; };
+		C6E6D02525549A5F00326093 /* SingleVideoDataRelatedVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleVideoDataRelatedVideo.swift; sourceTree = "<group>"; };
+		C6E6D02A25549ADB00326093 /* SingleVideoDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleVideoDataCreator.swift; sourceTree = "<group>"; };
+		C6E6D02F25549B1200326093 /* SingleVideoDataVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleVideoDataVideo.swift; sourceTree = "<group>"; };
+		C6E6D03825549D6500326093 /* ResVideosFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResVideosFavorites.swift; sourceTree = "<group>"; };
+		C6E6D03D25549DA900326093 /* VideosFavoritesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosFavoritesData.swift; sourceTree = "<group>"; };
+		C6E6D04225549DD100326093 /* VideosFavoritesDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosFavoritesDataCreator.swift; sourceTree = "<group>"; };
+		C6E6D04725549E3900326093 /* ResLikeToVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResLikeToVideo.swift; sourceTree = "<group>"; };
+		C6E6D04C25549E9500326093 /* LikeToVideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeToVideoData.swift; sourceTree = "<group>"; };
+		C6E6D05125549ED300326093 /* ReqLikeToVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqLikeToVideo.swift; sourceTree = "<group>"; };
+		C6E6D05625549F4700326093 /* ResChallengeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResChallengeVideo.swift; sourceTree = "<group>"; };
+		C6E6D05B2554A21700326093 /* ReqChallengeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqChallengeVideo.swift; sourceTree = "<group>"; };
+		C6E6D0602554A2A800326093 /* ResCheckChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResCheckChallenge.swift; sourceTree = "<group>"; };
+		C6E6D0652554A2F800326093 /* CheckChallengeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckChallengeData.swift; sourceTree = "<group>"; };
+		C6E6D0702554AAEE00326093 /* ResGetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResGetInfo.swift; sourceTree = "<group>"; };
+		C6E6D0752554AB6F00326093 /* GetInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoData.swift; sourceTree = "<group>"; };
+		C6E6D07A2554ABDD00326093 /* ReqUpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqUpdateProfile.swift; sourceTree = "<group>"; };
+		C6E6D07F2554ACAF00326093 /* ResUpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResUpdateProfile.swift; sourceTree = "<group>"; };
+		C6E6D0842554AD1A00326093 /* UpdateProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileData.swift; sourceTree = "<group>"; };
+		C6E6D0892554ADD600326093 /* ResLevelInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResLevelInformation.swift; sourceTree = "<group>"; };
+		C6E6D08E2554AE1900326093 /* LevelInformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelInformationData.swift; sourceTree = "<group>"; };
+		C6E6D09B2554B02400326093 /* ResPointsInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResPointsInformation.swift; sourceTree = "<group>"; };
+		C6E6D0A02554B0FE00326093 /* PointsInformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsInformationData.swift; sourceTree = "<group>"; };
+		C6E6D0A52554B2FE00326093 /* ResResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResResetPassword.swift; sourceTree = "<group>"; };
+		C6E6D0AB2554B40400326093 /* ReqLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqLogin.swift; sourceTree = "<group>"; };
+		C6E6D0B02554B49200326093 /* ResLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResLogin.swift; sourceTree = "<group>"; };
+		C6E6D0B72554B54800326093 /* ResRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResRegister.swift; sourceTree = "<group>"; };
+		C6E6D0BC2554B58400326093 /* ReqRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqRegister.swift; sourceTree = "<group>"; };
+		C6E6D0C12554B60200326093 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		C6E6D0C72554B69C00326093 /* ResLogOut .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResLogOut .swift"; sourceTree = "<group>"; };
+		C6E6D0CD2554B7C200326093 /* ResAuthResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResAuthResetPassword.swift; sourceTree = "<group>"; };
+		C6E6D0D22554B80600326093 /* ReqAuthResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqAuthResetPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +245,14 @@
 		C68AA06725533DA200F88201 /* nrgWayWellness */ = {
 			isa = PBXGroup;
 			children = (
+				C6E6D0AA2554B3BC00326093 /* authRepository */,
+				C6E6D06A2554A90E00326093 /* subscribeRepository */,
+				C6E6D0052554973E00326093 /* videosRepository */,
+				C6E6CFF92554953A00326093 /* videosLogRepository */,
+				C6E6CFCE2554843C00326093 /* categoriesRepository */,
+				C6E6CF9A25547BB100326093 /* instructorsRepository */,
+				C6E6CF7D255463F900326093 /* formulaVideoRepository */,
+				C6E6CF6A255461F800326093 /* achievementRepository */,
 				C68AA0B42553584E00F88201 /* main */,
 				C68AA06825533DA200F88201 /* AppDelegate.swift */,
 				C68AA07125533DA700F88201 /* Assets.xcassets */,
@@ -197,6 +325,322 @@
 				C68AA0B6255359C000F88201 /* TabbarVC.swift */,
 			);
 			path = main;
+			sourceTree = "<group>";
+		};
+		C6E6CF6A255461F800326093 /* achievementRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CF6B2554623400326093 /* ResAchievements.swift */,
+				C6E6CF73255462A000326093 /* AchievementData.swift */,
+			);
+			path = achievementRepository;
+			sourceTree = "<group>";
+		};
+		C6E6CF7D255463F900326093 /* formulaVideoRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFCA2554836F00326093 /* videosOfSpecificFormula */,
+				C6E6CFC92554830100326093 /* returnInstructor */,
+				C6E6CFC8255482AF00326093 /* listOfFormulas */,
+			);
+			path = formulaVideoRepository;
+			sourceTree = "<group>";
+		};
+		C6E6CF9A25547BB100326093 /* instructorsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFB72554806500326093 /* listOFvideosForTheTrainer */,
+				C6E6CFB62554801300326093 /* instructor */,
+				C6E6CFB525547FD000326093 /* listOfInstructors */,
+			);
+			path = instructorsRepository;
+			sourceTree = "<group>";
+		};
+		C6E6CFB525547FD000326093 /* listOfInstructors */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFA325547C8B00326093 /* InstructorListData.swift */,
+				C6E6CF9B25547C1800326093 /* ResInstructors.swift */,
+			);
+			path = listOfInstructors;
+			sourceTree = "<group>";
+		};
+		C6E6CFB62554801300326093 /* instructor */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFB025547D9A00326093 /* InstructorData.swift */,
+				C6E6CFA825547CDF00326093 /* ResInstructor.swift */,
+			);
+			name = instructor;
+			sourceTree = "<group>";
+		};
+		C6E6CFB72554806500326093 /* listOFvideosForTheTrainer */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFB92554810A00326093 /* ResVideosForTrainer.swift */,
+				C6E6CFBE2554814600326093 /* VideosForTrainerData.swift */,
+				C6E6CFC32554819700326093 /* VideosForTrainerDataCreator.swift */,
+			);
+			path = listOFvideosForTheTrainer;
+			sourceTree = "<group>";
+		};
+		C6E6CFC8255482AF00326093 /* listOfFormulas */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CF952554677300326093 /* ResFormulas.swift */,
+				C6E6CF812554646900326093 /* Creator.swift */,
+			);
+			path = listOfFormulas;
+			sourceTree = "<group>";
+		};
+		C6E6CFC92554830100326093 /* returnInstructor */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CF90255466C400326093 /* FormulaData.swift */,
+				C6E6CF8B2554667A00326093 /* ResFormula.swift */,
+			);
+			path = returnInstructor;
+			sourceTree = "<group>";
+		};
+		C6E6CFCA2554836F00326093 /* videosOfSpecificFormula */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CF862554655F00326093 /* FormulaVideoData.swift */,
+				C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */,
+			);
+			path = videosOfSpecificFormula;
+			sourceTree = "<group>";
+		};
+		C6E6CFCE2554843C00326093 /* categoriesRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFE92554873900326093 /* listOfVideosByCategory */,
+				C6E6CFDE255485D600326093 /* catgegory */,
+				C6E6CFCF2554845C00326093 /* listOfCategories */,
+			);
+			path = categoriesRepository;
+			sourceTree = "<group>";
+		};
+		C6E6CFCF2554845C00326093 /* listOfCategories */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFD12554853400326093 /* ResCategories.swift */,
+				C6E6CFD92554856100326093 /* CategoriesData.swift */,
+			);
+			path = listOfCategories;
+			sourceTree = "<group>";
+		};
+		C6E6CFDE255485D600326093 /* catgegory */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFDF255486A000326093 /* ResCategory.swift */,
+				C6E6CFE4255486C400326093 /* CategoryData.swift */,
+			);
+			path = catgegory;
+			sourceTree = "<group>";
+		};
+		C6E6CFE92554873900326093 /* listOfVideosByCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFEA255487BB00326093 /* ResVideosForCategory.swift */,
+				C6E6CFEF255487EA00326093 /* VideosForCategoryData.swift */,
+				C6E6CFF42554882300326093 /* VideosForCategoryDataCreator.swift */,
+			);
+			path = listOfVideosByCategory;
+			sourceTree = "<group>";
+		};
+		C6E6CFF92554953A00326093 /* videosLogRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFFA2554958200326093 /* updateLogsForVideoThatIsBeingWatched */,
+			);
+			path = videosLogRepository;
+			sourceTree = "<group>";
+		};
+		C6E6CFFA2554958200326093 /* updateLogsForVideoThatIsBeingWatched */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFFB255495F000326093 /* ResVideosLog.swift */,
+				C6E6D0002554965C00326093 /* VideosLogData.swift */,
+			);
+			path = updateLogsForVideoThatIsBeingWatched;
+			sourceTree = "<group>";
+		};
+		C6E6D0052554973E00326093 /* videosRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D00B2554984B00326093 /* verifyIfChallengeWasDone */,
+				C6E6D00A2554981C00326093 /* challengeWithVideo */,
+				C6E6D009255497F400326093 /* likeToVideoSpecific */,
+				C6E6D008255497CE00326093 /* listOfVideosFavorites */,
+				C6E6D0072554979C00326093 /* singleVideoWithLikesAndRelatedVideosToVideo */,
+				C6E6D0062554977200326093 /* listOfVideos */,
+			);
+			path = videosRepository;
+			sourceTree = "<group>";
+		};
+		C6E6D0062554977200326093 /* listOfVideos */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D00C2554989D00326093 /* ResListOfvideos.swift */,
+				C6E6D0112554991800326093 /* ListOfvideosData.swift */,
+				C6E6D0162554995E00326093 /* ListOfvideosDataCreator.swift */,
+			);
+			path = listOfVideos;
+			sourceTree = "<group>";
+		};
+		C6E6D0072554979C00326093 /* singleVideoWithLikesAndRelatedVideosToVideo */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D01B255499D200326093 /* ResSingleVideo.swift */,
+				C6E6D02025549A2700326093 /* SingleVideoData.swift */,
+				C6E6D02525549A5F00326093 /* SingleVideoDataRelatedVideo.swift */,
+				C6E6D02A25549ADB00326093 /* SingleVideoDataCreator.swift */,
+				C6E6D02F25549B1200326093 /* SingleVideoDataVideo.swift */,
+			);
+			path = singleVideoWithLikesAndRelatedVideosToVideo;
+			sourceTree = "<group>";
+		};
+		C6E6D008255497CE00326093 /* listOfVideosFavorites */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D03825549D6500326093 /* ResVideosFavorites.swift */,
+				C6E6D03D25549DA900326093 /* VideosFavoritesData.swift */,
+				C6E6D04225549DD100326093 /* VideosFavoritesDataCreator.swift */,
+			);
+			path = listOfVideosFavorites;
+			sourceTree = "<group>";
+		};
+		C6E6D009255497F400326093 /* likeToVideoSpecific */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D04725549E3900326093 /* ResLikeToVideo.swift */,
+				C6E6D04C25549E9500326093 /* LikeToVideoData.swift */,
+				C6E6D05125549ED300326093 /* ReqLikeToVideo.swift */,
+			);
+			path = likeToVideoSpecific;
+			sourceTree = "<group>";
+		};
+		C6E6D00A2554981C00326093 /* challengeWithVideo */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D05625549F4700326093 /* ResChallengeVideo.swift */,
+				C6E6D05B2554A21700326093 /* ReqChallengeVideo.swift */,
+			);
+			path = challengeWithVideo;
+			sourceTree = "<group>";
+		};
+		C6E6D00B2554984B00326093 /* verifyIfChallengeWasDone */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0602554A2A800326093 /* ResCheckChallenge.swift */,
+				C6E6D0652554A2F800326093 /* CheckChallengeData.swift */,
+			);
+			path = verifyIfChallengeWasDone;
+			sourceTree = "<group>";
+		};
+		C6E6D06A2554A90E00326093 /* subscribeRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D06F2554AA0700326093 /* sendEmailToSubcriberToResetPassword */,
+				C6E6D06E2554A9D000326093 /* pointsInformationAboutSubscriber */,
+				C6E6D06D2554A9A400326093 /* levelInformationAboutSubscriber */,
+				C6E6D06C2554A96D00326093 /* updateProfileOfSubcriber */,
+				C6E6D06B2554A94000326093 /* informationAboutSubscriberOfVideos */,
+			);
+			path = subscribeRepository;
+			sourceTree = "<group>";
+		};
+		C6E6D06B2554A94000326093 /* informationAboutSubscriberOfVideos */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0702554AAEE00326093 /* ResGetInfo.swift */,
+				C6E6D0752554AB6F00326093 /* GetInfoData.swift */,
+			);
+			path = informationAboutSubscriberOfVideos;
+			sourceTree = "<group>";
+		};
+		C6E6D06C2554A96D00326093 /* updateProfileOfSubcriber */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D07A2554ABDD00326093 /* ReqUpdateProfile.swift */,
+				C6E6D07F2554ACAF00326093 /* ResUpdateProfile.swift */,
+				C6E6D0842554AD1A00326093 /* UpdateProfileData.swift */,
+			);
+			path = updateProfileOfSubcriber;
+			sourceTree = "<group>";
+		};
+		C6E6D06D2554A9A400326093 /* levelInformationAboutSubscriber */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0892554ADD600326093 /* ResLevelInformation.swift */,
+				C6E6D08E2554AE1900326093 /* LevelInformationData.swift */,
+			);
+			path = levelInformationAboutSubscriber;
+			sourceTree = "<group>";
+		};
+		C6E6D06E2554A9D000326093 /* pointsInformationAboutSubscriber */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D09B2554B02400326093 /* ResPointsInformation.swift */,
+				C6E6D0A02554B0FE00326093 /* PointsInformationData.swift */,
+			);
+			path = pointsInformationAboutSubscriber;
+			sourceTree = "<group>";
+		};
+		C6E6D06F2554AA0700326093 /* sendEmailToSubcriberToResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0A52554B2FE00326093 /* ResResetPassword.swift */,
+			);
+			path = sendEmailToSubcriberToResetPassword;
+			sourceTree = "<group>";
+		};
+		C6E6D0AA2554B3BC00326093 /* authRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0CC2554B75600326093 /* authResetPassword */,
+				C6E6D0C62554B64C00326093 /* LogOut */,
+				C6E6D0B62554B4E100326093 /* Register */,
+				C6E6D0B52554B4CF00326093 /* login */,
+			);
+			path = authRepository;
+			sourceTree = "<group>";
+		};
+		C6E6D0B52554B4CF00326093 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0B02554B49200326093 /* ResLogin.swift */,
+				C6E6D0AB2554B40400326093 /* ReqLogin.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		C6E6D0B62554B4E100326093 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0B72554B54800326093 /* ResRegister.swift */,
+				C6E6D0BC2554B58400326093 /* ReqRegister.swift */,
+				C6E6D0C12554B60200326093 /* RegisterData.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C6E6D0C62554B64C00326093 /* LogOut */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0C72554B69C00326093 /* ResLogOut .swift */,
+			);
+			path = LogOut;
+			sourceTree = "<group>";
+		};
+		C6E6D0CC2554B75600326093 /* authResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0CD2554B7C200326093 /* ResAuthResetPassword.swift */,
+				C6E6D0D22554B80600326093 /* ReqAuthResetPassword.swift */,
+			);
+			path = authResetPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,22 +774,82 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E6D0B12554B49200326093 /* ResLogin.swift in Sources */,
+				C6E6CF872554655F00326093 /* FormulaVideoData.swift in Sources */,
+				C6E6CFE5255486C400326093 /* CategoryData.swift in Sources */,
+				C6E6D07B2554ABDD00326093 /* ReqUpdateProfile.swift in Sources */,
+				C6E6D05225549ED300326093 /* ReqLikeToVideo.swift in Sources */,
+				C6E6CFEB255487BB00326093 /* ResVideosForCategory.swift in Sources */,
 				C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */,
+				C6E6CFF52554882300326093 /* VideosForCategoryDataCreator.swift in Sources */,
 				C68AA0A12553423200F88201 /* PageViewController.swift in Sources */,
+				C6E6D01C255499D200326093 /* ResSingleVideo.swift in Sources */,
+				C6E6D0A12554B0FE00326093 /* PointsInformationData.swift in Sources */,
+				C6E6D0CE2554B7C200326093 /* ResAuthResetPassword.swift in Sources */,
 				C68AA0A52553425700F88201 /* PagesView.swift in Sources */,
+				C6E6D09C2554B02400326093 /* ResPointsInformation.swift in Sources */,
+				C6E6D0B82554B54800326093 /* ResRegister.swift in Sources */,
+				C6E6CFBA2554810A00326093 /* ResVideosForTrainer.swift in Sources */,
+				C6E6D0A62554B2FE00326093 /* ResResetPassword.swift in Sources */,
+				C6E6D0C22554B60200326093 /* RegisterData.swift in Sources */,
+				C6E6D0612554A2A800326093 /* ResCheckChallenge.swift in Sources */,
+				C6E6D08F2554AE1900326093 /* LevelInformationData.swift in Sources */,
+				C6E6CFA925547CDF00326093 /* ResInstructor.swift in Sources */,
+				C6E6CFF0255487EA00326093 /* VideosForCategoryData.swift in Sources */,
+				C6E6D0852554AD1A00326093 /* UpdateProfileData.swift in Sources */,
+				C6E6D02625549A5F00326093 /* SingleVideoDataRelatedVideo.swift in Sources */,
+				C6E6CFE0255486A000326093 /* ResCategory.swift in Sources */,
 				C68AA0AA2553443A00F88201 /* UserDefault.swift in Sources */,
+				C6E6CF6C2554623400326093 /* ResAchievements.swift in Sources */,
+				C6E6D0BD2554B58400326093 /* ReqRegister.swift in Sources */,
 				C68AA0AD2553499700F88201 /* SignUpView.swift in Sources */,
 				C68AA0A82553440100F88201 /* DataStore.swift in Sources */,
 				C68AA0B325534A9200F88201 /* OtherData.swift in Sources */,
+				C6E6D03925549D6500326093 /* ResVideosFavorites.swift in Sources */,
+				C6E6D0712554AAEE00326093 /* ResGetInfo.swift in Sources */,
+				C6E6CFFC255495F000326093 /* ResVideosLog.swift in Sources */,
+				C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */,
+				C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */,
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
+				C6E6D08A2554ADD600326093 /* ResLevelInformation.swift in Sources */,
+				C6E6D0012554965C00326093 /* VideosLogData.swift in Sources */,
+				C6E6D02B25549ADB00326093 /* SingleVideoDataCreator.swift in Sources */,
 				C68AA09F2553420800F88201 /* PageControl.swift in Sources */,
+				C6E6D04D25549E9500326093 /* LikeToVideoData.swift in Sources */,
+				C6E6D05C2554A21700326093 /* ReqChallengeVideo.swift in Sources */,
+				C6E6CFA425547C8B00326093 /* InstructorListData.swift in Sources */,
+				C6E6D00D2554989D00326093 /* ResListOfvideos.swift in Sources */,
+				C6E6CFDA2554856100326093 /* CategoriesData.swift in Sources */,
+				C6E6D0762554AB6F00326093 /* GetInfoData.swift in Sources */,
 				C68AA0B1255349B500F88201 /* LoginView.swift in Sources */,
+				C6E6CF822554646900326093 /* Creator.swift in Sources */,
+				C6E6CF74255462A000326093 /* AchievementData.swift in Sources */,
+				C6E6D04825549E3900326093 /* ResLikeToVideo.swift in Sources */,
+				C6E6D03025549B1200326093 /* SingleVideoDataVideo.swift in Sources */,
+				C6E6CF962554677300326093 /* ResFormulas.swift in Sources */,
+				C6E6CFC42554819700326093 /* VideosForTrainerDataCreator.swift in Sources */,
+				C6E6D04325549DD100326093 /* VideosFavoritesDataCreator.swift in Sources */,
 				C68AA0AF255349A600F88201 /* ForgotPasswordView.swift in Sources */,
+				C6E6CFBF2554814600326093 /* VideosForTrainerData.swift in Sources */,
+				C6E6D0AC2554B40400326093 /* ReqLogin.swift in Sources */,
+				C6E6D03E25549DA900326093 /* VideosFavoritesData.swift in Sources */,
+				C6E6D0D32554B80600326093 /* ReqAuthResetPassword.swift in Sources */,
+				C6E6D0172554995E00326093 /* ListOfvideosDataCreator.swift in Sources */,
 				C68AA07025533DA200F88201 /* ContentView.swift in Sources */,
+				C6E6D0662554A2F800326093 /* CheckChallengeData.swift in Sources */,
+				C6E6CF91255466C400326093 /* FormulaData.swift in Sources */,
+				C6E6D02125549A2700326093 /* SingleVideoData.swift in Sources */,
 				C68AA0A32553424700F88201 /* Subview.swift in Sources */,
 				C68AA09D255341EF00F88201 /* OnboardingView.swift in Sources */,
 				C68AA0B7255359C000F88201 /* TabbarVC.swift in Sources */,
+				C6E6CF9C25547C1800326093 /* ResInstructors.swift in Sources */,
 				C68AA06E25533DA200F88201 /* nrgWayWellness.xcdatamodeld in Sources */,
+				C6E6CFD22554853400326093 /* ResCategories.swift in Sources */,
+				C6E6D0122554991800326093 /* ListOfvideosData.swift in Sources */,
+				C6E6CF8C2554667A00326093 /* ResFormula.swift in Sources */,
+				C6E6D05725549F4700326093 /* ResChallengeVideo.swift in Sources */,
+				C6E6D0802554ACAF00326093 /* ResUpdateProfile.swift in Sources */,
+				C6E6D0C82554B69C00326093 /* ResLogOut .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
