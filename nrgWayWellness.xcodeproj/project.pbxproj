@@ -88,6 +88,19 @@
 		C6E6D0C82554B69C00326093 /* ResLogOut .swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0C72554B69C00326093 /* ResLogOut .swift */; };
 		C6E6D0CE2554B7C200326093 /* ResAuthResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0CD2554B7C200326093 /* ResAuthResetPassword.swift */; };
 		C6E6D0D32554B80600326093 /* ReqAuthResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0D22554B80600326093 /* ReqAuthResetPassword.swift */; };
+		C6E6D0DE2554BB4000326093 /* AchievementRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0DD2554BB4000326093 /* AchievementRepository.swift */; };
+		C6E6D0E62554BB9400326093 /* FormulaVideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0E52554BB9400326093 /* FormulaVideoRepository.swift */; };
+		C6E6D0EE2554BBC300326093 /* InstructorsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0ED2554BBC300326093 /* InstructorsRepository.swift */; };
+		C6E6D0F42554BBF000326093 /* CategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0F32554BBF000326093 /* CategoriesRepository.swift */; };
+		C6E6D0FA2554BC2F00326093 /* VideosLogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0F92554BC2F00326093 /* VideosLogRepository.swift */; };
+		C6E6D0FF2554BC4700326093 /* VideosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D0FE2554BC4700326093 /* VideosRepository.swift */; };
+		C6E6D1052554BC7F00326093 /* SubscribeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D1042554BC7F00326093 /* SubscribeRepository.swift */; };
+		C6E6D10B2554BCA800326093 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D10A2554BCA800326093 /* AuthRepository.swift */; };
+		C6E6D11925553E6400326093 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D11825553E6400326093 /* MainTabView.swift */; };
+		C6E6D11E2555517A00326093 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D11D2555517A00326093 /* SavedView.swift */; };
+		C6E6D1232555556900326093 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D1222555556900326093 /* ProfileView.swift */; };
+		C6E6D128255555BF00326093 /* WorkOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D127255555BF00326093 /* WorkOutView.swift */; };
+		C6E6D12D255555E500326093 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D12C255555E500326093 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +208,19 @@
 		C6E6D0C72554B69C00326093 /* ResLogOut .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResLogOut .swift"; sourceTree = "<group>"; };
 		C6E6D0CD2554B7C200326093 /* ResAuthResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResAuthResetPassword.swift; sourceTree = "<group>"; };
 		C6E6D0D22554B80600326093 /* ReqAuthResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqAuthResetPassword.swift; sourceTree = "<group>"; };
+		C6E6D0DD2554BB4000326093 /* AchievementRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementRepository.swift; sourceTree = "<group>"; };
+		C6E6D0E52554BB9400326093 /* FormulaVideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaVideoRepository.swift; sourceTree = "<group>"; };
+		C6E6D0ED2554BBC300326093 /* InstructorsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorsRepository.swift; sourceTree = "<group>"; };
+		C6E6D0F32554BBF000326093 /* CategoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRepository.swift; sourceTree = "<group>"; };
+		C6E6D0F92554BC2F00326093 /* VideosLogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosLogRepository.swift; sourceTree = "<group>"; };
+		C6E6D0FE2554BC4700326093 /* VideosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosRepository.swift; sourceTree = "<group>"; };
+		C6E6D1042554BC7F00326093 /* SubscribeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeRepository.swift; sourceTree = "<group>"; };
+		C6E6D10A2554BCA800326093 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		C6E6D11825553E6400326093 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		C6E6D11D2555517A00326093 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		C6E6D1222555556900326093 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C6E6D127255555BF00326093 /* WorkOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutView.swift; sourceTree = "<group>"; };
+		C6E6D12C255555E500326093 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +271,10 @@
 		C68AA06725533DA200F88201 /* nrgWayWellness */ = {
 			isa = PBXGroup;
 			children = (
+				C6E6D1132554C13400326093 /* profile */,
+				C6E6D1122554C12600326093 /* saved */,
+				C6E6D1112554C11800326093 /* workout */,
+				C6E6D1102554C10D00326093 /* home */,
 				C6E6D0AA2554B3BC00326093 /* authRepository */,
 				C6E6D06A2554A90E00326093 /* subscribeRepository */,
 				C6E6D0052554973E00326093 /* videosRepository */,
@@ -323,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				C68AA0B6255359C000F88201 /* TabbarVC.swift */,
+				C6E6D11825553E6400326093 /* MainTabView.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -330,8 +361,8 @@
 		C6E6CF6A255461F800326093 /* achievementRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6CF6B2554623400326093 /* ResAchievements.swift */,
-				C6E6CF73255462A000326093 /* AchievementData.swift */,
+				C6E6D0E22554BB4900326093 /* model */,
+				C6E6D0DD2554BB4000326093 /* AchievementRepository.swift */,
 			);
 			path = achievementRepository;
 			sourceTree = "<group>";
@@ -339,9 +370,8 @@
 		C6E6CF7D255463F900326093 /* formulaVideoRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6CFCA2554836F00326093 /* videosOfSpecificFormula */,
-				C6E6CFC92554830100326093 /* returnInstructor */,
-				C6E6CFC8255482AF00326093 /* listOfFormulas */,
+				C6E6D0E42554BB7E00326093 /* model */,
+				C6E6D0E52554BB9400326093 /* FormulaVideoRepository.swift */,
 			);
 			path = formulaVideoRepository;
 			sourceTree = "<group>";
@@ -349,9 +379,8 @@
 		C6E6CF9A25547BB100326093 /* instructorsRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6CFB72554806500326093 /* listOFvideosForTheTrainer */,
-				C6E6CFB62554801300326093 /* instructor */,
-				C6E6CFB525547FD000326093 /* listOfInstructors */,
+				C6E6D0F22554BBC900326093 /* model */,
+				C6E6D0ED2554BBC300326093 /* InstructorsRepository.swift */,
 			);
 			path = instructorsRepository;
 			sourceTree = "<group>";
@@ -372,6 +401,7 @@
 				C6E6CFA825547CDF00326093 /* ResInstructor.swift */,
 			);
 			name = instructor;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C6E6CFB72554806500326093 /* listOFvideosForTheTrainer */ = {
@@ -414,9 +444,8 @@
 		C6E6CFCE2554843C00326093 /* categoriesRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6CFE92554873900326093 /* listOfVideosByCategory */,
-				C6E6CFDE255485D600326093 /* catgegory */,
-				C6E6CFCF2554845C00326093 /* listOfCategories */,
+				C6E6D0F82554BBF600326093 /* model */,
+				C6E6D0F32554BBF000326093 /* CategoriesRepository.swift */,
 			);
 			path = categoriesRepository;
 			sourceTree = "<group>";
@@ -453,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				C6E6CFFA2554958200326093 /* updateLogsForVideoThatIsBeingWatched */,
+				C6E6D0F92554BC2F00326093 /* VideosLogRepository.swift */,
 			);
 			path = videosLogRepository;
 			sourceTree = "<group>";
@@ -469,12 +499,8 @@
 		C6E6D0052554973E00326093 /* videosRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6D00B2554984B00326093 /* verifyIfChallengeWasDone */,
-				C6E6D00A2554981C00326093 /* challengeWithVideo */,
-				C6E6D009255497F400326093 /* likeToVideoSpecific */,
-				C6E6D008255497CE00326093 /* listOfVideosFavorites */,
-				C6E6D0072554979C00326093 /* singleVideoWithLikesAndRelatedVideosToVideo */,
-				C6E6D0062554977200326093 /* listOfVideos */,
+				C6E6D1032554BC4D00326093 /* model */,
+				C6E6D0FE2554BC4700326093 /* VideosRepository.swift */,
 			);
 			path = videosRepository;
 			sourceTree = "<group>";
@@ -542,11 +568,8 @@
 		C6E6D06A2554A90E00326093 /* subscribeRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6D06F2554AA0700326093 /* sendEmailToSubcriberToResetPassword */,
-				C6E6D06E2554A9D000326093 /* pointsInformationAboutSubscriber */,
-				C6E6D06D2554A9A400326093 /* levelInformationAboutSubscriber */,
-				C6E6D06C2554A96D00326093 /* updateProfileOfSubcriber */,
-				C6E6D06B2554A94000326093 /* informationAboutSubscriberOfVideos */,
+				C6E6D1092554BC8400326093 /* model */,
+				C6E6D1042554BC7F00326093 /* SubscribeRepository.swift */,
 			);
 			path = subscribeRepository;
 			sourceTree = "<group>";
@@ -599,10 +622,8 @@
 		C6E6D0AA2554B3BC00326093 /* authRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6D0CC2554B75600326093 /* authResetPassword */,
-				C6E6D0C62554B64C00326093 /* LogOut */,
-				C6E6D0B62554B4E100326093 /* Register */,
-				C6E6D0B52554B4CF00326093 /* login */,
+				C6E6D10F2554BCB000326093 /* model */,
+				C6E6D10A2554BCA800326093 /* AuthRepository.swift */,
 			);
 			path = authRepository;
 			sourceTree = "<group>";
@@ -641,6 +662,113 @@
 				C6E6D0D22554B80600326093 /* ReqAuthResetPassword.swift */,
 			);
 			path = authResetPassword;
+			sourceTree = "<group>";
+		};
+		C6E6D0E22554BB4900326093 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CF73255462A000326093 /* AchievementData.swift */,
+				C6E6CF6B2554623400326093 /* ResAchievements.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C6E6D0E42554BB7E00326093 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFC8255482AF00326093 /* listOfFormulas */,
+				C6E6CFC92554830100326093 /* returnInstructor */,
+				C6E6CFCA2554836F00326093 /* videosOfSpecificFormula */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C6E6D0F22554BBC900326093 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFB525547FD000326093 /* listOfInstructors */,
+				C6E6CFB62554801300326093 /* instructor */,
+				C6E6CFB72554806500326093 /* listOFvideosForTheTrainer */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C6E6D0F82554BBF600326093 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6CFCF2554845C00326093 /* listOfCategories */,
+				C6E6CFDE255485D600326093 /* catgegory */,
+				C6E6CFE92554873900326093 /* listOfVideosByCategory */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C6E6D1032554BC4D00326093 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D00B2554984B00326093 /* verifyIfChallengeWasDone */,
+				C6E6D00A2554981C00326093 /* challengeWithVideo */,
+				C6E6D009255497F400326093 /* likeToVideoSpecific */,
+				C6E6D008255497CE00326093 /* listOfVideosFavorites */,
+				C6E6D0072554979C00326093 /* singleVideoWithLikesAndRelatedVideosToVideo */,
+				C6E6D0062554977200326093 /* listOfVideos */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C6E6D1092554BC8400326093 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D06F2554AA0700326093 /* sendEmailToSubcriberToResetPassword */,
+				C6E6D06E2554A9D000326093 /* pointsInformationAboutSubscriber */,
+				C6E6D06D2554A9A400326093 /* levelInformationAboutSubscriber */,
+				C6E6D06C2554A96D00326093 /* updateProfileOfSubcriber */,
+				C6E6D06B2554A94000326093 /* informationAboutSubscriberOfVideos */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C6E6D10F2554BCB000326093 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D0CC2554B75600326093 /* authResetPassword */,
+				C6E6D0C62554B64C00326093 /* LogOut */,
+				C6E6D0B62554B4E100326093 /* Register */,
+				C6E6D0B52554B4CF00326093 /* login */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C6E6D1102554C10D00326093 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D12C255555E500326093 /* HomeView.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		C6E6D1112554C11800326093 /* workout */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D127255555BF00326093 /* WorkOutView.swift */,
+			);
+			path = workout;
+			sourceTree = "<group>";
+		};
+		C6E6D1122554C12600326093 /* saved */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D11D2555517A00326093 /* SavedView.swift */,
+			);
+			path = saved;
+			sourceTree = "<group>";
+		};
+		C6E6D1132554C13400326093 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				C6E6D1222555556900326093 /* ProfileView.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -778,17 +906,21 @@
 				C6E6CF872554655F00326093 /* FormulaVideoData.swift in Sources */,
 				C6E6CFE5255486C400326093 /* CategoryData.swift in Sources */,
 				C6E6D07B2554ABDD00326093 /* ReqUpdateProfile.swift in Sources */,
+				C6E6D0DE2554BB4000326093 /* AchievementRepository.swift in Sources */,
 				C6E6D05225549ED300326093 /* ReqLikeToVideo.swift in Sources */,
 				C6E6CFEB255487BB00326093 /* ResVideosForCategory.swift in Sources */,
 				C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */,
 				C6E6CFF52554882300326093 /* VideosForCategoryDataCreator.swift in Sources */,
+				C6E6D11925553E6400326093 /* MainTabView.swift in Sources */,
 				C68AA0A12553423200F88201 /* PageViewController.swift in Sources */,
 				C6E6D01C255499D200326093 /* ResSingleVideo.swift in Sources */,
+				C6E6D0F42554BBF000326093 /* CategoriesRepository.swift in Sources */,
 				C6E6D0A12554B0FE00326093 /* PointsInformationData.swift in Sources */,
 				C6E6D0CE2554B7C200326093 /* ResAuthResetPassword.swift in Sources */,
 				C68AA0A52553425700F88201 /* PagesView.swift in Sources */,
 				C6E6D09C2554B02400326093 /* ResPointsInformation.swift in Sources */,
 				C6E6D0B82554B54800326093 /* ResRegister.swift in Sources */,
+				C6E6D0FF2554BC4700326093 /* VideosRepository.swift in Sources */,
 				C6E6CFBA2554810A00326093 /* ResVideosForTrainer.swift in Sources */,
 				C6E6D0A62554B2FE00326093 /* ResResetPassword.swift in Sources */,
 				C6E6D0C22554B60200326093 /* RegisterData.swift in Sources */,
@@ -796,7 +928,9 @@
 				C6E6D08F2554AE1900326093 /* LevelInformationData.swift in Sources */,
 				C6E6CFA925547CDF00326093 /* ResInstructor.swift in Sources */,
 				C6E6CFF0255487EA00326093 /* VideosForCategoryData.swift in Sources */,
+				C6E6D11E2555517A00326093 /* SavedView.swift in Sources */,
 				C6E6D0852554AD1A00326093 /* UpdateProfileData.swift in Sources */,
+				C6E6D12D255555E500326093 /* HomeView.swift in Sources */,
 				C6E6D02625549A5F00326093 /* SingleVideoDataRelatedVideo.swift in Sources */,
 				C6E6CFE0255486A000326093 /* ResCategory.swift in Sources */,
 				C68AA0AA2553443A00F88201 /* UserDefault.swift in Sources */,
@@ -809,7 +943,9 @@
 				C6E6D0712554AAEE00326093 /* ResGetInfo.swift in Sources */,
 				C6E6CFFC255495F000326093 /* ResVideosLog.swift in Sources */,
 				C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */,
+				C6E6D1232555556900326093 /* ProfileView.swift in Sources */,
 				C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */,
+				C6E6D128255555BF00326093 /* WorkOutView.swift in Sources */,
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
 				C6E6D08A2554ADD600326093 /* ResLevelInformation.swift in Sources */,
 				C6E6D0012554965C00326093 /* VideosLogData.swift in Sources */,
@@ -817,6 +953,8 @@
 				C68AA09F2553420800F88201 /* PageControl.swift in Sources */,
 				C6E6D04D25549E9500326093 /* LikeToVideoData.swift in Sources */,
 				C6E6D05C2554A21700326093 /* ReqChallengeVideo.swift in Sources */,
+				C6E6D1052554BC7F00326093 /* SubscribeRepository.swift in Sources */,
+				C6E6D0FA2554BC2F00326093 /* VideosLogRepository.swift in Sources */,
 				C6E6CFA425547C8B00326093 /* InstructorListData.swift in Sources */,
 				C6E6D00D2554989D00326093 /* ResListOfvideos.swift in Sources */,
 				C6E6CFDA2554856100326093 /* CategoriesData.swift in Sources */,
@@ -827,6 +965,7 @@
 				C6E6D04825549E3900326093 /* ResLikeToVideo.swift in Sources */,
 				C6E6D03025549B1200326093 /* SingleVideoDataVideo.swift in Sources */,
 				C6E6CF962554677300326093 /* ResFormulas.swift in Sources */,
+				C6E6D0EE2554BBC300326093 /* InstructorsRepository.swift in Sources */,
 				C6E6CFC42554819700326093 /* VideosForTrainerDataCreator.swift in Sources */,
 				C6E6D04325549DD100326093 /* VideosFavoritesDataCreator.swift in Sources */,
 				C68AA0AF255349A600F88201 /* ForgotPasswordView.swift in Sources */,
@@ -837,6 +976,7 @@
 				C6E6D0172554995E00326093 /* ListOfvideosDataCreator.swift in Sources */,
 				C68AA07025533DA200F88201 /* ContentView.swift in Sources */,
 				C6E6D0662554A2F800326093 /* CheckChallengeData.swift in Sources */,
+				C6E6D0E62554BB9400326093 /* FormulaVideoRepository.swift in Sources */,
 				C6E6CF91255466C400326093 /* FormulaData.swift in Sources */,
 				C6E6D02125549A2700326093 /* SingleVideoData.swift in Sources */,
 				C68AA0A32553424700F88201 /* Subview.swift in Sources */,
@@ -848,6 +988,7 @@
 				C6E6D0122554991800326093 /* ListOfvideosData.swift in Sources */,
 				C6E6CF8C2554667A00326093 /* ResFormula.swift in Sources */,
 				C6E6D05725549F4700326093 /* ResChallengeVideo.swift in Sources */,
+				C6E6D10B2554BCA800326093 /* AuthRepository.swift in Sources */,
 				C6E6D0802554ACAF00326093 /* ResUpdateProfile.swift in Sources */,
 				C6E6D0C82554B69C00326093 /* ResLogOut .swift in Sources */,
 			);

@@ -16,7 +16,7 @@ import SwiftUI
      @State var email: String = ""
      @State var password: String = ""
      @State var alertMsg = ""
-     
+     @State private var showMain = false
      @State private var showForgotPassword = false
      @State private var showSignup = false
      @State var showAlert = false
@@ -102,22 +102,35 @@ import SwiftUI
                  
                  VStack {
                      Spacer()
-                     Button(action: {
-                         if  self.isValidInputs() {
-                             // For use with property wrapper
-                             UserDefaults.standard.set(true, forKey: "Loggedin")
-                             UserDefaults.standard.synchronize()
-                             self.settings.loggedIn = true
-                             // ==========
+                    
+                    Button(action: {
+                        self.showMain = true
+                    }) {
+                        Text("login")
                              
-                             // For use with property wrapper
-                             //                self.dataStore.loggedIn = true
-                             // ==========
-                         }
-                         
-                     }) {
-                         buttonWithBackground(btnText: "LOGIN")
-                     }
+                    }.sheet(isPresented: self.$showMain) {
+                        MainTabView()
+                    }
+                     
+                    
+//                     Button(action: {
+//                         if  self.isValidInputs() {
+//                             // For use with property wrapper
+//                             UserDefaults.standard.set(true, forKey: "Loggedin")
+//                             UserDefaults.standard.synchronize()
+//                             self.settings.loggedIn = true
+//                             // ==========
+//
+//                             // For use with property wrapper
+//                             //                self.dataStore.loggedIn = true
+//                             // ==========
+//
+//
+//                         }
+//
+//                     }) {
+//                         buttonWithBackground(btnText: "LOGIN")
+//                     }
                      Spacer()
                  }
                  
