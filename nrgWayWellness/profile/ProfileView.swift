@@ -10,7 +10,27 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text(" ProfileView")
+        VStack(){
+    
+            Image("bird").frame(height: 300)
+            CircleImageView().offset(y: -130).padding(.bottom, -130)
+        
+       VStack(alignment: .leading){
+            Text("Ehtisham Khan ")
+                .font(.title)
+         HStack() {
+                Text("   for tessssst")
+                .font(.subheadline)
+                Spacer()
+                Text("Artificial Intelligence")
+            }
+     
+        }.padding()
+            
+            
+        SocialMediaListView()
+    }.edgesIgnoringSafeArea(.top)
+        //Text(" ProfileView")
     }
 }
 

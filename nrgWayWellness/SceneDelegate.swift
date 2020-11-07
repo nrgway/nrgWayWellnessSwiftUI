@@ -131,7 +131,7 @@ struct StartView: View {
                 
         if settings.loggedIn {
             //return AnyView(TabbarVC())
-            return AnyView(LoginView())
+            return AnyView(MainTabView())
         } else {
             return AnyView(LoginView())
         }

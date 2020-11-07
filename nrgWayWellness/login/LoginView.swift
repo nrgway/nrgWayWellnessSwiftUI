@@ -105,12 +105,16 @@ import SwiftUI
                     
                     Button(action: {
                         self.showMain = true
+                        UserDefaults.standard.set(true, forKey: "Loggedin")
+                        UserDefaults.standard.synchronize()
+                        self.settings.loggedIn = true
                     }) {
                         Text("login")
                              
-                    }.sheet(isPresented: self.$showMain) {
-                        MainTabView()
                     }
+//                    .sheet(isPresented: self.$showMain) {
+//                        MainTabView()
+//                    }
                      
                     
 //                     Button(action: {
