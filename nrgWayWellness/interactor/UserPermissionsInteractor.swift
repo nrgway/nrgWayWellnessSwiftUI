@@ -30,40 +30,24 @@ protocol UserPermissionsInteractor: class {
 // MARK: - RealUserPermissionsInteractor
 
 final class RealUserPermissionsInteractor: UserPermissionsInteractor {
-    
-    private let appState: Store<AppState>
-    private let openAppSettings: () -> Void
-    
-    init(appState: Store<AppState>, openAppSettings: @escaping () -> Void) {
-        self.appState = appState
-        self.openAppSettings = openAppSettings
-    }
-    
     func resolveStatus(for permission: Permission) {
-        let keyPath = AppState.permissionKeyPath(for: permission)
-        let currentStatus = appState[keyPath]
-        guard currentStatus == .unknown else { return }
-        let onResolve: (Permission.Status) -> Void = { [weak appState] status in
-            appState?[keyPath] = status
-        }
-        switch permission {
-        case .pushNotifications:
-            pushNotificationsPermissionStatus(onResolve)
-        }
+        
     }
     
     func request(permission: Permission) {
-        let keyPath = AppState.permissionKeyPath(for: permission)
-        let currentStatus = appState[keyPath]
-        guard currentStatus != .denied else {
-            openAppSettings()
-            return
-        }
-        switch permission {
-        case .pushNotifications:
-            requestPushNotificationsPermission()
-        }
+        
     }
+    
+    
+    
+    private let openAppSettings: () -> Void
+    
+    init(  openAppSettings: @escaping () -> Void) {
+         
+        self.openAppSettings = openAppSettings
+    }
+    
+   
 }
     
 // MARK: - Push Notifications
@@ -90,14 +74,7 @@ private extension RealUserPermissionsInteractor {
         }
     }
     
-    func requestPushNotificationsPermission() {
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) { (isGranted, error) in
-            DispatchQueue.main.async {
-                self.appState[\.permissions.push] = isGranted ? .granted : .denied
-            }
-        }
-    }
+     
 }
 
 // MARK: -

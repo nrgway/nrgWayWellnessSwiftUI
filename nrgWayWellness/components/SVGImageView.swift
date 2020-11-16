@@ -13,7 +13,7 @@ import WebKit
 struct SVGImageView: View {
     
     let imageURL: URL
-    @Environment(\.injected) var injected: DIContainer
+   
     @State private var image: Loadable<UIImage>
     let inspection = Inspection<Self>()
     
@@ -41,8 +41,8 @@ struct SVGImageView: View {
 
 private extension SVGImageView {
     func loadImage() {
-        injected.interactors.imagesInteractor
-            .load(image: $image, url: imageURL)
+//        injected.interactors.imagesInteractor
+//            .load(image: $image, url: imageURL)
     }
 }
 

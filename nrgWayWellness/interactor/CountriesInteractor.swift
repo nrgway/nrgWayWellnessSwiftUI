@@ -20,14 +20,11 @@ struct RealCountriesInteractor: CountriesInteractor {
     
     let webRepository: CountriesWebRepository
     //let dbRepository: CountriesDBRepository
-    let appState: Store<AppState>
-    
-    init(webRepository: CountriesWebRepository,
-         //dbRepository: CountriesDBRepository,
-         appState: Store<AppState>) {
+     
+    init(webRepository: CountriesWebRepository ) {
         self.webRepository = webRepository
         //self.dbRepository = dbRepository
-        self.appState = appState
+         
     }
 
     func load(countries: LoadableSubject<LazyList<Country>>, search: String, locale: Locale) {

@@ -24,35 +24,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     //
-    var systemEventsHandler: SystemEventsHandler?
-
+   
 
    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
          
     
     
     // ==========
-//                let contentView = StartOnboardView()
-//                let onboard = UserOnboard()
-//                if let windowScene = scene as? UIWindowScene {
-//                    let window = UIWindow(windowScene: windowScene)
-//                    window.rootViewController = UIHostingController(rootView: contentView.environmentObject(onboard))
-//                    self.window = window
-//                    window.makeKeyAndVisible()
-//                }
+                let contentView = StartOnboardView()
+                let onboard = UserOnboard()
+                if let windowScene = scene as? UIWindowScene {
+                    let window = UIWindow(windowScene: windowScene)
+                    window.rootViewController = UIHostingController(rootView: contentView.environmentObject(onboard))
+                    self.window = window
+                    window.makeKeyAndVisible()
+                }
                 
                 // ==========
-    let environment = AppEnvironment.bootstrap()
-    let contentView = CountryContentView(container: environment.container)
-    if let windowScene = scene as? UIWindowScene {
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UIHostingController(rootView: contentView)
-        self.window = window
-        window.makeKeyAndVisible()
-    }
-    self.systemEventsHandler = environment.systemEventsHandler
-
-    
+   
     
     
     
@@ -60,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        systemEventsHandler?.sceneOpenURLContexts(URLContexts)
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -71,13 +60,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        systemEventsHandler?.sceneDidBecomeActive()
+       
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        systemEventsHandler?.sceneWillResignActive()
+       
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
     }
