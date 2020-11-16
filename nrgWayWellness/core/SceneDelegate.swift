@@ -22,72 +22,46 @@ class UserOnboard: ObservableObject {
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    //
+    var systemEventsHandler: SystemEventsHandler?
 
 
    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-        // Create the SwiftUI view that provides the window contents.
-        // For use without property wrapper
-        //        let contentView = StartView()
-        //        let settings = UserSettings()
-        //
-        //        if UserDefaults.standard.bool(forKey: "Loggedin") {
-        //            settings.loggedIn = true
-        //        } else {
-        //            settings.loggedIn = false
-        //        }
-        //
-        //        // Use a UIHostingController as window root view controller.
-        //        if let windowScene = scene as? UIWindowScene {
-        //            let window = UIWindow(windowScene: windowScene)
-        //            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(settings))
-        //            self.window = window
-        //            window.makeKeyAndVisible()
-        //        }
-                
-                let contentView = StartOnboardView()
-                let onboard = UserOnboard()
-
-                // Use a UIHostingController as window root view controller.
-                if let windowScene = scene as? UIWindowScene {
-                    let window = UIWindow(windowScene: windowScene)
-                    window.rootViewController = UIHostingController(rootView: contentView.environmentObject(onboard))
-        //            window.rootViewController = UIHostingController(rootView: ContentView())
-                    self.window = window
-                    window.makeKeyAndVisible()
-                }
+         
+    
+    
+    // ==========
+//                let contentView = StartOnboardView()
+//                let onboard = UserOnboard()
+//                if let windowScene = scene as? UIWindowScene {
+//                    let window = UIWindow(windowScene: windowScene)
+//                    window.rootViewController = UIHostingController(rootView: contentView.environmentObject(onboard))
+//                    self.window = window
+//                    window.makeKeyAndVisible()
+//                }
                 
                 // ==========
-                
-                
-                // For with use of property wrapper
-        //        let contentView = StartViewUsingPropertyWrappers()
-        //        let dataStore = DataStore()
-        //
-        //        // Use a UIHostingController as window root view controller.
-        //        if let windowScene = scene as? UIWindowScene {
-        //            let window = UIWindow(windowScene: windowScene)
-        //            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(dataStore))
-        //            self.window = window
-        //            window.makeKeyAndVisible()
-        //        }
-        //
-        //        let contentView = StartOnboard()
-        //        let dataOnboard = DataOnboarding()
-        //
-        //        // Use a UIHostingController as window root view controller.
-        //        if let windowScene = scene as? UIWindowScene {
-        //            let window = UIWindow(windowScene: windowScene)
-        //            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(dataOnboard))
-        //            self.window = window
-        //            window.makeKeyAndVisible()
-        //        }
-                // ==========
+    let environment = AppEnvironment.bootstrap()
+    let contentView = CountryContentView(container: environment.container)
+    if let windowScene = scene as? UIWindowScene {
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = UIHostingController(rootView: contentView)
+        self.window = window
+        window.makeKeyAndVisible()
+    }
+    self.systemEventsHandler = environment.systemEventsHandler
+
+    
+    
+    
+    
+    
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        systemEventsHandler?.sceneOpenURLContexts(URLContexts)
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -97,11 +71,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
+        systemEventsHandler?.sceneDidBecomeActive()
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
+        systemEventsHandler?.sceneWillResignActive()
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
     }

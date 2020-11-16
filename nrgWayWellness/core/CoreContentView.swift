@@ -9,14 +9,8 @@
 import SwiftUI
 
 //MARK:-
-//MARK:- Color
-
-let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-let lightGreenColor = Color(red: 21.0/255.0, green: 183.0/255.0, blue: 177.0/255.0, opacity: 1.0)
-let lightblueColor = Color(red: 85.0/255.0, green: 84.0/255.0, blue: 166.0/255.0, opacity: 1.0)
-
-
-struct ContentView: View {
+ 
+struct CoreContentView: View {
     @State var alertMsg = ""
     
     var alert: Alert {
@@ -29,41 +23,10 @@ struct ContentView: View {
 }
 
 
-struct NavigationConfigurator: UIViewControllerRepresentable {
-    
-    var configure: (UINavigationController) -> Void = { _ in }
-
-    func makeUIViewController(context: Context) -> UIViewController {
-        
-        UIViewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
-        if let nc = uiViewController.navigationController {
-            self.configure(nc)
-        }
-    }
-}
 
 
-//MARK:-
-//MARK:- Rounded Image
-struct RoundedImage: View {
 
-    var body: some View {
-        
-        Image("logo")
-           .resizable()
-           .aspectRatio(contentMode: .fill)
-           .frame(width: 150, height: 150)
-           .clipped()
-           .cornerRadius(150)
-           .padding(.bottom, 40)
-        
-    }
 
-}
 
 
 
@@ -104,20 +67,7 @@ struct textFieldWithSeperator: View {
 }
 
 
-//MARK:-
-//MARK:- Seperator (Bottom line view)
-struct seperator: View {
-    
-    var body: some View {
-    
-        VStack {
-            
-            Divider().background(lightGreyColor)
-            
-        }.padding()
-            .frame(height: 1, alignment: .center)
-    }
-}
+
 
 struct buttons: View {
     
@@ -202,8 +152,8 @@ struct DatePickerView: View {
 }
  
 
-struct ContentView_Previews: PreviewProvider {
+struct CoreContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CoreContentView()
     }
 }

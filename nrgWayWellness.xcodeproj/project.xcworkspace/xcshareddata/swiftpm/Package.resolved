@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "EnvironmentOverrides",
+        "repositoryURL": "https://github.com/nalexn/EnvironmentOverrides",
+        "state": {
+          "branch": null,
+          "revision": "3e47b5fc04e6dc50797c25dfca2137b65b85c355",
+          "version": "0.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

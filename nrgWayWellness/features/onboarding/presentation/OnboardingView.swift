@@ -9,6 +9,16 @@ import SwiftUI
 
 struct OnboardingView: View {
     
+    @Environment(\.locale) var locale: Locale
+    @Environment(\.injected) private var injected: DIContainer
+    
+     
+    @State private var routingState: Routing = .init()
+    
+    private var routingBinding: Binding<Routing> {
+        $routingState.dispatched(to: injected.appState, \.routing.onboardingView)
+    }
+    
     var subViews = [
         UIHostingController(rootView: Subview(imageString: "First")),
         UIHostingController(rootView: Subview(imageString: "Second")),
@@ -59,7 +69,15 @@ struct OnboardingView: View {
 //                        self.dataOnboard.onboardComlete = true
                         
                         //if using with out property wrapper
-                        self.userOnboard.onboardComplete = true
+                       // self.userOnboard.onboardComplete = true
+                        
+                        
+//                        NavigationLink(destination: detailsView(country: Country.mockedData[0])) {
+//                                            Text("Show Detail View")
+//                                        }.navigationBarTitle("Navigation")
+//                        
+                        
+                        
                     } else {
                         self.currentPageIndex += 1
                     }
@@ -77,9 +95,36 @@ struct OnboardingView: View {
     }
 }
 
+
+// MARK: - Routing
+
+extension OnboardingView {
+    struct Routing: Equatable {
+        var detailsSheet: Bool = false
+    }
+}
+
+// MARK: - State Updates
+
+//private extension OnboardingView {
+//
+//    var routingUpdate: AnyPublisher<Routing, Never> {
+//        injected.appState.updates(for: \.routing.onboardingView)
+//    }
+//}
+
+// MARK: - Displaying Content
+
+private extension OnboardingView {
+   
+    func detailsView(country: Country) -> some View {
+        CountryDetails(country: country)
+    }
+}
+
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView().inject(.preview)
     }
 }
 
