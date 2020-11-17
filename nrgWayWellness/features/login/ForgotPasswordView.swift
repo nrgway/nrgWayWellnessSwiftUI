@@ -54,7 +54,7 @@ struct ForgotPasswordView: View {
                                 .autocapitalization(UITextAutocapitalizationType.none)
                         }
                       
-                        seperator()
+                        Seperator()
                     }
                     
                     Spacer(minLength: 20)

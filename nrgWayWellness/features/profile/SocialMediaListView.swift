@@ -41,7 +41,7 @@ struct SocialMediaListView: View {
                                 UIApplication.shared.open(url)
                             }
                             }){
-                                Text("")
+                                Text("fgg")
                             }
                     }
                 }

@@ -9,19 +9,22 @@
 import SwiftUI
 
 struct CircleImageView: View {
+    var name: String
+    var size: CGFloat
+    
     var body: some View {
-          Image("bird")
+          Image(name)
             .resizable()
-            .frame(width: 200, height: 200)
+            .frame(width: size, height: size)
                 .aspectRatio(contentMode: .fit)
                      .clipShape(Circle())
                      .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                     .shadow(radius: 10)
+                     .shadow(radius: 5)
     }
 }
 
 struct CircleImageView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImageView()
+        CircleImageView(name: "bird", size: 120)
     }
 }

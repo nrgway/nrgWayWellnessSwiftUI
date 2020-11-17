@@ -60,7 +60,7 @@ struct textFieldWithSeperator: View {
                 //                .textFieldStyle(RoundedBorderTextFieldStyle())
                 
             }
-            seperator()
+            Seperator()
         }
         
     }

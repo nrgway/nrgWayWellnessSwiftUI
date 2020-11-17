@@ -9,7 +9,7 @@
 import SwiftUI
 //MARK:-
 //MARK:- Seperator (Bottom line view)
-struct seperator: View {
+struct Seperator: View {
     
     var body: some View {
     
@@ -18,6 +18,12 @@ struct seperator: View {
             Divider().background(lightGreyColor)
             
         }.padding()
-            .frame(height: 1, alignment: .center)
+            .frame(height: 2, alignment: .center)
+    }
+}
+
+struct Seperator_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

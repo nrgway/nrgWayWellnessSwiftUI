@@ -57,7 +57,7 @@ import SwiftUI
                              .autocapitalization(UITextAutocapitalizationType.none)
                          
                      }
-                     seperator()
+                     Seperator()
                  }
                  
                  Spacer(minLength: (UIScreen.main.bounds.width * 15) / 414)
@@ -75,7 +75,7 @@ import SwiftUI
                              .font(.system(size: (UIScreen.main.bounds.width * 15) / 414, weight: .regular, design: .default))
                              .imageScale(.small)
                      }
-                     seperator()
+                    Seperator()
                      
                  }
                  

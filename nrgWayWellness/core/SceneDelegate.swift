@@ -11,20 +11,18 @@ import SwiftUI
 
 class UserSettings: ObservableObject {
     
-    @Published var loggedIn : Bool = false
+    @Published var loggedIn : Bool = true
 }
 
 class UserOnboard: ObservableObject {
     
-    @Published var onboardComplete : Bool = false
+    @Published var onboardComplete : Bool = true
 }
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    
-    //
-   
+     
 
    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
          
@@ -118,7 +116,7 @@ struct StartOnboardView: View {
             if UserDefaults.standard.bool(forKey: "Loggedin") {
                 settings.loggedIn = true
                 //return AnyView(TabbarVC())
-                return AnyView(OnboardingView())
+                return AnyView(MainTabView())
             } else {
                 settings.loggedIn = false
                 return AnyView(OnboardingView())
@@ -135,7 +133,7 @@ struct StartViewUsingPropertyWrappers: View {
                 
         if dataStore.login {
             //return AnyView(TabbarVC())
-            return AnyView(LoginView())
+            return AnyView(MainTabView())
         } else {
             return AnyView(LoginView())
         }

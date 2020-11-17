@@ -68,7 +68,7 @@ struct SignUpView: View {
                         
                         
                     }
-                    seperator()
+                    Seperator()
                 }
                 
                 VStack {
@@ -86,7 +86,7 @@ struct SignUpView: View {
                             .imageScale(.small)
                         
                     }
-                    seperator()
+                    Seperator()
                 }
                 
                 VStack {
@@ -106,7 +106,7 @@ struct SignUpView: View {
                             .autocapitalization(UITextAutocapitalizationType.none)
                         
                     }
-                    seperator()
+                    Seperator()
                 }
                 
                 VStack {
@@ -125,7 +125,7 @@ struct SignUpView: View {
                             .keyboardType(.numberPad)
                         
                     }
-                    seperator()
+                    Seperator()
                 }
                 
                 VStack {
@@ -145,7 +145,7 @@ struct SignUpView: View {
         
                         }
                     }
-                    seperator()
+                    Seperator()
                 }
                 
                 VStack {
@@ -163,7 +163,7 @@ struct SignUpView: View {
                             .imageScale(.small)
                         
                     }
-                    seperator()
+                    Seperator()
                 }
                 
                 VStack {
@@ -181,7 +181,7 @@ struct SignUpView: View {
                             .imageScale(.small)
                         
                     }
-                    seperator()
+                    Seperator()
                 }
                 
                
