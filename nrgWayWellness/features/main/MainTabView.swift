@@ -15,55 +15,9 @@ struct MainTabView: View {
          
         
         ZStack(alignment: .topTrailing) {
-//            TabView(selection: $selection) {
-//                HomeView()
-//                    .tabItem {
-//                        Image(systemName: "house.fill")
-//                        //Text("Home")
-//                    }
-//                    .tag(0)
-//
-//                SavedView()
-//                    .tabItem {
-//                        Image(systemName: "bookmark.circle.fill")
-//                        //Text("saved")
-//                    }
-//                    .tag(1)
-//
-//                WorkOutView()
-//                    .tabItem {
-//                        Image(systemName: "video.circle.fill")
-//                        //Text("WorkOut")
-//                    }
-//                    .tag(2)
-//
-//                ProfileView()
-//                    .tabItem {
-//                        Image(systemName: "person.crop.circle")
-//                        //Text("Profile")
-//                    }
-//                    .tag(3)
-//            }
-//            .onAppear() {
-//                UITabBar.appearance().barTintColor = navyBlueUIColor
-//                //UIColor(named: "navyBlueColor")
-//            }
-//            .accentColor(.white)
+
             AppTabbedView()
-//            Button(action: {
-//                selection = (selection + 1) % 4
-//            }) {
-//                Text("Next")
-//                    .font(.system(.headline, design: .rounded))
-//                    .padding()
-//                    .foregroundColor(.white)
-//                    .background(navyBlueColor)
-//                    .cornerRadius(10.0)
-//                    .padding()
-//         
-//            }
             
-           
         }
         
     }
@@ -80,21 +34,21 @@ struct AppTabbedView: View {
         TabView(selection: $selection) {
             HomeView()
                 .tabItem {
-                    Image(systemName: "house.fill")
-                    //Text("Home")
+                    Image(systemName:"bookmark.circle.fill")
+                    
                 }
                 .tag(0)
          
             SavedView()
                 .tabItem {
-                    Image(systemName: "bookmark.circle.fill")
+                    Image(systemName: "bookmark")
                     //Text("saved")
                 }
                 .tag(1)
          
             WorkOutView()
                 .tabItem {
-                    Image(systemName: "video.circle.fill")
+                    Image(systemName: "dumbell")
                     //Text("WorkOut")
                 }
                 .tag(2)

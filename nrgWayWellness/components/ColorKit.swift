@@ -31,6 +31,9 @@ let grayColor = Color("gray")
 let grayUIColor = UIColor(named: "gray")
 
 
+let lightBrownColor = Color("lightBrown")
+let lightBrownUIColor = UIColor(named: "lightBrown")
+
 //extension Color {
 //    public static var navyBlueColor: Color {
 //        return Color(red: 4.0/255.0, green: 54.0/255.0, blue: 89/255.0, opacity: 1.0)

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6289B8C2565328600948CD4 /* SavedMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6289B8B2565328600948CD4 /* SavedMockData.swift */; };
+		C6289B912565330C00948CD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6289B902565330C00948CD4 /* User.swift */; };
+		C6289B962565333000948CD4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6289B952565333000948CD4 /* Post.swift */; };
+		C6289B9B256536DF00948CD4 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6289B9A256536DF00948CD4 /* PostView.swift */; };
 		C66B07FD25572B6400D911CE /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B07FC25572B6400D911CE /* APICall.swift */; };
 		C66B080225572B9000D911CE /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B080125572B9000D911CE /* CancelBag.swift */; };
 		C66B080725572BBD00D911CE /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B080625572BBD00D911CE /* Helpers.swift */; };
@@ -169,6 +173,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6289B8B2565328600948CD4 /* SavedMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMockData.swift; sourceTree = "<group>"; };
+		C6289B902565330C00948CD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6289B952565333000948CD4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C6289B9A256536DF00948CD4 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		C66B07FC25572B6400D911CE /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		C66B080125572B9000D911CE /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		C66B080625572BBD00D911CE /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -1017,6 +1025,10 @@
 			isa = PBXGroup;
 			children = (
 				C6E6D11D2555517A00326093 /* SavedView.swift */,
+				C6289B8B2565328600948CD4 /* SavedMockData.swift */,
+				C6289B902565330C00948CD4 /* User.swift */,
+				C6289B952565333000948CD4 /* Post.swift */,
+				C6289B9A256536DF00948CD4 /* PostView.swift */,
 			);
 			path = saved;
 			sourceTree = "<group>";
@@ -1247,11 +1259,13 @@
 				C6E6D128255555BF00326093 /* WorkOutView.swift in Sources */,
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
 				C66B08A3255FF94B00D911CE /* extensionString.swift in Sources */,
+				C6289B912565330C00948CD4 /* User.swift in Sources */,
 				C6E6D08A2554ADD600326093 /* ResLevelInformation.swift in Sources */,
 				C66B088B25575CD000D911CE /* UserPermissionsInteractor.swift in Sources */,
 				C6AE2F102561485B00DA44C6 /* ColorKit.swift in Sources */,
 				C6E6D0012554965C00326093 /* VideosLogData.swift in Sources */,
 				C6E6D02B25549ADB00326093 /* SingleVideoDataCreator.swift in Sources */,
+				C6289B962565333000948CD4 /* Post.swift in Sources */,
 				C68AA09F2553420800F88201 /* PageControl.swift in Sources */,
 				C6F5F6D0256480B90088CECD /* DetailView.swift in Sources */,
 				C6AE2F1A256148FB00DA44C6 /* RoundedImage.swift in Sources */,
@@ -1275,6 +1289,7 @@
 				C6E6CF962554677300326093 /* ResFormulas.swift in Sources */,
 				C6E6D0EE2554BBC300326093 /* InstructorsRepository.swift in Sources */,
 				C6E6CFC42554819700326093 /* VideosForTrainerDataCreator.swift in Sources */,
+				C6289B9B256536DF00948CD4 /* PostView.swift in Sources */,
 				C6E6D04325549DD100326093 /* VideosFavoritesDataCreator.swift in Sources */,
 				C68AA0AF255349A600F88201 /* ForgotPasswordView.swift in Sources */,
 				C6E6D137255561BC00326093 /* SocialMediaListView.swift in Sources */,
@@ -1309,6 +1324,7 @@
 				C66B082C25572E3E00D911CE /* Country.swift in Sources */,
 				C6E6D0122554991800326093 /* ListOfvideosData.swift in Sources */,
 				C6E6CF8C2554667A00326093 /* ResFormula.swift in Sources */,
+				C6289B8C2565328600948CD4 /* SavedMockData.swift in Sources */,
 				C6E6D05725549F4700326093 /* ResChallengeVideo.swift in Sources */,
 				C6E6D10B2554BCA800326093 /* AuthRepository.swift in Sources */,
 				C66B08FF2560A0F600D911CE /* OnboardingInteractor.swift in Sources */,

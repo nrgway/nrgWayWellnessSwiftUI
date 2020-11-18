@@ -44,12 +44,12 @@ struct PersonalInformation: View {
             }
             
             HStack(alignment: .firstTextBaseline) {
-                Text("First Name:")
+                Text("Last Name:")
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .foregroundColor(blackColor)
                     .frame(width: 190, height: 50, alignment: .leading)
                     .padding(.leading,30)
-                Text("Emma ")
+                Text("Watson")
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .foregroundColor(blackColor)
                 
@@ -57,20 +57,20 @@ struct PersonalInformation: View {
             }
             
             HStack(alignment: .firstTextBaseline) {
-                Text("First Name:")
+                Text("Phone Number:")
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .foregroundColor(blackColor)
                     .frame(width: 190, height: 50, alignment: .leading)
                     .padding(.leading,30)
-                Text("Emma ")
-                    .font(.system(size: 16, weight: .bold, design: .default))
+                Text("+1 123-567")
+                    .font(.system(size: 10, weight: .bold, design: .default))
                     .foregroundColor(blackColor)
                 
                 
             }
             
             HStack(alignment: .firstTextBaseline) {
-                Text("First Name:")
+                Text("Email Address:")
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .foregroundColor(blackColor)
                     .frame(width: 190, height: 50, alignment: .leading)
@@ -97,7 +97,6 @@ struct PersonalInformation: View {
                 
                 
                 Button(action: {
-                               
                         }) {
                                 Text("edit")
                                     .font(.system(.headline, design: .rounded))
@@ -105,12 +104,10 @@ struct PersonalInformation: View {
                                     .padding(.bottom,10)
                                     .padding(.trailing,30)
                                     .padding(.leading,30)
-                                      
                                     .foregroundColor(.white)
                                     .background(navyBlueColor)
                                     .cornerRadius(8)
                                      
-                
                             }
                
                 
