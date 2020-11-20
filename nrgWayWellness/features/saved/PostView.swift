@@ -46,17 +46,7 @@ struct PostView: View {
                         Image("close")
                             .resizable()
                             .frame(width: 30, height: 30)
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.white.opacity(0.5), lineWidth: 5))
                         
-                       
-                         
-                        
-                        
-                        
-                       
-                        
-                         
                     }
                     
                     Spacer()

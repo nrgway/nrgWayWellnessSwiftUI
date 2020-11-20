@@ -13,13 +13,71 @@ struct MainTabView: View {
     @State private var selection = 0
     var body: some View {
          
+        AppTabbedView()
         
-        ZStack(alignment: .topTrailing) {
+        
+    }
+}
 
-            AppTabbedView()
-            
-        }
+struct Home : View {
+    
+     
+    @State var tab = 0
+     
+    
+    var bottom = UIApplication.shared.windows.first?.safeAreaInsets.bottom
+    
+    var body: some View{
         
+        HStack{
+            
+            Button(action: {
+                
+                self.tab = 0
+                
+            }) {
+                
+                Image(systemName: "suit.heart.fill")
+                    .font(.title)
+                    .foregroundColor(self.tab == 0 ? .black : Color.black.opacity(0.25))
+                
+            }
+            
+            Spacer(minLength: 0)
+            
+            Button(action: {
+                
+                self.tab = 1
+                
+            }) {
+                
+                Image(systemName: "safari")
+                    .font(.title)
+                     .foregroundColor(self.tab == 1 ? .black : Color.black.opacity(0.25))
+                
+            }
+            
+            Spacer(minLength: 0)
+            
+            Button(action: {
+                
+                self.tab = 2
+                
+            }) {
+                
+                Image(systemName: "person.circle")
+                    .font(.title)
+                    .foregroundColor(self.tab == 2 ? .black : Color.black.opacity(0.25))
+                
+            }
+        }
+        .padding(.horizontal, 30)
+        .padding(.top,25)
+        // for no safearea phones padding will be 15 at bottom...
+        .padding(.bottom, self.bottom! == 0 ? 15 : self.bottom! + 10)
+        .background(navyBlueColor)
+        .clipShape(CShape())
+        //.edgesIgnoringSafeArea(.bottom)
     }
 }
 
@@ -60,9 +118,19 @@ struct AppTabbedView: View {
                 }
                 .tag(3)
         }
+        
+        .accentColor(.red)
          
-        .accentColor(.white)
-         
+    }
+}
+
+struct CShape : Shape {
+    
+    func path(in rect: CGRect) -> Path {
+        
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 45, height: 45))
+        
+        return Path(path.cgPath)
     }
 }
 struct MainTabView_Previews: PreviewProvider {

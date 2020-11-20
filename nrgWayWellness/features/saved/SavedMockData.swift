@@ -29,11 +29,11 @@ struct SavedMockData {
                          content: "Isolation Session Vol #15",
                          time: "05:45")
         
-        let post3 = Post(user: userCraig, image: "26",
+        let post3 = Post(user: userCraig, image: "31",
                          content: "Isolation Session Vol #15.",
                          time: "12:00")
         
-        let post4 = Post(user: userElonMusk, image: "27",
+        let post4 = Post(user: userElonMusk, image: "32",
                          content: "Isolation Session Vol #15",
                          time: "13:34")
         

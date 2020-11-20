@@ -10,7 +10,38 @@ import SwiftUI
 
 struct WorkOutView: View {
     var body: some View {
-        Text("     WorkOutView" )
+        
+        GeometryReader { geometry in
+                    VStack {
+                        Text("See Details")
+                            .font(.caption)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 25)
+                            .background(Capsule().stroke(Color.white, lineWidth: 2))
+                        
+                        Button(action: {
+                            
+                        }) {
+                            
+                            Text("Add to Cart")
+                                .foregroundColor(.white)
+                                .padding(.vertical)
+                                .frame(width: UIScreen.main.bounds.width / 1.5)
+                                .background(Color.yellow)
+                                .cornerRadius(10)
+                            
+                        }
+                        .shadow(radius: 5)
+                    }
+                    .frame(width: geometry.size.width,
+                           height: geometry.size.height,
+                               alignment: .topLeading)
+                    .background(LinearGradient(gradient: .init(colors: [navyBlueColor, lightblueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
+                    .edgesIgnoringSafeArea(.bottom)
+                }
+        
+         
     }
 }
 
