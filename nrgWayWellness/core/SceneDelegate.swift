@@ -11,7 +11,7 @@ import SwiftUI
 
 class UserSettings: ObservableObject {
     
-    @Published var loggedIn : Bool = true
+    @Published var loggedIn : Bool = false
 }
 
 class UserOnboard: ObservableObject {

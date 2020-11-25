@@ -26,6 +26,10 @@ let blackUIColor = UIColor(named: "black")
 let lightGrayColor = Color("lightGray")
 let lightGrayUIColor = UIColor(named: "lightGray")
 
+let lightGrayColor2 = Color("lightGray2")
+let lightGrayUIColor2 = UIColor(named: "lightGray2")
+
+
 
 let grayColor = Color("gray")
 let grayUIColor = UIColor(named: "gray")
@@ -34,6 +38,14 @@ let grayUIColor = UIColor(named: "gray")
 let lightBrownColor = Color("lightBrown")
 let lightBrownUIColor = UIColor(named: "lightBrown")
 
+let loginFirstBlueColor = Color("loginFirstBlueColor")
+let loginFirstBlueUIColor = UIColor(named: "loginFirstBlueColor")
+
+
+let loginSecondBlueColor = Color("loginSecondBlueColor")
+let loginSecondBlueUIColor = UIColor(named: "loginSecondBlueColor")
+
+ 
 //extension Color {
 //    public static var navyBlueColor: Color {
 //        return Color(red: 4.0/255.0, green: 54.0/255.0, blue: 89/255.0, opacity: 1.0)

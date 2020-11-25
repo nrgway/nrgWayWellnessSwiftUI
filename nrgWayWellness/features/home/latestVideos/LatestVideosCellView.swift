@@ -22,10 +22,14 @@ struct LatestVideosCellView : View {
                 Text("")
             }
             
-            VStack(spacing: 10){
+            VStack(spacing: 5){
                 
                 Image(data.image)
                     .cornerRadius(15)
+                    .frame(width: 150, height: 150)
+                    .cornerRadius(5)
+                    .shadow(radius: 5)
+                    .padding(5)
                 Text(data.name).fontWeight(.semibold)
                 Text(data.price).foregroundColor(.green).fontWeight(.semibold)
                 

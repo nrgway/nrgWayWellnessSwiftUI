@@ -8,14 +8,44 @@
 
 import SwiftUI
 
-struct NGTInstructorsCellView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct NGTInstructorsCellView : View {
+    
+    var data : fresh
+    @State var show = false
+    
+    var body : some View {
+        
+        ZStack{
+            
+            NavigationLink(destination: Detail(show: self.$show), isActive: self.$show) {
+                
+                Text("")
+            }
+            
+            VStack(spacing: 10){
+                
+                Image(data.image)
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(5)
+                     
+                    .shadow(radius: 5)
+                    .padding(5)
+                
+                Text(data.name)
+                    .fontWeight(.semibold)
+                    .padding(10)
+                 
+                
+            }.onTapGesture {
+                
+                self.show.toggle()
+            }
+            
+        }
     }
 }
+ 
+ 
 
-struct NGTInstructorsCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        NGTInstructorsCellView()
-    }
-}
+
+ 

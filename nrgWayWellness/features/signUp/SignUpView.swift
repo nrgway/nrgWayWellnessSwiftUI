@@ -45,7 +45,7 @@ struct SignUpView: View {
     var body: some View {
         
 //        UIApplication.shared.sendAction(#selector(resignFirstResponder), to: nil, from: nil, for: nil)
-        
+         
         ScrollView {
             
             VStack {

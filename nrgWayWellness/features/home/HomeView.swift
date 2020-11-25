@@ -18,17 +18,21 @@ struct HomeView : View {
             
             HStack(spacing: 12){
                 
-                Image("logo").renderingMode(.original).resizable().frame(width: 30, height: 30)
-                
-                Text("Hi, Kavsoft").font(.body)
-                
                 Spacer()
                 
                 Button(action: {
                     
                 }) {
                     
-                    Image("filter").renderingMode(.original)
+                    Image(systemName:"person.circle")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                        .shadow(radius: 1)
+                        .padding(10)
                 }
             }
 
@@ -36,61 +40,8 @@ struct HomeView : View {
                 
                 VStack(spacing: 15){
                     
-                    HStack(spacing: 15){
-                        
-                        HStack{
-                            
-                            Image(systemName: "magnifyingglass").font(.body)
-                            
-                            TextField("Search Groceries", text: $txt)
-                            
-                        }.padding(10)
-                        .background(Color("Color1"))
-                        .cornerRadius(20)
-                        
-                        Button(action: {
-                            
-                        }) {
-                            
-                            Image("mic").renderingMode(.original)
-                        }
-                    }
-                    
-                    
-                    HStack{
-
-                        Text("NGT Instructors").font(.title)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            
-                        }) {
-                            
-                            Text("More")
-                            
-                        }.foregroundColor(lightblueColor)
-                        
-                    }.padding(.vertical, 15)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        
-                        HStack(spacing: 15){
-                            
-                            ForEach(categories,id: \.self){i in
-                                
-                                VStack{
-                                    
-                                    Image("41")
-                                        .frame(width: 50, height: 50)
-                                    
-                                            
-                                    Text(i)
-                                }.padding(10)
-                            }
-                        }
-                    }
-                    
+                   
+                  
                     HomeBottomView()
                     
                     
@@ -103,9 +54,12 @@ struct HomeView : View {
 
 struct HomeBottomView : View {
     
-    var body : some View{
+    var body : some View {
         
         VStack(spacing: 15){
+            
+            //NGTInstructorsView()
+            NGTInstructorsView()
             
             LatestVideosView()
             
@@ -364,7 +318,7 @@ struct recipe : Identifiable {
 }
 
 var freshitems = [
-fresh(id: 0, name: "Frozen Fish", price: "20.00 / pcs",image: "41"),
+fresh(id: 0, name: "Frozen Fish", price: "20.00 / pcs",image: "28"),
 fresh(id: 1, name: "Seedless Lemon", price: "30.00 / kg",image: "41"),
 fresh(id: 2, name: "Coffee Bread", price: "15.00 / pack",image: "41")
 ]
