@@ -1,16 +1,17 @@
 //
-//  LatestVideosCellView.swift
+//  WorkoutsCellView.swift
 //  nrgWayWellness
 //
-//  Created by Hosein Alimoradi on 9/1/1399 AP.
+//  Created by Hosein Alimoradi on 9/7/1399 AP.
 //  Copyright © 1399 wellness. All rights reserved.
 //
 
+
 import SwiftUI
 
-struct LatestVideosCellView : View {
+struct WorkoutsCellView : View {
     
-    var data : LatestVideoEntity
+    var data : WorkoutEntity
     @State var show = false
     
     var body : some View {
@@ -22,18 +23,16 @@ struct LatestVideosCellView : View {
                 Text("")
             }
             
-            VStack(spacing: 5){
+            VStack(spacing: 10){
                 
                 Image(data.image)
                     .resizable()
-                    .cornerRadius(15)
-                    .frame(width: 150, height: 150)
-                    .cornerRadius(5)
+                    .frame(width: 100, height: 100)
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
                     .shadow(radius: 5)
-                    .padding(5)
-                
-                Text(data.name).fontWeight(.semibold)
-                Text(data.name).foregroundColor(.green).fontWeight(.semibold)
+                 
                 
             }.onTapGesture {
                 
@@ -43,5 +42,3 @@ struct LatestVideosCellView : View {
         }
     }
 }
- 
- 

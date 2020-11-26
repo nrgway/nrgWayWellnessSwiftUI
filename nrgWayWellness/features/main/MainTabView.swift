@@ -14,73 +14,175 @@ struct MainTabView: View {
     var body: some View {
          
         AppTabbedView()
-        
+        //Home()
         
     }
 }
 
 struct Home : View {
-    
-     
-    @State var tab = 0
-     
-    
-    var bottom = UIApplication.shared.windows.first?.safeAreaInsets.bottom
+    @State var modelData = ModelView()
+    @State var selectedTab = "Home"
+    var edges = UIApplication.shared.windows.first?.safeAreaInsets
     
     var body: some View{
         
-        HStack{
+        VStack(){
             
-            Button(action: {
+            GeometryReader{_ in
                 
-                self.tab = 0
-                
-            }) {
-                
-                Image(systemName: "suit.heart.fill")
-                    .font(.title)
-                    .foregroundColor(self.tab == 0 ? .black : Color.black.opacity(0.25))
-                
+                ZStack{
+                    HomeView()
+                    .opacity(selectedTab == "Home" ? 1 : 0)
+                    
+                    SavedView()
+                        .opacity(selectedTab == "Restaurants" ? 1 : 0)
+                    
+                    WorkOutView()
+                        .opacity(selectedTab == "Orders" ? 1 : 0)
+                    
+                    ProfileView()
+                        .opacity(selectedTab == "Rewards" ? 1 : 0)
+                }
             }
-            
-            Spacer(minLength: 0)
-            
-            Button(action: {
-                
-                self.tab = 1
-                
-            }) {
-                
-                Image(systemName: "safari")
-                    .font(.title)
-                     .foregroundColor(self.tab == 1 ? .black : Color.black.opacity(0.25))
-                
+            .onChangeBackwardsCompatible(of: selectedTab) { (newIndex) in
+                print("Do something with \(newIndex)")
+                switch(selectedTab){
+
+                case "Restaurants": if
+                    !modelData.isRestaurantLoad{modelData.loadRestaurant()}
+                case "Orders": if !modelData.isOrderLoad{modelData.loadOrders()}
+                case "Rewards": if !modelData.isRewardLoad{modelData.loadReward()}
+                default: ()
+                }
             }
+             
+            // TabView...
             
-            Spacer(minLength: 0)
-            
-            Button(action: {
+            HStack(spacing: 0){
                 
-                self.tab = 2
-                
-            }) {
-                
-                Image(systemName: "person.circle")
-                    .font(.title)
-                    .foregroundColor(self.tab == 2 ? .black : Color.black.opacity(0.25))
-                
+                ForEach(tabs,id: \.self){tab in
+                    
+                    TabButton(title: tab, selectedTab: $selectedTab)
+                    
+                    if tab != tabs.last{
+                        Spacer(minLength: 0)
+                    }
+                }
             }
+            // for iphone like 8 and SE
+            .padding(.bottom,edges!.bottom == 0 ? 15 : edges!.bottom)
+            .background(Color.blue)
         }
-        .padding(.horizontal, 30)
-        .padding(.top,25)
-        // for no safearea phones padding will be 15 at bottom...
-        .padding(.bottom, self.bottom! == 0 ? 15 : self.bottom! + 10)
-        .background(navyBlueColor)
-        .clipShape(CShape())
-        //.edgesIgnoringSafeArea(.bottom)
+         
+        .background(Color.black.opacity(0.06))
     }
 }
 
+extension View {
+    @ViewBuilder func onChangeBackwardsCompatible<T: Equatable>(of value: T, perform completion: @escaping (T) -> Void) -> some View {
+        if #available(iOS 14.0, *) {
+            self.onChange(of: value, perform: completion)
+        } else {
+            self.onReceive([value].publisher.first()) { (value) in
+                completion(value)
+            }
+        }
+    }
+}
+
+// Tab Button...
+
+struct TabButton : View {
+    
+    var title : String
+    @Binding var selectedTab : String
+     
+    var body: some View{
+        
+        Button(action: {
+            withAnimation{selectedTab = title}
+        }) {
+            
+            VStack(){
+                
+                VStack{
+                    Image(title)
+                        .renderingMode(.template)
+                        .resizable()
+                        .foregroundColor(selectedTab == title ? Color.blue : Color.black.opacity(0.2))
+                        .frame(width: 24, height: 24)
+                    
+                    Text(title)
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.black.opacity(selectedTab == title ? 0.6 : 0.2))
+                    
+                    
+                    TabButtonCustomShape()
+                        .fill(Color.clear)
+                        .frame(width: 45, height: 6)
+                    
+                    if selectedTab == title{
+                        
+                        TabButtonCustomShape()
+                            .fill(Color.red)
+                            .frame(width: 45, height: 6)
+                             
+                    }
+                }
+                 
+                
+                
+            }
+        }
+    }
+}
+
+// Custom Shape..
+
+struct TabButtonCustomShape: Shape {
+    
+    func path(in rect: CGRect) -> Path {
+        
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.bottomLeft,.bottomRight], cornerRadii: CGSize(width: 10, height: 10))
+        
+        return Path(path.cgPath)
+    }
+}
+
+
+class ModelView : ObservableObject{
+    
+    @Published var isOrderLoad = false
+    @Published var isRestaurantLoad = false
+    @Published var isRewardLoad = false
+    
+    init() {
+        
+        // load initial data
+        print("Home Data Loaded")
+    }
+    
+    func loadOrders(){
+        
+        print("order Loaded")
+        isOrderLoad = true
+    }
+    
+    func loadRestaurant(){
+        
+        print("Restaurant Loaded")
+        isRestaurantLoad = true
+    }
+    
+    func loadReward(){
+        
+        print("reward Loaded")
+        isRewardLoad = true
+    }
+}
+
+////
 struct AppTabbedView: View {
 
     @State private var selection = 0
@@ -133,6 +235,7 @@ struct CShape : Shape {
         return Path(path.cgPath)
     }
 }
+
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()

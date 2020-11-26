@@ -14,57 +14,51 @@ struct HomeView : View {
     
     var body : some View{
         
-        VStack(spacing: 15){
-            
-            HStack(spacing: 12){
-                
-                Spacer()
-                
-                Button(action: {
+        NavigationView{
+         
+            VStack(spacing: 15){
+                ScrollView(.vertical, showsIndicators: false) {
                     
-                }) {
-                    
-                    Image(systemName:"person.circle")
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                        .shadow(radius: 1)
-                        .padding(10)
+                    VStack(spacing: 15){
+                        
+                        HomeAvatarView()
+                       
+                        WorkoutsView()
+                        NGTInstructorsView()
+                        
+                        LatestVideosView()
+                        
+                        ChallengesView()
+                        
+                        ChallengesContainerView()
+                    }
                 }
+                .padding(.horizontal)
+                 
             }
-
-            ScrollView(.vertical, showsIndicators: false) {
-                
-                VStack(spacing: 15){
-                    
-                   
-                  
-                    HomeBottomView()
-                    
-                    
-                }
-            }
+            .navigationBarBackButtonHidden(false)
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
             
-        }.padding(.horizontal)
+        }
+        
+        
     }
 }
 
-struct HomeBottomView : View {
+struct ChallengesContainerView : View {
     
     var body : some View {
         
         VStack(spacing: 15){
             
-            //NGTInstructorsView()
             NGTInstructorsView()
             
-            LatestVideosView()
+            NGTInstructorsView()
             
-            ChallengesView()
         }
+        .clipShape(CornersSignUp())
+        .background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom))
     }
 }
 
@@ -317,11 +311,7 @@ struct recipe : Identifiable {
     var authorpic : String
 }
 
-var freshitems = [
-fresh(id: 0, name: "Frozen Fish", price: "20.00 / pcs",image: "28"),
-fresh(id: 1, name: "Seedless Lemon", price: "30.00 / kg",image: "41"),
-fresh(id: 2, name: "Coffee Bread", price: "15.00 / pack",image: "41")
-]
+
 
 var recipeitems = [
 recipe(id: 0, name: "Basil Pasta", author: "Karlien Nijhuis",image: "41",authorpic: "rp1"),

@@ -18,19 +18,13 @@ struct NGTInstructorsView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    
-                }) {
-                    
-                    Text("VIEW ALL")
-                    
-                }.foregroundColor(lightblueColor)
+                 
                 
-            }.padding(.vertical, 15)
+            }.padding(.vertical, 5)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                HStack(spacing: 15){
+                HStack(spacing: 5){
                     
                     ForEach(freshitems){i in
                         NGTInstructorsCellView(data: i)
@@ -50,3 +44,10 @@ struct NGTInstructorsView_Previews: PreviewProvider {
         NGTInstructorsView()
     }
 }
+
+var freshitems = [
+    NGTInstructorEntity(id: 0, name: "Kane", image: "28"),
+    NGTInstructorEntity(id: 1, name: "Danny", image: "21"),
+    NGTInstructorEntity(id: 2, name: "Alyson", image: "22"),
+    NGTInstructorEntity(id: 3, name: "rfgbfd", image: "23")
+]

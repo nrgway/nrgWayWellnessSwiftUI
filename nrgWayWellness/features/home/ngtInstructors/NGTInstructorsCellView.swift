@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NGTInstructorsCellView : View {
     
-    var data : fresh
+    var data : NGTInstructorEntity
     @State var show = false
     
     var body : some View {
@@ -25,9 +25,9 @@ struct NGTInstructorsCellView : View {
             VStack(spacing: 10){
                 
                 Image(data.image)
+                    .resizable()
                     .frame(width: 50, height: 50)
-                    .cornerRadius(5)
-                     
+                    .cornerRadius(5)                     
                     .shadow(radius: 5)
                     .padding(5)
                 
@@ -47,5 +47,3 @@ struct NGTInstructorsCellView : View {
  
  
 
-
- 

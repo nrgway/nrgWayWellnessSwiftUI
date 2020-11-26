@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+ 
 struct LatestVideosView: View {
     var body : some View{
         VStack(spacing: 15){
@@ -32,7 +32,7 @@ struct LatestVideosView: View {
                 
                 HStack(spacing: 15){
                     
-                    ForEach(freshitems){i in
+                    ForEach(latestVideos){i in
                         LatestVideosCellView(data: i)
                         //FreshCellView(data: i)
                     }
