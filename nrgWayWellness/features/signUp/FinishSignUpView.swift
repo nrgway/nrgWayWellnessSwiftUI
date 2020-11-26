@@ -1,14 +1,14 @@
 //
-//  InvitationCodeView.swift
+//  FinishSignUpView.swift
 //  nrgWayWellness
 //
-//  Created by Hosein Alimoradi on 9/5/1399 AP.
+//  Created by Hosein Alimoradi on 9/6/1399 AP.
 //  Copyright © 1399 wellness. All rights reserved.
 //
 
 import SwiftUI
 
-struct InvitationCodeView: View {
+struct FinishSignUpView: View {
     @State var email: String = ""
     @State private var showSignup = false
     
@@ -61,7 +61,7 @@ struct InvitationCodeView: View {
                                 }
                                  
                                 
-                                Text("      Please type down the company invitation sent to you for further steps.")
+                                Text("      Please Choose your password. your password should be at least 8 characters.")
                                     .foregroundColor(lightGrayColor)
                                     .padding(.trailing, 10)
                                     .font(.system(size: 20, weight: .regular, design: .default))
@@ -80,80 +80,74 @@ struct InvitationCodeView: View {
                         Spacer()
                         VStack {
                             
-                            TextField("Invitation Code", text: $email)
+                            TextField("Password", text: $email)
                                 .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
                                 .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
                                 .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
                                 .font(.system(size: (UIScreen.main.bounds.width * 15) / 414, weight: .regular, design: .default))
-                                .imageScale(.small)
+                                 
                                 .keyboardType(.emailAddress)
                                 .autocapitalization(UITextAutocapitalizationType.none)
                                 .foregroundColor(navyBlueColor)
                                 .padding(.vertical, 10)
                                 .padding(.horizontal, 25)
                                 .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
+                            .padding(.top, 10)
                             
-                             
+                            TextField("Password Confirmation", text: $email)
+                                .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
+                                .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
+                                .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
+                                .font(.system(size: (UIScreen.main.bounds.width * 15) / 414, weight: .regular, design: .default))
+                                 
+                                .keyboardType(.emailAddress)
+                                .autocapitalization(UITextAutocapitalizationType.none)
+                                .foregroundColor(navyBlueColor)
+                                .padding(.vertical, 10)
+                                .padding(.horizontal, 25)
+                                .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
                             .padding(.top, 10)
                             
                         }
                         .padding(.trailing, 20)
                         .padding(.leading, 20)
-                        
-                        
-                       
+                                               
+                    
                         
                         Spacer()
-                        
-                        VStack {
-                            
-                            HStack {
-                                Spacer()
-                                Button(action: {
-                                    self.showSignup = true
-                                }) {
-                                    Text("I have an account.")
-                                        
-                                        .foregroundColor(lightGrayColor)
-                                    
-                                    
-                                }.sheet(isPresented: self.$showSignup) {
-                                    SignUpView()
-                                }
-                                
-                                Button(action: {
-                                    self.showSignup = true
-                                }) {
-                                    Text(" Login instead.")
-                                        .foregroundColor(lightBrownColor)
-                                        .foregroundColor(Color("TextColor"))
-                                }.sheet(isPresented: self.$showSignup) {
-                                    SignUpView()
-                                }
-                                
-                                Spacer()
-                            }
-                            
-                        }
                         
                         VStack(alignment: .trailing) {
                             HStack {
                                 Spacer()
-                                
                                 Button(action: {
                                     self.showMain = true
                                      
                                 }) {
-                                    Text("Next Step")
+                                    Text("Previous Step")
                                         .foregroundColor(Color.white)
                                         .padding(.vertical)
-                                        .frame(width: 320)
+                                        .frame(width: 160)
                                         .background(navyBlueColor)
                                         .cornerRadius(14)
                                     
                                     
                                 }.sheet(isPresented: self.$showMain) {
-                                    GetInformationSignUpView()
+                                    ForgotPasswordView()
+                                }
+                                Button(action: {
+                                    self.showMain = true
+                                     
+                                }) {
+                                    Text("Finish!")
+                                        .foregroundColor(Color.white)
+                                        .padding(.vertical)
+                                        .frame(width: 160)
+                                        .background(navyBlueColor)
+                                        .cornerRadius(14)
+                                    
+                                    
+                                }.sheet(isPresented: self.$showMain) {
+                                     
                                 }
                                 
                                 Spacer()
@@ -164,7 +158,7 @@ struct InvitationCodeView: View {
                             HStack {
                                 Spacer()
                                 
-                                InvitationCodeStepperView()
+                                FinishedStepperView()
                                 
                                 Spacer()
                                 
@@ -187,17 +181,8 @@ struct InvitationCodeView: View {
     }
 }
 
-
-
-
-
-
-
-
-
-
-struct InvitationCodeView_Previews: PreviewProvider {
+struct FinishSignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        InvitationCodeView()
+        FinishSignUpView()
     }
 }

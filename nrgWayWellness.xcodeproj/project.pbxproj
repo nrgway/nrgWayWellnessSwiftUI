@@ -81,6 +81,8 @@
 		C68AA0B1255349B500F88201 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B0255349B500F88201 /* LoginView.swift */; };
 		C68AA0B325534A9200F88201 /* OtherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B225534A9200F88201 /* OtherData.swift */; };
 		C68AA0B7255359C000F88201 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA0B6255359C000F88201 /* TabbarVC.swift */; };
+		C697823B256F955600A13D32 /* FinishSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697823A256F955600A13D32 /* FinishSignUpView.swift */; };
+		C6978240256F982800A13D32 /* GetInformationSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697823F256F982800A13D32 /* GetInformationSignUpView.swift */; };
 		C6AE2F102561485B00DA44C6 /* ColorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2F0F2561485B00DA44C6 /* ColorKit.swift */; };
 		C6AE2F15256148C800DA44C6 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2F14256148C800DA44C6 /* NavigationConfigurator.swift */; };
 		C6AE2F1A256148FB00DA44C6 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2F19256148FB00DA44C6 /* RoundedImage.swift */; };
@@ -266,6 +268,8 @@
 		C68AA0B0255349B500F88201 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C68AA0B225534A9200F88201 /* OtherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherData.swift; sourceTree = "<group>"; };
 		C68AA0B6255359C000F88201 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		C697823A256F955600A13D32 /* FinishSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishSignUpView.swift; sourceTree = "<group>"; };
+		C697823F256F982800A13D32 /* GetInformationSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInformationSignUpView.swift; sourceTree = "<group>"; };
 		C6AE2F0F2561485B00DA44C6 /* ColorKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorKit.swift; sourceTree = "<group>"; };
 		C6AE2F14256148C800DA44C6 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		C6AE2F19256148FB00DA44C6 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
@@ -461,6 +465,8 @@
 				C657B5EA256EC623004D6B93 /* CornersSignUp.swift */,
 				C657B5EF256EC644004D6B93 /* CustomShapeSignUp.swift */,
 				C657B5F4256EC6A6004D6B93 /* CustomShape.swift */,
+				C697823A256F955600A13D32 /* FinishSignUpView.swift */,
+				C697823F256F982800A13D32 /* GetInformationSignUpView.swift */,
 			);
 			path = signUp;
 			sourceTree = "<group>";
@@ -1322,6 +1328,7 @@
 				C6E6D05225549ED300326093 /* ReqLikeToVideo.swift in Sources */,
 				C6E6CFEB255487BB00326093 /* ResVideosForCategory.swift in Sources */,
 				C657B5EB256EC623004D6B93 /* CornersSignUp.swift in Sources */,
+				C697823B256F955600A13D32 /* FinishSignUpView.swift in Sources */,
 				C66B081625572C3400D911CE /* NetworkingHelpers.swift in Sources */,
 				C657B5B325686DF6004D6B93 /* ChallengesView.swift in Sources */,
 				C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */,
@@ -1376,6 +1383,7 @@
 				C66B09042560A29D00D911CE /* OnboardingIntractable.swift in Sources */,
 				C68AA0AD2553499700F88201 /* SignUpView.swift in Sources */,
 				C68AA0A82553440100F88201 /* DataStore.swift in Sources */,
+				C6978240256F982800A13D32 /* GetInformationSignUpView.swift in Sources */,
 				C68AA0B325534A9200F88201 /* OtherData.swift in Sources */,
 				C657B5F0256EC644004D6B93 /* CustomShapeSignUp.swift in Sources */,
 				C6E6D03925549D6500326093 /* ResVideosFavorites.swift in Sources */,

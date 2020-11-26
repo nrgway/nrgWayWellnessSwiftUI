@@ -18,7 +18,7 @@ struct LoginView: View {
     @State var alertMsg = ""
     @State private var showMain = false
     @State private var showForgotPassword = false
-    @State private var showSignup = false
+    @State private var showInvitationCodeView = false
     @State var showAlert = false
     @State var showDetails = false
     
@@ -116,27 +116,16 @@ struct LoginView: View {
                     
                     HStack {
                         Spacer()
-                        Button(action: {
-                            self.showSignup = true
-                        }) {
-                            Text("I don’t have any account.")
-                                .foregroundColor(.white)
-                                
-                                .foregroundColor(Color("TextColor"))
-                            
-                            
-                        }.sheet(isPresented: self.$showSignup) {
-                            SignUpView()
-                        }
+                        Text("I don’t have any account.")
+                            .foregroundColor(.white)
                         
                         Button(action: {
-                            self.showSignup = true
+                            self.showInvitationCodeView = true
                         }) {
                             Text("Create one!")
                                 .foregroundColor(lightBrownColor)
-                                .foregroundColor(Color("TextColor"))
-                        }.sheet(isPresented: self.$showSignup) {
-                            SignUpView()
+                        }.sheet(isPresented: self.$showInvitationCodeView) {
+                            InvitationCodeView()
                         }
                         
                         Spacer()
@@ -162,9 +151,10 @@ struct LoginView: View {
                                 .cornerRadius(14)
                             
                             
-                        }.sheet(isPresented: self.$showMain) {
-                            ForgotPasswordView()
                         }
+//                        .sheet(isPresented: self.$showMain) {
+//                            ForgotPasswordView()
+//                        }
                         //                    .sheet(isPresented: self.$showMain) {
                         //                        MainTabView()
                         //                    }
