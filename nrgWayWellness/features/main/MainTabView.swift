@@ -40,8 +40,8 @@ struct Home : View {
                     WorkOutView()
                         .opacity(selectedTab == "Orders" ? 1 : 0)
                     
-                    ProfileView()
-                        .opacity(selectedTab == "Rewards" ? 1 : 0)
+//                    ProfileView()
+//                        .opacity(selectedTab == "Rewards" ? 1 : 0)
                 }
             }
             .onChangeBackwardsCompatible(of: selectedTab) { (newIndex) in
@@ -213,7 +213,7 @@ struct AppTabbedView: View {
                 }
                 .tag(2)
          
-            ProfileView()
+            ProfileView(viewModel: ProfileViewModel())
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     //Text("Profile")

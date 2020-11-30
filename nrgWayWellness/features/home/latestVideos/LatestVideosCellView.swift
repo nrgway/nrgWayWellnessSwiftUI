@@ -21,21 +21,79 @@ struct LatestVideosCellView : View {
                 
                 Text("")
             }
+            VStack(alignment: .leading) {
+                ZStack() {
+                    Image(data.image)
+                        .resizable()
+                        .cornerRadius(10)
+                        .aspectRatio(3/2, contentMode: .fit)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        HStack() {
+                            
+                            Button(action: {
+                                    }) {
+                                            Text("Intermediate")
+                                                .font(.system(.headline, design: .rounded))
+                                                .padding(.top,5)
+                                                .padding(.bottom,5)
+                                                .padding(.trailing,10)
+                                                .padding(.leading,10)
+                                                .foregroundColor(.white)
+                                                .background(lightBrownColor)
+                                                .cornerRadius(8)
+                                                 
+                            }.padding(5)
+                            
+                            Spacer()
+                            
+                            
+                        }
+                        
+                        Spacer()
+                            
+                        HStack( ) {
+                            Image("play")
+                                .resizable()
+                                .frame(width: 70, height: 70, alignment: .center)
+                        }
+                        .frame(maxWidth: .infinity )
+                       
+                        
+                        Spacer()
+                        
+                        HStack() {
+                            
+                            // name
+                            Text(data.name)
+                                .foregroundColor(.white)
+                                .font(.headline)
+                            
+                            Spacer()
+                            
+                            // post time
+                            Text(data.name)
+                                .foregroundColor(.white)
+                                .font(.subheadline)
+                            
+                             
+                        }
+                       
+                    }
+                    .padding(.bottom, 10)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .aspectRatio(3/2, contentMode: .fit)
+                   
+                }
+                
+                
+            }
+            .padding(5)
+             
             
-            VStack(spacing: 5){
-                
-                Image(data.image)
-                    .resizable()
-                    .cornerRadius(15)
-                    .frame(width: 150, height: 150)
-                    .cornerRadius(5)
-                    .shadow(radius: 5)
-                    .padding(5)
-                
-                Text(data.name).fontWeight(.semibold)
-                Text(data.name).foregroundColor(.green).fontWeight(.semibold)
-                
-            }.onTapGesture {
+            .onTapGesture {
                 
                 self.show.toggle()
             }
@@ -45,3 +103,10 @@ struct LatestVideosCellView : View {
 }
  
  
+
+struct LatestVideosCellView_Previews: PreviewProvider {
+    static var previews: some View {
+        LatestVideosCellView(data: latestVideos[0])
+        
+    }
+}

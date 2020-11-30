@@ -10,11 +10,13 @@ import SwiftUI
  
 struct LatestVideosView: View {
     var body : some View{
-        VStack(spacing: 15){
+        VStack(spacing: 5){
             
             HStack{
 
-                Text("Latest Videos").font(.title)
+                Text("Latest Videos")
+                    .font(.title)
+                    .foregroundColor(grayHomeTitileColor)
                 
                 Spacer()
                 
@@ -26,18 +28,21 @@ struct LatestVideosView: View {
                     
                 }.foregroundColor(lightblueColor)
                 
-            }.padding(.vertical, 15)
+                
+            }.padding(.trailing, 5)
+            .padding(.leading,5)
+            
             
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                HStack(spacing: 15){
+                HStack(spacing: 8){
                     
                     ForEach(latestVideos){i in
                         LatestVideosCellView(data: i)
-                        //FreshCellView(data: i)
+                    
                     }
                 }
-            }
+            }.aspectRatio(3/2, contentMode: .fit)
             
              
         }

@@ -13,35 +13,39 @@ struct HomeView : View {
     @State var txt = ""
     
     var body : some View{
-        
-        NavigationView{
-         
-            VStack(spacing: 15){
-                ScrollView(.vertical, showsIndicators: false) {
-                    
-                    VStack(spacing: 15){
+        VStack(){
+            CustomToolBarView()
+            NavigationView{
+             
+                VStack(){
+                    ScrollView(.vertical, showsIndicators: false) {
                         
-                        HomeAvatarView()
-                       
-                        WorkoutsView()
-                        NGTInstructorsView()
-                        
-                        LatestVideosView()
-                        
-                        ChallengesView()
-                        
-                        ChallengesContainerView()
+                        VStack(){
+                            
+                            
+                            HomeAvatarView()
+                           
+                            WorkoutsView()
+                            NGTInstructorsView()
+                            
+                            LatestVideosView()
+                            
+                            ChallengesView()
+                            
+                            //ChallengesContainerView()
+                        }
                     }
+                    .padding(.horizontal)
+                     
                 }
-                .padding(.horizontal)
-                 
+                .navigationBarBackButtonHidden(false)
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                
             }
-            .navigationBarBackButtonHidden(false)
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
             
         }
-        
+       
         
     }
 }
@@ -52,9 +56,9 @@ struct ChallengesContainerView : View {
         
         VStack(spacing: 15){
             
-            NGTInstructorsView()
+            ChallengesView()
             
-            NGTInstructorsView()
+            ChallengesView()
             
         }
         .clipShape(CornersSignUp())

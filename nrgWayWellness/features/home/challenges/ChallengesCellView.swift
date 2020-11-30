@@ -10,27 +10,38 @@ import SwiftUI
 
 struct ChallengesCellView: View {
     
-    var data : recipe
+    var data : ChallengeEntity
+    @State var show = false
     
-    var body : some View{
+    var body : some View {
         
-        VStack(spacing: 10){
+        ZStack{
             
-            Image(data.image)
-            
-            HStack(spacing: 10){
+            NavigationLink(destination: ChallengeListView(show: self.$show), isActive: self.$show) {
                 
-                Image(data.authorpic)
-                
-                VStack(alignment: .leading, spacing: 6){
-                    
-                    Text(data.name).fontWeight(.semibold)
-                    Text(data.author).foregroundColor(.green).fontWeight(.semibold)
-                }
+                Text("")
             }
-
+            
+            VStack(spacing: 5){
+                
+                Image(data.image)
+                    .resizable()
+                    .cornerRadius(15)
+                    .frame(width: 150, height: 150)
+                    .cornerRadius(5)
+                    .shadow(radius: 5)
+                    .padding(5)
+                
+                Text(data.name).fontWeight(.semibold)
+                Text(data.name).foregroundColor(.green).fontWeight(.semibold)
+                
+            }.onTapGesture {
+                
+                self.show.toggle()
+            }
+            
         }
     }
 }
-
+ 
  

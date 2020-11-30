@@ -10,21 +10,22 @@ import SwiftUI
 
 struct WorkoutsView: View {
     var body: some View {
-        VStack(spacing: 15){
-            
+        VStack(){
             HStack{
 
-                Text("Workouts").font(.title)
+                Text("Workouts")
+                    .font(.title)
+                    .foregroundColor(grayHomeTitileColor)
                 
                 Spacer()
                 
                  
                 
-            }.padding(.vertical, 5)
+            }.padding(.vertical, 1)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                HStack(spacing: 5){
+                HStack(spacing: 8){
                     
                     ForEach(workouts){i in
                         WorkoutsCellView(data: i)

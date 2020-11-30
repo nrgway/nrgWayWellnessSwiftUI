@@ -42,7 +42,7 @@ struct PostView: View {
                         }.padding(5)
                         
                         Spacer()
-                        // close
+                        
                         Image("close")
                             .resizable()
                             .frame(width: 30, height: 30)

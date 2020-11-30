@@ -14,30 +14,23 @@ struct SavedView: View {
     
     
     var body: some View {
-        NavigationView {
-            List {
-                
-                // statuses
-//                ScrollView(.horizontal, content: {
-//                    HStack(spacing: 10) {
-//                        ForEach(statuses) { status in
-//                            StatusView(status: status)
-//                        }
-//                    }
-//                    .padding(.leading, 10)
-//                })
-//                .frame(height: 190)
-                
-                
-                // posts
-                ForEach(posts) { post in
-                    PostView(post: post)
+        
+        VStack(){
+            CustomToolBarView()
+            
+            NavigationView {
+                List {
+      
+                    ForEach(posts) { post in
+                        PostView(post: post)
+                    }
                 }
+                .padding(.leading, -20)
+                .padding(.trailing, -20)
+                .navigationBarTitle(Text("Saved"))
             }
-            .padding(.leading, -20)
-            .padding(.trailing, -20)
-            .navigationBarTitle(Text("Saved"))
         }
+        
     }
 }
 

@@ -10,21 +10,23 @@ import SwiftUI
 
 struct NGTInstructorsView: View {
     var body : some View{
-        VStack(spacing: 15){
+        VStack(){
             
             HStack{
 
-                Text("NGT Instructors").font(.title)
+                Text("NGT Instructors")
+                    .font(.title)
+                    .foregroundColor(grayHomeTitileColor)
                 
                 Spacer()
                 
                  
                 
-            }.padding(.vertical, 5)
+            }.padding(.vertical, 6)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                HStack(spacing: 5){
+                HStack(spacing: 8){
                     
                     ForEach(freshitems){i in
                         NGTInstructorsCellView(data: i)
@@ -34,7 +36,7 @@ struct NGTInstructorsView: View {
             }
             
              
-        }
+        }.padding(.top, 6)
     }
     
 }

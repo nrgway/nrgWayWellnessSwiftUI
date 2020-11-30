@@ -17,23 +17,25 @@ struct NGTInstructorsCellView : View {
         
         ZStack{
             
-            NavigationLink(destination: Detail(show: self.$show), isActive: self.$show) {
+            NavigationLink(destination: InstructorDetailsView(show: self.$show), isActive: self.$show) {
                 
                 Text("")
             }
             
-            VStack(spacing: 10){
+            VStack(){
                 
                 Image(data.image)
                     .resizable()
-                    .frame(width: 50, height: 50)
-                    .cornerRadius(5)                     
+                    .frame(width: 70, height: 70)
+                    .cornerRadius(5)
                     .shadow(radius: 5)
-                    .padding(5)
+//                    .padding(.trailing, 5)
+//                    .padding(.leading, 5)
                 
                 Text(data.name)
                     .fontWeight(.semibold)
-                    .padding(10)
+                    .frame(width: 80, height: 25)
+                    //.padding(2)
                  
                 
             }.onTapGesture {

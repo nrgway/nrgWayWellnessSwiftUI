@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-
 struct LoginView: View {
     
     @EnvironmentObject var settings: UserSettings

@@ -23,15 +23,14 @@ struct WorkoutsCellView : View {
                 Text("")
             }
             
-            VStack(spacing: 10){
+            VStack(){
                 
                 Image(data.image)
                     .resizable()
                     .frame(width: 100, height: 100)
                     .aspectRatio(contentMode: .fit)
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                    .shadow(radius: 5)
+                    .overlay(Circle().stroke(Color.white, lineWidth: 1))
                  
                 
             }.onTapGesture {

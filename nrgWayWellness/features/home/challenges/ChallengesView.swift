@@ -9,13 +9,12 @@
 import SwiftUI
 
 struct ChallengesView: View {
-    var body : some View {
+    var body : some View{
         VStack(spacing: 15){
-            
             
             HStack{
 
-                Text("Recipe").font(.title)
+                Text("Challenges").font(.title)
                 
                 Spacer()
                 
@@ -23,9 +22,9 @@ struct ChallengesView: View {
                     
                 }) {
                     
-                    Text("More")
+                    Text("VIEW ALL")
                     
-                }.foregroundColor(Color("Color"))
+                }.foregroundColor(lightblueColor)
                 
             }.padding(.vertical, 15)
             
@@ -33,16 +32,19 @@ struct ChallengesView: View {
                 
                 HStack(spacing: 15){
                     
-                    ForEach(recipeitems){i in
-                        
+                    ForEach(challenges){i in
                         ChallengesCellView(data: i)
+                        //FreshCellView(data: i)
                     }
                 }
             }
+            
+             
         }
     }
     
 }
+
 
 struct ChallengesView_Previews: PreviewProvider {
     static var previews: some View {

@@ -13,10 +13,10 @@ struct AchivementsView: View {
     var body: some View {
         VStack(){
             VStack(){
+                 
                 HStack(){
                     
                     Button(action: {
-                        
                         self.show.toggle()
                         
                     }) {
@@ -61,5 +61,7 @@ struct AchivementsView: View {
         
     }
 }
+
+ 
 
  

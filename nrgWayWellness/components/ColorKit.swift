@@ -45,6 +45,9 @@ let loginFirstBlueUIColor = UIColor(named: "loginFirstBlueColor")
 let loginSecondBlueColor = Color("loginSecondBlueColor")
 let loginSecondBlueUIColor = UIColor(named: "loginSecondBlueColor")
 
+let grayHomeTitileColor = Color("grayHomeTitile")
+let grayHomeTitileUIColor = UIColor(named: "grayHomeTitile")
+
  
 //extension Color {
 //    public static var navyBlueColor: Color {
