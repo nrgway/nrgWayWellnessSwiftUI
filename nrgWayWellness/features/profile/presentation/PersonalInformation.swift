@@ -9,6 +9,12 @@
 import SwiftUI
 
 struct PersonalInformation: View {
+    var info: GetInfoEntity
+    
+    init(getInfoEntity: GetInfoEntity) {
+        info = getInfoEntity
+    }
+    
     var body: some View {
         
         VStack() {
@@ -21,18 +27,14 @@ struct PersonalInformation: View {
                     .frame(width: 150, alignment: .trailing)
                 
                 
-                
-                
                 VStack() {
                     HStack(alignment: .firstTextBaseline) {
                         Text("Personal Information")
                             .font(.system(size: 20, weight: .bold, design: .default))
                             .foregroundColor(navyBlueColor)
-                           
                             .padding(.top,35)
                             .padding(.bottom,5)
                             .padding(.leading,30)
-                        
                         
                         
                     }.frame(maxWidth: .infinity,alignment:.leading)
@@ -64,23 +66,22 @@ struct PersonalInformation: View {
                         .frame(width: 130, alignment: .leading)
                         
                         VStack(alignment: .leading) {
-                            Text("hosein")
-                                .frame(height: 50)
-                                
-                                .font(.system(size: 14, weight: .regular, design: .default))
-                                .foregroundColor(blackColor)
-                            
-                            Text("alimorai")
+                            Text(info.firstName ?? "")
                                 .frame(height: 50)
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .foregroundColor(blackColor)
                             
-                            Text("989355840142")
+                            Text(info.lastName ?? "")
+                                .frame(height: 50)
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                                .foregroundColor(blackColor)
+                            
+                            Text(info.phone ?? "")
                                 .frame(height: 50, alignment: .leading)
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .foregroundColor(blackColor)
                             
-                            Text("ho.alimoradi@gmail.com")
+                            Text(info.email ?? "")
                                 .frame(height: 50)
                                 .font(.system(size: 12, weight: .regular, design: .default))
                                 .foregroundColor(blackColor)
@@ -140,8 +141,4 @@ struct PersonalInformation: View {
     }
 }
 
-struct PersonalInformation_Previews: PreviewProvider {
-    static var previews: some View {
-        PersonalInformation()
-    }
-}
+ 

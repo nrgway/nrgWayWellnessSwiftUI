@@ -11,7 +11,7 @@ import Foundation
 struct FormulaVideoData: Codable {
     
     let createdAt : String?
-    let creator : Creator?
+     
     let difficultyId : Int?
     let internalNotes : String?
     let length : Int?
@@ -31,7 +31,7 @@ struct FormulaVideoData: Codable {
 
     enum CodingKeys: String, CodingKey {
             case createdAt = "created_at"
-            case creator = "creator"
+            
             case difficultyId = "difficulty_id"
             case internalNotes = "internal_notes"
             case length = "length"
@@ -53,7 +53,7 @@ struct FormulaVideoData: Codable {
     init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
             createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
-            creator = try Creator(from: decoder)
+             
             difficultyId = try values.decodeIfPresent(Int.self, forKey: .difficultyId)
             internalNotes = try values.decodeIfPresent(String.self, forKey: .internalNotes)
             length = try values.decodeIfPresent(Int.self, forKey: .length)

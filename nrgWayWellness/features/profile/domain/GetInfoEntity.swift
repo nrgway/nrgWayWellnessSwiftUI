@@ -1,5 +1,5 @@
 //
-//  GetInfoEntity.swift
+//  GetInfoEntity.swift  
 //  nrgWayWellness
 //
 //  Created by Hosein Alimoradi on 9/8/1399 AP.
@@ -19,8 +19,9 @@ struct GetInfoEntity {
     let phone : String?
     let preferences : String?
     let registrationDate : String?
+    var point : Int?
     
-    var poster: URL? { avatar.map { MoviesAPI.imageBase.appendingPathComponent($0) } }
+    var poster: URL? { avatar.map { WebAPI.imageBase.appendingPathComponent($0) } }
     
     init(resGetInfo: ResGetInfo) {
         
@@ -38,9 +39,7 @@ struct GetInfoEntity {
         formatter.allowedUnits = [.minute, .hour]
         registrationDate = resGetInfo.data?.registrationDate
         
-    }
-    
-    func getFirstName() -> String {
-        return firstName ?? ""
-    }
+        point = resGetInfo.data?.company?.statusId
+        
+    } 
 }

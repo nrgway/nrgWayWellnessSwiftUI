@@ -10,6 +10,8 @@ import Combine
 import SwiftUI
 
 class BreweriesViewModel: ObservableObject {
+    
+    
     private let url = "https://api.openbrewerydb.org/breweries"
     private var task: AnyCancellable?
     

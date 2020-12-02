@@ -59,12 +59,9 @@ struct ProfileView: View {
 
                         Seperator()
 
-                        PersonalInformation()
+                        PersonalInformation(getInfoEntity: getInfoEntity)
 
-                        AchivementCard().onAppear{
-                           
-                            
-                        }
+                        AchivementCard()
 
                     }.navigationBarBackButtonHidden(true)
                     .navigationBarTitle("")
@@ -81,7 +78,7 @@ struct ProfileView: View {
        
     }
     
-    
+}
 //    var body: some View {
 //        NavigationView{
 //
@@ -102,7 +99,7 @@ struct ProfileView: View {
 //        }
 //
 //    }
-}
+ 
  
 
  

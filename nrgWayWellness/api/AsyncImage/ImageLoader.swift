@@ -38,7 +38,20 @@ class ImageLoader: ObservableObject {
             return
         }
         
-        cancellable = URLSession.shared.dataTaskPublisher(for: url)
+        var request = URLComponents(
+            url: url,
+            resolvingAgainstBaseURL: true)?
+            .makeHTTPS()
+            .request
+         
+        request?.httpMethod = "GET"
+        request?.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request?.setValue(WebAPI.token, forHTTPHeaderField: "Authorization" )
+        
+        
+        cancellable =
+            URLSession.shared.dataTaskPublisher(for: request!)
+            //URLSession.shared.dataTaskPublisher(for: url)
             .map { UIImage(data: $0.data) }
             .replaceError(with: nil)
             .handleEvents(receiveSubscription: { [weak self] _ in self?.onStart() },

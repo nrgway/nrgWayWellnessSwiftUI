@@ -37,8 +37,8 @@ struct Home : View {
                     SavedView()
                         .opacity(selectedTab == "Restaurants" ? 1 : 0)
                     
-                    WorkOutView()
-                        .opacity(selectedTab == "Orders" ? 1 : 0)
+//                    WorkOutView()
+//                        .opacity(selectedTab == "Orders" ? 1 : 0)
                     
 //                    ProfileView()
 //                        .opacity(selectedTab == "Rewards" ? 1 : 0)
@@ -206,9 +206,9 @@ struct AppTabbedView: View {
                 }
                 .tag(1)
          
-            WorkOutView()
+            WorkOutView(viewModel: WorkOutViewModel())
                 .tabItem {
-                    Image(systemName: "dumbell")
+                    Image(systemName: "bolt.heart.fill")
                     //Text("WorkOut")
                 }
                 .tag(2)

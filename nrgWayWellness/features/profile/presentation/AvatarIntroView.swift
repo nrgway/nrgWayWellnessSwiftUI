@@ -21,7 +21,6 @@ struct AvatarIntroView: View {
     
     var body: some View {
         
-        
         VStack{
             HStack {
                 
@@ -29,7 +28,8 @@ struct AvatarIntroView: View {
                     AsyncImage(
                         url: url,
                         cache: cache,
-                        placeholder: self.spinner,
+                        //placeholder: self.spinner,
+                        placeholder: CircleImageView(name: "bird", size: 120),
                         configuration: { $0.resizable() }
                     )
                     .aspectRatio(contentMode: .fit)
@@ -44,20 +44,19 @@ struct AvatarIntroView: View {
                 
 //                CircleImageView(name: "bird", size: 120).padding(.trailing, 4)
                 
-                
                 VStack(alignment: .leading) {
                      
-                    Text(info.firstName ?? "default" )
+                    Text( (info.firstName ?? "default") + " " + (info.lastName ?? "") )
                         .font(.headline)
                         .padding(.bottom, 4)
                     
                     HStack {
-                        Text("Level 5")
+                        Text("Level \(info.difficultyId ?? 1)")
                             .font(.subheadline)
                             .foregroundColor(navyBlueColor)
                             .padding(.trailing, 5)
                         
-                        Text("165 Points")
+                        Text("\(info.difficultyId ?? 1) Points")
                             .font(.subheadline)
                             .foregroundColor(lightGrayColor)
                         
