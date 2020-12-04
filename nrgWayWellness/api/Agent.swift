@@ -26,9 +26,8 @@ struct Agent {
         return URLSession.shared
             .dataTaskPublisher(for: request)
             .map { $0.data }
-            .handleEvents(receiveOutput: {
-                print(NSString(data: $0, encoding: String.Encoding.utf8.rawValue)!)
-                print("تستتتت کنیم ببینم چیسه")
+            .handleEvents(receiveOutput: {                print(NSString(data: $0, encoding: String.Encoding.utf8.rawValue)!)
+                //print("تستتتت کنیم ببینم چیسه")
             })
             .decode(type: T.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)

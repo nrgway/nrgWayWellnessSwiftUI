@@ -46,15 +46,15 @@ extension HomeViewModel {
     enum State {
         case idle
         case loading
-        case loaded([FormulaEntity])
+        case instructorsLoaded([InstructorEntity])
         case error(Error)
     }
     
     enum Event {
         case onAppear
-        case onSelectMovie(Int)
-        case onMoviesLoaded([FormulaEntity])
-        case onFailedToLoadMovies(Error)
+        case onSelectInstructor(Int)
+        case onInstructorsLoaded([InstructorEntity])
+        case onFailedToLoadInstructors(Error)
     }
      
 }
@@ -71,17 +71,22 @@ extension HomeViewModel {
             default:
                 return state
             }
+            
         case .loading:
             switch event {
-            case .onFailedToLoadMovies(let error):
+            case .onFailedToLoadInstructors(let error):
                 return .error(error)
-            case .onMoviesLoaded(let formula):
-                return .loaded(formula)
+                
+            case .onInstructorsLoaded(let formula):
+                return .instructorsLoaded(formula)
+                
             default:
                 return state
             }
-        case .loaded:
+            
+        case .instructorsLoaded:
             return state
+            
         case .error:
             return state
         }
@@ -91,10 +96,10 @@ extension HomeViewModel {
         Feedback { (state: State) -> AnyPublisher<Event, Never> in
             guard case .loading = state else { return Empty().eraseToAnyPublisher() }
             
-            return WebAPI.getFormulas()
-                .map { $0.data.map(FormulaEntity.init)}
-                .map(Event.onMoviesLoaded)
-                .catch { Just(Event.onFailedToLoadMovies($0)) }
+            return WebAPI.getInstructors()
+                .map { $0.data.map(InstructorEntity.init)}
+                .map(Event.onInstructorsLoaded)
+                .catch { Just(Event.onFailedToLoadInstructors($0)) }
                 .eraseToAnyPublisher()
         }
     }

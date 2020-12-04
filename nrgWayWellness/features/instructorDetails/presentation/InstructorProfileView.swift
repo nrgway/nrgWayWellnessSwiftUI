@@ -10,20 +10,24 @@ import SwiftUI
 
 struct InstructorProfileView: View {
     @State private var showDetails = false
+    //var data : InstructorEntity
+        
     var body: some View {
         VStack(){
-            Image(systemName: "person.crop.circle")
-              .resizable()
+            //Image(systemName: "person.crop.circle")
+            UrlImageView(urlString: WebAPI.jsonURL)
+                 
               .frame(width: 100, height: 100)
                   .aspectRatio(contentMode: .fit)
                        .clipShape(Circle())
                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
                        .shadow(radius: 5)
-            Text("Emma Watson").font(.title)
+            
+            Text("data").font(.title)
             
             VStack {
                 if showDetails {
-                    Text("You should follow me on Twitter: @twostraws")
+                    Text("")
                         .font(.largeTitle)
                 }
                 
@@ -52,9 +56,4 @@ struct InstructorProfileView: View {
         }
     }
 }
-
-struct InstructorProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        InstructorProfileView()
-    }
-}
+ 

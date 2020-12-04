@@ -10,6 +10,9 @@ import SwiftUI
 
 struct InstructorDetailsView: View {
     @Binding var show : Bool
+    
+    var data : InstructorEntity
+    
     var body: some View {
         VStack(){
             VStack(){
@@ -26,7 +29,7 @@ struct InstructorDetailsView: View {
                     }
                     
                     Spacer()
-
+                    
                 }
                 .padding(.leading,8)
                 .navigationBarTitle("")
@@ -50,8 +53,8 @@ struct InstructorDetailsView: View {
     }
 }
 
- 
 
- 
 
- 
+
+
+

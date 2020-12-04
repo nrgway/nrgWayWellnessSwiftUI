@@ -128,6 +128,9 @@
 		C6BB045E2572ABDA00E1FEF4 /* extensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB045D2572ABDA00E1FEF4 /* extensionView.swift */; };
 		C6BB04632572AC4C00E1FEF4 /* extensionPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB04622572AC4C00E1FEF4 /* extensionPublisher.swift */; };
 		C6BB04682572AD3700E1FEF4 /* extensionFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB04672572AD3700E1FEF4 /* extensionFeedback.swift */; };
+		C6DE82BB257A2EEB00E22B14 /* InstructorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82BA257A2EEB00E22B14 /* InstructorEntity.swift */; };
+		C6DE82C0257A586B00E22B14 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82BF257A586B00E22B14 /* RemoteImage.swift */; };
+		C6DE82C5257A8D0800E22B14 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82C4257A8D0800E22B14 /* UrlImageView.swift */; };
 		C6E6CF6C2554623400326093 /* ResAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF6B2554623400326093 /* ResAchievements.swift */; };
 		C6E6CF74255462A000326093 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF73255462A000326093 /* AchievementData.swift */; };
 		C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */; };
@@ -352,6 +355,9 @@
 		C6BB045D2572ABDA00E1FEF4 /* extensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionView.swift; sourceTree = "<group>"; };
 		C6BB04622572AC4C00E1FEF4 /* extensionPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionPublisher.swift; sourceTree = "<group>"; };
 		C6BB04672572AD3700E1FEF4 /* extensionFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionFeedback.swift; sourceTree = "<group>"; };
+		C6DE82BA257A2EEB00E22B14 /* InstructorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorEntity.swift; sourceTree = "<group>"; };
+		C6DE82BF257A586B00E22B14 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		C6DE82C4257A8D0800E22B14 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
 		C6E6CF6B2554623400326093 /* ResAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResAchievements.swift; sourceTree = "<group>"; };
 		C6E6CF73255462A000326093 /* AchievementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
 		C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResFormulaVideo.swift; sourceTree = "<group>"; };
@@ -493,13 +499,9 @@
 		C657B58A25683C2B004D6B93 /* instructorDetails */ = {
 			isa = PBXGroup;
 			children = (
-				C697826D2570718000A13D32 /* InstructorDetailsView.swift */,
-				C6BB03FF2571065500E1FEF4 /* InstructorProfileView.swift */,
-				C6BB04042571129400E1FEF4 /* InstructorProfileEntity.swift */,
-				C6BB040A25711BE300E1FEF4 /* InstructorVideoListView.swift */,
-				C6BB041225712B6700E1FEF4 /* InstructorVideoRowEntity.swift */,
-				C6BB041725712C6000E1FEF4 /* InstructorVideoCardView.swift */,
-				C6BB041C25712E7400E1FEF4 /* InstructorVideoType.swift */,
+				C6DE82C9257AA54500E22B14 /* data */,
+				C6DE82CA257AA54C00E22B14 /* domain */,
+				C6DE82CB257AA55500E22B14 /* presentation */,
 			);
 			path = instructorDetails;
 			sourceTree = "<group>";
@@ -758,6 +760,7 @@
 		C67158C92578333800102C66 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				C6DE82BA257A2EEB00E22B14 /* InstructorEntity.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -966,8 +969,38 @@
 				C6BB044B2572AB1300E1FEF4 /* ImageCache.swift */,
 				C624BB662572E6A000982074 /* AsyncImage.swift */,
 				C624BB6B2572E6C700982074 /* ImageLoader.swift */,
+				C6DE82BF257A586B00E22B14 /* RemoteImage.swift */,
+				C6DE82C4257A8D0800E22B14 /* UrlImageView.swift */,
 			);
 			path = AsyncImage;
+			sourceTree = "<group>";
+		};
+		C6DE82C9257AA54500E22B14 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		C6DE82CA257AA54C00E22B14 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		C6DE82CB257AA55500E22B14 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C697826D2570718000A13D32 /* InstructorDetailsView.swift */,
+				C6BB04042571129400E1FEF4 /* InstructorProfileEntity.swift */,
+				C6BB03FF2571065500E1FEF4 /* InstructorProfileView.swift */,
+				C6BB041725712C6000E1FEF4 /* InstructorVideoCardView.swift */,
+				C6BB040A25711BE300E1FEF4 /* InstructorVideoListView.swift */,
+				C6BB041225712B6700E1FEF4 /* InstructorVideoRowEntity.swift */,
+				C6BB041C25712E7400E1FEF4 /* InstructorVideoType.swift */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 		C6E6CF6A255461F800326093 /* achievementRepository */ = {
@@ -1628,6 +1661,7 @@
 				C6E6D03925549D6500326093 /* ResVideosFavorites.swift in Sources */,
 				C6E6D0712554AAEE00326093 /* ResGetInfo.swift in Sources */,
 				C6E6CFFC255495F000326093 /* ResVideosLog.swift in Sources */,
+				C6DE82C5257A8D0800E22B14 /* UrlImageView.swift in Sources */,
 				C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */,
 				C6F5F6CA25646DAC0088CECD /* AchivementType.swift in Sources */,
 				C66B088625575C4C00D911CE /* ImagesInteractor.swift in Sources */,
@@ -1641,6 +1675,7 @@
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
 				C66B08A3255FF94B00D911CE /* extensionString.swift in Sources */,
 				C6289B912565330C00948CD4 /* User.swift in Sources */,
+				C6DE82BB257A2EEB00E22B14 /* InstructorEntity.swift in Sources */,
 				C6E6D08A2554ADD600326093 /* ResLevelInformation.swift in Sources */,
 				C689A3FA2577F21A006C43BA /* VideoPlayerView.swift in Sources */,
 				C697826E2570718000A13D32 /* InstructorDetailsView.swift in Sources */,
@@ -1660,6 +1695,7 @@
 				C657B5BB25686E40004D6B93 /* ChallengesCellView.swift in Sources */,
 				C6E6D1052554BC7F00326093 /* SubscribeRepository.swift in Sources */,
 				C6E6D0FA2554BC2F00326093 /* VideosLogRepository.swift in Sources */,
+				C6DE82C0257A586B00E22B14 /* RemoteImage.swift in Sources */,
 				C6E6CFA425547C8B00326093 /* InstructorListData.swift in Sources */,
 				C66B08FA2560997400D911CE /* OnboardingRepository.swift in Sources */,
 				C6E6D00D2554989D00326093 /* ResListOfvideos.swift in Sources */,
@@ -1897,7 +1933,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"nrgWayWellness/Preview Content\"";
-				DEVELOPMENT_TEAM = 9F9MB6R33D;
+				DEVELOPMENT_TEAM = T3FZ5A929H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = nrgWayWellness/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1917,7 +1953,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"nrgWayWellness/Preview Content\"";
-				DEVELOPMENT_TEAM = 9F9MB6R33D;
+				DEVELOPMENT_TEAM = T3FZ5A929H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = nrgWayWellness/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

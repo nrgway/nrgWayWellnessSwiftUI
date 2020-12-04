@@ -18,10 +18,10 @@ struct WorkoutsCellView : View {
         
         ZStack{
             
-            NavigationLink(destination: Detail(show: self.$show), isActive: self.$show) {
-                
-                Text("")
-            }
+//            NavigationLink(destination: InstructorDetailsView(show: self.$show), isActive: self.$show) {
+//                
+//                Text("")
+//            }
             
             VStack(){
                 

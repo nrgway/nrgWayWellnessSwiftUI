@@ -11,6 +11,8 @@ import Foundation
 import Combine
 
 enum WebAPI {
+    static let jsonURL = "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png"
+   
     static let videoBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/")!
     
     static let imageBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/")!
@@ -222,8 +224,8 @@ enum WebAPI {
     }
     
     
-    // MARK: - Instructors
-    static func getInstructors() -> AnyPublisher<ResInstructors, Error> {
+    // MARK: - Instructors ResInstructors<InstructorListData>
+    static func getInstructors() -> AnyPublisher<ResInstructors<InstructorListData>, Error> {
         var request = URLComponents(
             url: base.appendingPathComponent("instructors"),
             resolvingAgainstBaseURL: true)?

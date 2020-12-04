@@ -31,9 +31,9 @@ struct Home : View {
             GeometryReader{_ in
                 
                 ZStack{
-                    HomeView()
-                    .opacity(selectedTab == "Home" ? 1 : 0)
-                    
+//                    HomeView()
+//                    .opacity(selectedTab == "Home" ? 1 : 0)
+//                    
                     SavedView()
                         .opacity(selectedTab == "Restaurants" ? 1 : 0)
                     
@@ -60,14 +60,14 @@ struct Home : View {
             
             HStack(spacing: 0){
                 
-                ForEach(tabs,id: \.self){tab in
-                    
-                    TabButton(title: tab, selectedTab: $selectedTab)
-                    
-                    if tab != tabs.last{
-                        Spacer(minLength: 0)
-                    }
-                }
+//                ForEach(tabs,id: \.self){tab in
+//
+//                    TabButton(title: tab, selectedTab: $selectedTab)
+//
+//                    if tab != tabs.last{
+//                        Spacer(minLength: 0)
+//                    }
+//                }
             }
             // for iphone like 8 and SE
             .padding(.bottom,edges!.bottom == 0 ? 15 : edges!.bottom)
@@ -192,10 +192,10 @@ struct AppTabbedView: View {
     }
     var body: some View {
         TabView(selection: $selection) {
-            HomeView()
+            HomeView(viewModel: HomeViewModel())
                 .tabItem {
                     Image(systemName:"bookmark.circle.fill")
-                    
+
                 }
                 .tag(0)
          

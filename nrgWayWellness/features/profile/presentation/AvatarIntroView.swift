@@ -24,23 +24,32 @@ struct AvatarIntroView: View {
         VStack{
             HStack {
                 
-                info.poster.map { url in
-                    AsyncImage(
-                        url: url,
-                        cache: cache,
-                        //placeholder: self.spinner,
-                        placeholder: CircleImageView(name: "bird", size: 120),
-                        configuration: { $0.resizable() }
-                    )
+//                info.poster.map { url in
+//                    AsyncImage(
+//                        url: url,
+//                        cache: cache,
+//                        //placeholder: self.spinner,
+//                        placeholder: CircleImageView(name: "bird", size: 120),
+//                        configuration: { $0.resizable() }
+//                    )
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 120, height: 120)
+//                        .aspectRatio(contentMode: .fit)
+//                             .clipShape(Circle())
+//                             .overlay(Circle().stroke(Color.white, lineWidth: 2))
+//                             .shadow(radius: 5)
+//                    .padding(.trailing, 4)
+//
+//                }
+                
+                UrlImageView(urlString: WebAPI.jsonURL)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 120, height: 120)
                         .aspectRatio(contentMode: .fit)
                              .clipShape(Circle())
                              .overlay(Circle().stroke(Color.white, lineWidth: 2))
                              .shadow(radius: 5)
-                    .padding(.trailing, 4)
-                    
-                }
+                    .padding(.trailing, 24)
                 
 //                CircleImageView(name: "bird", size: 120).padding(.trailing, 4)
                 
@@ -62,7 +71,9 @@ struct AvatarIntroView: View {
                         
                     }
                 }
-            }.padding(.bottom, 4)
+            }
+            .padding(.top, 2)
+            .padding(.bottom, 4)
             
             HStack() {
                 Text("Difficulty Level:")

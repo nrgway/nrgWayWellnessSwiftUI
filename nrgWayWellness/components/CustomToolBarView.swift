@@ -10,11 +10,14 @@ import SwiftUI
 
 struct CustomToolBarView: View {
     var body: some View {
- 
+        
         Image("toolbar")
             .resizable()
             .frame(maxWidth: .infinity)
             .frame(height: 80)
+ 
+        
+            //.background(Color.)
     }
     
 }

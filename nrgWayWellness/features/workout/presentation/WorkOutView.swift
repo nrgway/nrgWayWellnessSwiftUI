@@ -14,8 +14,7 @@ struct WorkOutView: View {
         
     var body: some View {
         NavigationView {
-            content
-                .navigationBarTitle("Trending Movies")
+            content.navigationBarTitle("Trending Movies")
         }
         .onAppear { self.viewModel.send(event: .onAppear) }
     }
@@ -24,6 +23,7 @@ struct WorkOutView: View {
         switch viewModel.state {
         case .idle:
             return Color.clear.eraseToAnyView()
+            
         case .loading:
             return Spinner(isAnimating: true, style: .large).eraseToAnyView()
         case .error(let error):
@@ -42,4 +42,5 @@ struct WorkOutView: View {
             )
         }
     }
+    
 }

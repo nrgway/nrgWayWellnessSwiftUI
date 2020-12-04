@@ -21,7 +21,7 @@ struct FormulaCardView: View {
     
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack() {
             ZStack() {
                  
                 poster
@@ -113,7 +113,9 @@ struct FormulaCardView: View {
             
             
         }
-        .padding(15)
+        .frame(height: 300)
+        .background(lightGrayColor)
+        .padding(5)
         
         
     }
