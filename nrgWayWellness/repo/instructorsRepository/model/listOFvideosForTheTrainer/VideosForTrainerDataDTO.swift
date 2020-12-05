@@ -1,5 +1,4 @@
 //
-//  ResFormula.swift
 //  nrgWayWellness
 //
 //  Created by Hosein Alimoradi on 8/15/1399 AP.
@@ -8,12 +7,8 @@
 
 import Foundation
 
-struct ResFormulas<T: Codable> : Codable {
-    
-    let data : [T]
-    let records : Int?
-    let status : Bool? 
-    
+struct VideosForTrainerDataDTO <T: Codable> : Codable {
+
+    let videos : [T]
 }
 
- 

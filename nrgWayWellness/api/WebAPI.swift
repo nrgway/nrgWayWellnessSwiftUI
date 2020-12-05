@@ -15,7 +15,7 @@ enum WebAPI {
    
     static let videoBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/")!
     
-    static let imageBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/")!
+    static let imageBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/storage")!
     
     private static let base = URL(string: "https://app.nrgway.com/api/v1/")!
      
@@ -253,9 +253,10 @@ enum WebAPI {
         return agent.run(request!)
     }
     
-    static func getVideosByInstructor() -> AnyPublisher<ResGetInfo, Error> {
+    static func getVideosByInstructor(id: Int) ->
+    AnyPublisher<ResVideosForTrainer<VideosForTrainerDataDTO<VideosForTrainerDTO>>, Error> {
         var request = URLComponents(
-            url: base.appendingPathComponent("categories"),
+            url: base.appendingPathComponent("instructors/\(id)/videos"),
             resolvingAgainstBaseURL: true)?
             .makeHTTPS()
             .request
@@ -266,6 +267,7 @@ enum WebAPI {
         
         return agent.run(request!)
     }
+     
     
     
     // MARK: - Formulas

@@ -10,6 +10,8 @@
 import Combine
 import UIKit
 
+import KingfisherSwiftUI
+
 class ImageLoader: ObservableObject {
     @Published var image: UIImage?
     
@@ -51,7 +53,7 @@ class ImageLoader: ObservableObject {
         
         cancellable =
             URLSession.shared.dataTaskPublisher(for: request!)
-            //URLSession.shared.dataTaskPublisher(for: url)
+
             .map { UIImage(data: $0.data) }
             .replaceError(with: nil)
             .handleEvents(receiveSubscription: { [weak self] _ in self?.onStart() },
@@ -60,6 +62,8 @@ class ImageLoader: ObservableObject {
                           receiveCancel: { [weak self] in self?.onFinish() })
             .subscribe(on: Self.imageProcessingQueue)
             .receive(on: DispatchQueue.main)
+            
+           
             .assign(to: \.image, on: self)
     }
     

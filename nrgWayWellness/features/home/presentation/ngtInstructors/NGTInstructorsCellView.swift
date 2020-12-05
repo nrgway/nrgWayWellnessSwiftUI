@@ -8,21 +8,26 @@
 
 import SwiftUI
 import Alamofire
+import KingfisherSwiftUI
 struct NGTInstructorsCellView : View {
     
     var instructor : InstructorEntity
     @State var show = false
+    @State var fullName: String = ""
+    @State var avatarUrl: String = ""
     @Environment(\.imageCache) var cache: ImageCache
     
     init(data : InstructorEntity) {
         instructor = data
+        fullName = (data.firstName ?? "") + " " + (data.lastName ?? "")
     }
     
     var body : some View {
         
         ZStack{
             
-            NavigationLink(destination: InstructorDetailsView(show: self.$show, data: instructor), isActive: self.$show) {
+            NavigationLink(destination: InstructorDetailsView(show: self.$show, viewModel: InstructorDetailsViewModel(),
+                                                              data: instructor), isActive: self.$show) {
                 Text("")
             }
             
@@ -41,23 +46,21 @@ struct NGTInstructorsCellView : View {
 //                .frame(width: 70, height: 70)
 //                .cornerRadius(5)
 //                .shadow(radius: 5)
-                //.frame(idealHeight: UIScreen.main.bounds.width / 2 * 3)
                 
-               
-//                UrlImageView(urlString: instructor.completeAvatar)
-//                    .frame(width:70, height:70)
-//
+                instructor.completeAvatarURL.map { url in
+                    KFImage(url)
+                        .resizable()
+                        .frame(width:70, height:70)
+                        .scaledToFit()
+                        .cornerRadius(22)
+                }
                 
-                UrlImageView(urlString: WebAPI.jsonURL)
-                    .frame(width:70, height:70)
                 
-                
-                //+ (instructor.lastName ?? "")
                 Text((instructor.firstName ?? "") )
                     .fontWeight(.semibold)
                     .frame(width: 80, height: 25)
-                    //.padding(2)
-                 
+                //.padding(2)
+                
                 
             }.onTapGesture {
                 self.show.toggle()
@@ -71,7 +74,7 @@ struct NGTInstructorsCellView : View {
     }
     
     
-   
+    
     
     
     private var spinner: some View {
@@ -80,6 +83,6 @@ struct NGTInstructorsCellView : View {
     
     
 }
- 
- 
+
+
 

@@ -14,7 +14,7 @@ struct WorkOutView: View {
         
     var body: some View {
         NavigationView {
-            content.navigationBarTitle("Trending Movies")
+            content.navigationBarTitle("")
         }
         .onAppear { self.viewModel.send(event: .onAppear) }
     }

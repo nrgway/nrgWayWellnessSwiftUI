@@ -51,7 +51,7 @@ struct AchivementList: View {
                             
                             ForEach(i.rows){j in
                                 
-                                AchivementCardView(row: j)
+                                AchivementCardView()
                             }
                         }
                     }

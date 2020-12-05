@@ -9,67 +9,53 @@
 import SwiftUI
 
 struct InstructorVideoListView: View {
+    var data: [InstructorVideoEntity]
     
-    var achivements = [
-
-        AchivementType(id: 0,rows: [
-                        AchivementRow(id:0,name: "NRG Third Eye", price: "subscriber after watching", image: "41"),
-                        
-                        AchivementRow(id:1,name: "NRG Third Eye", price: "subscriber after watching", image: "41")]),
-
-        AchivementType(id: 1,rows: [
-                        AchivementRow(id:2,name: "NRG Third Eye", price: "subscriber after watching", image: "42"),
-                        
-                        AchivementRow(id:3,name: "NRG Third Eye", price: "subscriber after watching", image: "43")]),
-        
-        AchivementType(id: 2,rows: [
-                        
-                        AchivementRow(id:4,name: "NRG Third Eye", price: "subscriber after watching", image: "44"),
-                        
-                        AchivementRow(id:5,name: "NRG Third Eye", price: "subscriber after watching", image: "45")]),
-
-        AchivementType(id: 3,rows: [
-                        
-                        AchivementRow(id:6,name: "NRG Third Eye", price: "subscriber after watching", image: "46"),
-                        
-                        AchivementRow(id:7,name: "NRG Third Eye", price: "subscriber after watching", image: "42")])
-
-    ]
+    init(instructorVideos: [InstructorVideoEntity]) {
+        data = instructorVideos
+    }
+     
     
+    private let columnCount: Int = 2
     
-    var body : some View{
-        
-        VStack(){
-            
+    var body : some View {
+         
+        VStack() {
             ScrollView(.vertical, showsIndicators: false) {
+               
+                let count = self.data.count
+                let rowCount = ( Double(count) / Double(self.columnCount)).rounded(.up)
                 
-                VStack(spacing: 2){
-                    
-                    ForEach(achivements){i in
-                        
-                        HStack{
-                            
-                            ForEach(i.rows){j in
+                ForEach(0..<Int(rowCount)) { row in
+                    Spacer(minLength: 8)
+                    HStack(spacing: 8) {
+                        ForEach(0..<self.columnCount) { column in
+                            let index = row * columnCount + column
+                            if index < count {
                                 
-                                AchivementCardView(row: j)
+                                InstructorVideoListItemCardView(instructorVideo: self.data[index])
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    
+                            } else {
+                                Spacer().frame(maxWidth: .infinity)
                             }
                         }
                     }
-                }
+                    
+                }.frame(maxWidth: .infinity)
             }
             
-        }.padding()
-        //.background(lightGrayColor)
+            
+        }
+        .padding()
         .animation(.spring())
         
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        InstructorVideoListView()
-    }
-}
+
+
+ 
 
 
 

@@ -131,6 +131,11 @@
 		C6DE82BB257A2EEB00E22B14 /* InstructorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82BA257A2EEB00E22B14 /* InstructorEntity.swift */; };
 		C6DE82C0257A586B00E22B14 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82BF257A586B00E22B14 /* RemoteImage.swift */; };
 		C6DE82C5257A8D0800E22B14 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82C4257A8D0800E22B14 /* UrlImageView.swift */; };
+		C6DE82D2257BCE1700E22B14 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C6DE82D1257BCE1700E22B14 /* KingfisherSwiftUI */; };
+		C6DE82DA257C11EB00E22B14 /* InstructorDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82D9257C11EB00E22B14 /* InstructorDetailsViewModel.swift */; };
+		C6DE82DF257C150700E22B14 /* InstructorVideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82DE257C150700E22B14 /* InstructorVideoEntity.swift */; };
+		C6DE82EA257C221C00E22B14 /* InstructorDetailsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82E9257C221C00E22B14 /* InstructorDetailsList.swift */; };
+		C6DE82EF257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */; };
 		C6E6CF6C2554623400326093 /* ResAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF6B2554623400326093 /* ResAchievements.swift */; };
 		C6E6CF74255462A000326093 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF73255462A000326093 /* AchievementData.swift */; };
 		C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */; };
@@ -142,8 +147,8 @@
 		C6E6CFA925547CDF00326093 /* ResInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFA825547CDF00326093 /* ResInstructor.swift */; };
 		C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFB025547D9A00326093 /* InstructorData.swift */; };
 		C6E6CFBA2554810A00326093 /* ResVideosForTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFB92554810A00326093 /* ResVideosForTrainer.swift */; };
-		C6E6CFBF2554814600326093 /* VideosForTrainerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFBE2554814600326093 /* VideosForTrainerData.swift */; };
-		C6E6CFC42554819700326093 /* VideosForTrainerDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFC32554819700326093 /* VideosForTrainerDataCreator.swift */; };
+		C6E6CFBF2554814600326093 /* VideosForTrainerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFBE2554814600326093 /* VideosForTrainerDTO.swift */; };
+		C6E6CFC42554819700326093 /* VideosForTrainerDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFC32554819700326093 /* VideosForTrainerDataDTO.swift */; };
 		C6E6CFD22554853400326093 /* ResCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFD12554853400326093 /* ResCategories.swift */; };
 		C6E6CFDA2554856100326093 /* CategoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFD92554856100326093 /* CategoriesData.swift */; };
 		C6E6CFE0255486A000326093 /* ResCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CFDF255486A000326093 /* ResCategory.swift */; };
@@ -358,6 +363,10 @@
 		C6DE82BA257A2EEB00E22B14 /* InstructorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorEntity.swift; sourceTree = "<group>"; };
 		C6DE82BF257A586B00E22B14 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		C6DE82C4257A8D0800E22B14 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
+		C6DE82D9257C11EB00E22B14 /* InstructorDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorDetailsViewModel.swift; sourceTree = "<group>"; };
+		C6DE82DE257C150700E22B14 /* InstructorVideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorVideoEntity.swift; sourceTree = "<group>"; };
+		C6DE82E9257C221C00E22B14 /* InstructorDetailsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorDetailsList.swift; sourceTree = "<group>"; };
+		C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorVideoListItemCardView.swift; sourceTree = "<group>"; };
 		C6E6CF6B2554623400326093 /* ResAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResAchievements.swift; sourceTree = "<group>"; };
 		C6E6CF73255462A000326093 /* AchievementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
 		C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResFormulaVideo.swift; sourceTree = "<group>"; };
@@ -369,8 +378,8 @@
 		C6E6CFA825547CDF00326093 /* ResInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResInstructor.swift; sourceTree = "<group>"; };
 		C6E6CFB025547D9A00326093 /* InstructorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorData.swift; sourceTree = "<group>"; };
 		C6E6CFB92554810A00326093 /* ResVideosForTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResVideosForTrainer.swift; sourceTree = "<group>"; };
-		C6E6CFBE2554814600326093 /* VideosForTrainerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForTrainerData.swift; sourceTree = "<group>"; };
-		C6E6CFC32554819700326093 /* VideosForTrainerDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForTrainerDataCreator.swift; sourceTree = "<group>"; };
+		C6E6CFBE2554814600326093 /* VideosForTrainerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForTrainerDTO.swift; sourceTree = "<group>"; };
+		C6E6CFC32554819700326093 /* VideosForTrainerDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosForTrainerDataDTO.swift; sourceTree = "<group>"; };
 		C6E6CFD12554853400326093 /* ResCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResCategories.swift; sourceTree = "<group>"; };
 		C6E6CFD92554856100326093 /* CategoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesData.swift; sourceTree = "<group>"; };
 		C6E6CFDF255486A000326093 /* ResCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResCategory.swift; sourceTree = "<group>"; };
@@ -444,6 +453,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DE82D2257BCE1700E22B14 /* KingfisherSwiftUI in Frameworks */,
 				C66B084E25573D3200D911CE /* EnvironmentOverrides in Frameworks */,
 				C689A3CF2575C896006C43BA /* Alamofire in Frameworks */,
 			);
@@ -978,6 +988,7 @@
 		C6DE82C9257AA54500E22B14 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				C6DE82DE257C150700E22B14 /* InstructorVideoEntity.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -985,6 +996,7 @@
 		C6DE82CA257AA54C00E22B14 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				C6DE82D9257C11EB00E22B14 /* InstructorDetailsViewModel.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -999,6 +1011,8 @@
 				C6BB040A25711BE300E1FEF4 /* InstructorVideoListView.swift */,
 				C6BB041225712B6700E1FEF4 /* InstructorVideoRowEntity.swift */,
 				C6BB041C25712E7400E1FEF4 /* InstructorVideoType.swift */,
+				C6DE82E9257C221C00E22B14 /* InstructorDetailsList.swift */,
+				C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -1053,8 +1067,8 @@
 			isa = PBXGroup;
 			children = (
 				C6E6CFB92554810A00326093 /* ResVideosForTrainer.swift */,
-				C6E6CFBE2554814600326093 /* VideosForTrainerData.swift */,
-				C6E6CFC32554819700326093 /* VideosForTrainerDataCreator.swift */,
+				C6E6CFBE2554814600326093 /* VideosForTrainerDTO.swift */,
+				C6E6CFC32554819700326093 /* VideosForTrainerDataDTO.swift */,
 			);
 			path = listOFvideosForTheTrainer;
 			sourceTree = "<group>";
@@ -1451,6 +1465,7 @@
 			packageProductDependencies = (
 				C66B084D25573D3200D911CE /* EnvironmentOverrides */,
 				C689A3CE2575C896006C43BA /* Alamofire */,
+				C6DE82D1257BCE1700E22B14 /* KingfisherSwiftUI */,
 			);
 			productName = nrgWayWellness;
 			productReference = C68AA06525533DA200F88201 /* nrgWayWellness.app */;
@@ -1527,6 +1542,7 @@
 			packageReferences = (
 				C66B084C25573D3200D911CE /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */,
 				C689A3CD2575C896006C43BA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C6DE82D0257BCE1700E22B14 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C68AA06625533DA200F88201 /* Products */;
 			projectDirPath = "";
@@ -1671,7 +1687,9 @@
 				C66B083125572F1600D911CE /* MockedModel.swift in Sources */,
 				C689A3EA257785B1006C43BA /* FormulaEntity.swift in Sources */,
 				C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */,
+				C6DE82EF257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift in Sources */,
 				C6E6D128255555BF00326093 /* WorkOutView.swift in Sources */,
+				C6DE82DA257C11EB00E22B14 /* InstructorDetailsViewModel.swift in Sources */,
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
 				C66B08A3255FF94B00D911CE /* extensionString.swift in Sources */,
 				C6289B912565330C00948CD4 /* User.swift in Sources */,
@@ -1693,6 +1711,7 @@
 				C6E6D04D25549E9500326093 /* LikeToVideoData.swift in Sources */,
 				C6E6D05C2554A21700326093 /* ReqChallengeVideo.swift in Sources */,
 				C657B5BB25686E40004D6B93 /* ChallengesCellView.swift in Sources */,
+				C6DE82DF257C150700E22B14 /* InstructorVideoEntity.swift in Sources */,
 				C6E6D1052554BC7F00326093 /* SubscribeRepository.swift in Sources */,
 				C6E6D0FA2554BC2F00326093 /* VideosLogRepository.swift in Sources */,
 				C6DE82C0257A586B00E22B14 /* RemoteImage.swift in Sources */,
@@ -1709,14 +1728,14 @@
 				C6E6D03025549B1200326093 /* SingleVideoDataVideo.swift in Sources */,
 				C6BB041325712B6700E1FEF4 /* InstructorVideoRowEntity.swift in Sources */,
 				C6E6D0EE2554BBC300326093 /* InstructorsRepository.swift in Sources */,
-				C6E6CFC42554819700326093 /* VideosForTrainerDataCreator.swift in Sources */,
+				C6E6CFC42554819700326093 /* VideosForTrainerDataDTO.swift in Sources */,
 				C657B5A525686D7D004D6B93 /* LatestVideosView.swift in Sources */,
 				C6289B9B256536DF00948CD4 /* PostView.swift in Sources */,
 				C6E6D04325549DD100326093 /* VideosFavoritesDataCreator.swift in Sources */,
 				C697826125704D0A00A13D32 /* WorkoutsCellView.swift in Sources */,
 				C68AA0AF255349A600F88201 /* ForgotPasswordView.swift in Sources */,
 				C6E6D137255561BC00326093 /* SocialMediaListView.swift in Sources */,
-				C6E6CFBF2554814600326093 /* VideosForTrainerData.swift in Sources */,
+				C6E6CFBF2554814600326093 /* VideosForTrainerDTO.swift in Sources */,
 				C66B080C25572BF300D911CE /* LazyList.swift in Sources */,
 				C66B080725572BBD00D911CE /* Helpers.swift in Sources */,
 				C6E6D0AC2554B40400326093 /* ReqLogin.swift in Sources */,
@@ -1752,6 +1771,7 @@
 				C66B08ED256045D400D911CE /* DetailRow.swift in Sources */,
 				C66B09092560A4D100D911CE /* OnboardingInteractorFake.swift in Sources */,
 				C67158D0257833EB00102C66 /* extentionImage.swift in Sources */,
+				C6DE82EA257C221C00E22B14 /* InstructorDetailsList.swift in Sources */,
 				C6E6CFD22554853400326093 /* ResCategories.swift in Sources */,
 				C66B082C25572E3E00D911CE /* Country.swift in Sources */,
 				C6E6D0122554991800326093 /* ListOfvideosData.swift in Sources */,
@@ -2105,6 +2125,14 @@
 				minimumVersion = 5.4.0;
 			};
 		};
+		C6DE82D0257BCE1700E22B14 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2117,6 +2145,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C689A3CD2575C896006C43BA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C6DE82D1257BCE1700E22B14 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6DE82D0257BCE1700E22B14 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

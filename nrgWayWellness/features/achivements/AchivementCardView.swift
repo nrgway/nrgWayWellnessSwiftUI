@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AchivementCardView: View {
     
-    var row : AchivementRow
+     
     @State var show  = false
     
     var body : some View{
@@ -19,16 +19,16 @@ struct AchivementCardView: View {
             
             NavigationLink(destination: DetailView(show: $show), isActive: $show) {
                 
-                Image(row.image).renderingMode(.original).resizable().frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25).cornerRadius(15)
+                Image("21").renderingMode(.original).resizable().frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25).cornerRadius(15)
             }
             
             HStack{
                 
                 VStack(alignment: .leading, spacing: 4){
                 
-                    Text(row.name).fontWeight(.heavy)
+                    Text("row.name").fontWeight(.heavy)
                     
-                    Text(row.price).foregroundColor(grayColor)
+                    Text("row.price").foregroundColor(grayColor)
                         .padding(.bottom, 5)
                     
                 }
