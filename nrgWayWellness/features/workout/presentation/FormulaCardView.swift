@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Alamofire
+import KingfisherSwiftUI
 
 struct FormulaCardView: View {
     
@@ -82,11 +83,16 @@ struct FormulaCardView: View {
             HStack() {
                 
                 // avatar
-                Image("22")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.white.opacity(0.5), lineWidth: 2))
+                formulaEntity.completeAvatarURL.map { url in
+                    KFImage(url)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.white.opacity(0.5), lineWidth: 2))
+
+                }
+                
                 
                 // name
                 VStack{
@@ -121,17 +127,15 @@ struct FormulaCardView: View {
     }
      
     private var poster: some View {
-        formulaEntity.poster.map { url in
+        formulaEntity.completeAvatarURL.map { url in
+            KFImage(URL(string: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png"))
+                .resizable()
+                .renderingMode(.original)
+                .aspectRatio(3/2, contentMode: .fit)
+                .scaledToFit()
+                .cornerRadius(22)
 
-            AsyncImage(
-                url: url,
-                cache: cache,
-                placeholder: spinner,
-                configuration: { $0.resizable().renderingMode(.original) }
-            )
         }
-        .aspectRatio(contentMode: .fit)
-        .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3)
 
 //        let image = Image(systemName: "")
 //            .resizable()

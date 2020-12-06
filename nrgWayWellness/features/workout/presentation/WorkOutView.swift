@@ -10,6 +10,7 @@ import SwiftUI
 import Alamofire
 
 struct WorkOutView: View {
+    @State var show  = false
     @ObservedObject var viewModel: WorkOutViewModel
         
     var body: some View {
@@ -36,7 +37,7 @@ struct WorkOutView: View {
     private func list(of formulas: [FormulaEntity]) -> some View {
         return List(formulas) { formula in
             NavigationLink(
-                destination: VideoPlayerView(),
+                destination: SpecificVideoPlayerWithRelatedVideoView(show: $show),
                 //destination: MovieDetailView(viewModel: MovieDetailViewModel(movieID: movie.id)),
                 label: { FormulaCardView(formula: formula) }
             )

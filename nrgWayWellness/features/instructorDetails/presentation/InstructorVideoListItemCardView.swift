@@ -24,13 +24,15 @@ struct InstructorVideoListItemCardView: View {
         
         VStack(spacing: 8){
             
-            NavigationLink(destination: DetailView(show: $show), isActive: $show) {
+            NavigationLink(destination: SpecificVideoPlayerWithRelatedVideoView(show: $show), isActive: $show) {
                 
                 data.completeAvatarURL.map { url in
                     KFImage(url)
                         .resizable()
+                        
                         .renderingMode(.original)
-                        .frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25)
+                        .aspectRatio(3/2, contentMode: .fit)
+//                        .frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25)
                         .scaledToFit()
                         .cornerRadius(22)
 

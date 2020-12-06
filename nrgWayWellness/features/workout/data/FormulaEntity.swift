@@ -26,7 +26,7 @@ struct FormulaEntity: Identifiable {
     let videoUrl : String?
     let workoutName : String?
     
-    var poster: URL? { imageUrl.map { WebAPI.imageBase.appendingPathComponent($0) } }
+    var completeAvatarURL: URL? { imageUrl.map { WebAPI.imageBase.appendingPathComponent($0) } }
     
     init(formulaData: FormulaData) {
         

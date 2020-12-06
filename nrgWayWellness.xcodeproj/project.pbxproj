@@ -73,7 +73,7 @@
 		C689A3CF2575C896006C43BA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C689A3CE2575C896006C43BA /* Alamofire */; };
 		C689A3EA257785B1006C43BA /* FormulaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C689A3E9257785B1006C43BA /* FormulaEntity.swift */; };
 		C689A3F525778FA1006C43BA /* FormulaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C689A3F425778FA1006C43BA /* FormulaCardView.swift */; };
-		C689A3FA2577F21A006C43BA /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C689A3F92577F21A006C43BA /* VideoPlayerView.swift */; };
+		C689A3FA2577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C689A3F92577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift */; };
 		C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA06825533DA200F88201 /* AppDelegate.swift */; };
 		C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA06A25533DA200F88201 /* SceneDelegate.swift */; };
 		C68AA06E25533DA200F88201 /* nrgWayWellness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C68AA06C25533DA200F88201 /* nrgWayWellness.xcdatamodeld */; };
@@ -136,6 +136,8 @@
 		C6DE82DF257C150700E22B14 /* InstructorVideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82DE257C150700E22B14 /* InstructorVideoEntity.swift */; };
 		C6DE82EA257C221C00E22B14 /* InstructorDetailsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82E9257C221C00E22B14 /* InstructorDetailsList.swift */; };
 		C6DE82EF257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */; };
+		C6DE82F5257CB9FD00E22B14 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82F4257CB9FD00E22B14 /* VideoView.swift */; };
+		C6DE82FA257CBAA800E22B14 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82F9257CBAA800E22B14 /* Utility.swift */; };
 		C6E6CF6C2554623400326093 /* ResAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF6B2554623400326093 /* ResAchievements.swift */; };
 		C6E6CF74255462A000326093 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF73255462A000326093 /* AchievementData.swift */; };
 		C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */; };
@@ -299,7 +301,7 @@
 		C689A3C82575C60F006C43BA /* WorkOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutViewModel.swift; sourceTree = "<group>"; };
 		C689A3E9257785B1006C43BA /* FormulaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaEntity.swift; sourceTree = "<group>"; };
 		C689A3F425778FA1006C43BA /* FormulaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaCardView.swift; sourceTree = "<group>"; };
-		C689A3F92577F21A006C43BA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		C689A3F92577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificVideoPlayerWithRelatedVideoView.swift; sourceTree = "<group>"; };
 		C68AA06525533DA200F88201 /* nrgWayWellness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nrgWayWellness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68AA06825533DA200F88201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C68AA06A25533DA200F88201 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -367,6 +369,8 @@
 		C6DE82DE257C150700E22B14 /* InstructorVideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorVideoEntity.swift; sourceTree = "<group>"; };
 		C6DE82E9257C221C00E22B14 /* InstructorDetailsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorDetailsList.swift; sourceTree = "<group>"; };
 		C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorVideoListItemCardView.swift; sourceTree = "<group>"; };
+		C6DE82F4257CB9FD00E22B14 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		C6DE82F9257CBAA800E22B14 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		C6E6CF6B2554623400326093 /* ResAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResAchievements.swift; sourceTree = "<group>"; };
 		C6E6CF73255462A000326093 /* AchievementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
 		C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResFormulaVideo.swift; sourceTree = "<group>"; };
@@ -516,12 +520,13 @@
 			path = instructorDetails;
 			sourceTree = "<group>";
 		};
-		C657B58B25683CB4004D6B93 /* videoPlayer */ = {
+		C657B58B25683CB4004D6B93 /* specificVideoPlayerWithRelatedVideoView */ = {
 			isa = PBXGroup;
 			children = (
-				C689A3F92577F21A006C43BA /* VideoPlayerView.swift */,
+				C689A3F92577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift */,
+				C6DE82F4257CB9FD00E22B14 /* VideoView.swift */,
 			);
-			path = videoPlayer;
+			path = specificVideoPlayerWithRelatedVideoView;
 			sourceTree = "<group>";
 		};
 		C657B58D25683D74004D6B93 /* categories */ = {
@@ -666,7 +671,7 @@
 				C6E6D1132554C13400326093 /* profile */,
 				C6E6D1122554C12600326093 /* saved */,
 				C657B5D0256EA14D004D6B93 /* signUp */,
-				C657B58B25683CB4004D6B93 /* videoPlayer */,
+				C657B58B25683CB4004D6B93 /* specificVideoPlayerWithRelatedVideoView */,
 				C6E6D1112554C11800326093 /* workout */,
 			);
 			path = features;
@@ -683,6 +688,7 @@
 				C66B081525572C3400D911CE /* NetworkingHelpers.swift */,
 				C66B081A25572C8900D911CE /* Store.swift */,
 				C66B082025572CF000D911CE /* WebRepository.swift */,
+				C6DE82F9257CBAA800E22B14 /* Utility.swift */,
 			);
 			path = utility;
 			sourceTree = "<group>";
@@ -1677,6 +1683,7 @@
 				C6E6D03925549D6500326093 /* ResVideosFavorites.swift in Sources */,
 				C6E6D0712554AAEE00326093 /* ResGetInfo.swift in Sources */,
 				C6E6CFFC255495F000326093 /* ResVideosLog.swift in Sources */,
+				C6DE82F5257CB9FD00E22B14 /* VideoView.swift in Sources */,
 				C6DE82C5257A8D0800E22B14 /* UrlImageView.swift in Sources */,
 				C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */,
 				C6F5F6CA25646DAC0088CECD /* AchivementType.swift in Sources */,
@@ -1695,7 +1702,7 @@
 				C6289B912565330C00948CD4 /* User.swift in Sources */,
 				C6DE82BB257A2EEB00E22B14 /* InstructorEntity.swift in Sources */,
 				C6E6D08A2554ADD600326093 /* ResLevelInformation.swift in Sources */,
-				C689A3FA2577F21A006C43BA /* VideoPlayerView.swift in Sources */,
+				C689A3FA2577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift in Sources */,
 				C697826E2570718000A13D32 /* InstructorDetailsView.swift in Sources */,
 				C66B088B25575CD000D911CE /* UserPermissionsInteractor.swift in Sources */,
 				C6AE2F102561485B00DA44C6 /* ColorKit.swift in Sources */,
@@ -1740,6 +1747,7 @@
 				C66B080725572BBD00D911CE /* Helpers.swift in Sources */,
 				C6E6D0AC2554B40400326093 /* ReqLogin.swift in Sources */,
 				C69782522570480900A13D32 /* WorkoutEntity.swift in Sources */,
+				C6DE82FA257CBAA800E22B14 /* Utility.swift in Sources */,
 				C6E6D03E25549DA900326093 /* VideosFavoritesData.swift in Sources */,
 				C6E6D0D32554B80600326093 /* ReqAuthResetPassword.swift in Sources */,
 				C66B0897255FBD0700D911CE /* CountriesWebRepository.swift in Sources */,
