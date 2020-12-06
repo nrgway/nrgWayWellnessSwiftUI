@@ -43,27 +43,27 @@ struct ProfileView: View {
         
         
         VStack(){
-            CustomToolBarView()
             VStack(){
                 
                 
                 NavigationView{
 
-                    VStack(){
+                    ScrollView {
+                        VStack(){
 
-                        AvatarIntroView(getInfoEntity: getInfoEntity)
-                            .padding(.bottom, 4)
-                            .onAppear{
-                              
-                            }
+                            AvatarIntroView(getInfoEntity: getInfoEntity)
+                                .padding(.bottom, 4)
+                                .padding(.top, 20)
 
-                        Seperator()
+                            Seperator()
 
-                        PersonalInformation(getInfoEntity: getInfoEntity)
+                            PersonalInformation(getInfoEntity: getInfoEntity)
 
-                        AchivementCard()
+                            AchivementCard()
 
-                    }.navigationBarBackButtonHidden(true)
+                        }
+                    }
+                    .navigationBarBackButtonHidden(true)
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
 

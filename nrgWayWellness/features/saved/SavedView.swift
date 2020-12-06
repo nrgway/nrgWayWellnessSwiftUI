@@ -16,7 +16,7 @@ struct SavedView: View {
     var body: some View {
         
         VStack(){
-            CustomToolBarView()
+            //CustomToolBarView()
             
             NavigationView {
                 List {

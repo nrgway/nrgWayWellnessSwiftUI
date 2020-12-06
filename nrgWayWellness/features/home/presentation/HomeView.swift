@@ -42,7 +42,7 @@ struct HomeView : View {
     private func list(of instructorlist: [InstructorEntity]) -> some View {
         
         VStack(){
-            CustomToolBarView()
+            
             NavigationView{
              
                 VStack(){

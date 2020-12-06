@@ -12,71 +12,31 @@ struct MainTabView: View {
      
     @State private var selection = 0
     var body: some View {
-         
-        AppTabbedView()
-        //Home()
-        
-    }
-}
-
-struct Home : View {
-    @State var modelData = ModelView()
-    @State var selectedTab = "Home"
-    var edges = UIApplication.shared.windows.first?.safeAreaInsets
-    
-    var body: some View{
-        
-        VStack(){
+        ZStack(alignment: .top) {
             
-            GeometryReader{_ in
-                
-                ZStack{
-//                    HomeView()
-//                    .opacity(selectedTab == "Home" ? 1 : 0)
-//                    
-                    SavedView()
-                        .opacity(selectedTab == "Restaurants" ? 1 : 0)
+            TabbedView()
+                   ZStack() {
+                       
                     
-//                    WorkOutView()
-//                        .opacity(selectedTab == "Orders" ? 1 : 0)
+                    //.background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
                     
-//                    ProfileView()
-//                        .opacity(selectedTab == "Rewards" ? 1 : 0)
-                }
-            }
-            .onChangeBackwardsCompatible(of: selectedTab) { (newIndex) in
-                print("Do something with \(newIndex)")
-                switch(selectedTab){
-
-                case "Restaurants": if
-                    !modelData.isRestaurantLoad{modelData.loadRestaurant()}
-                case "Orders": if !modelData.isOrderLoad{modelData.loadOrders()}
-                case "Rewards": if !modelData.isRewardLoad{modelData.loadReward()}
-                default: ()
-                }
-            }
-             
-            // TabView...
+                    
+                    
+                    Rectangle()
+                     .foregroundColor(navyBlueColor.opacity(0.0))
+                     .background(CustomToolBarView())
+                        .edgesIgnoringSafeArea(.top)
+                        .frame(height: 20)
+                   }
+           
             
-            HStack(spacing: 0){
-                
-//                ForEach(tabs,id: \.self){tab in
-//
-//                    TabButton(title: tab, selectedTab: $selectedTab)
-//
-//                    if tab != tabs.last{
-//                        Spacer(minLength: 0)
-//                    }
-//                }
-            }
-            // for iphone like 8 and SE
-            .padding(.bottom,edges!.bottom == 0 ? 15 : edges!.bottom)
-            .background(Color.blue)
         }
-         
-        .background(Color.black.opacity(0.06))
+        //AppTabbedView()
+        
+        
     }
 }
+
 
 extension View {
     @ViewBuilder func onChangeBackwardsCompatible<T: Equatable>(of value: T, perform completion: @escaping (T) -> Void) -> some View {
@@ -90,98 +50,114 @@ extension View {
     }
 }
 
-// Tab Button...
 
-struct TabButton : View {
+struct TabbedView : View {
     
-    var title : String
-    @Binding var selectedTab : String
-     
+    @State var tab = 0
+    var bottom = UIApplication.shared.windows.first?.safeAreaInsets.bottom
+    
     var body: some View{
         
-        Button(action: {
-            withAnimation{selectedTab = title}
-        }) {
+        ZStack (alignment: .bottom){
             
-            VStack(){
-                
-                VStack{
-                    Image(title)
-                        .renderingMode(.template)
-                        .resizable()
-                        .foregroundColor(selectedTab == title ? Color.blue : Color.black.opacity(0.2))
-                        .frame(width: 24, height: 24)
-                    
-                    Text(title)
-                        .font(.caption)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black.opacity(selectedTab == title ? 0.6 : 0.2))
-                    
-                    
-                    TabButtonCustomShape()
-                        .fill(Color.clear)
-                        .frame(width: 45, height: 6)
-                    
-                    if selectedTab == title{
-                        
-                        TabButtonCustomShape()
-                            .fill(Color.red)
-                            .frame(width: 45, height: 6)
-                             
-                    }
-                }
+            Color.black.opacity(0.06).edgesIgnoringSafeArea(.all)
+            
+            if(tab == 0) {
+                HomeView(viewModel: HomeViewModel())
+            } else if (tab == 1) {
+                SavedView()
+            } else if (tab == 2) {
+                WorkOutView(viewModel: WorkOutViewModel())
+            } else   {
+                ProfileView(viewModel: ProfileViewModel())
+            }
+            
+             
+            
+            VStack{
                  
                 
-                
+                HStack{
+                    
+                    Button(action: {
+                        
+                        self.tab = 0
+                        
+                    }) {
+                        
+                        Image(systemName: "house.fill")
+                            .font(.title)
+                            .foregroundColor(self.tab == 0 ? .white : Color.white.opacity(0.25))
+                        
+                    }
+                    
+                    Spacer(minLength: 0)
+                    
+                    Button(action: {
+                        
+                        self.tab = 1
+                        
+                    }) {
+                        
+                        Image(systemName: "wand.and.stars.inverse")
+                            .font(.title)
+                             .foregroundColor(self.tab == 1 ? .white : Color.white.opacity(0.25))
+                        
+                    }
+                    
+                    Spacer(minLength: 0)
+                    
+                    Button(action: {
+                        
+                        self.tab = 2
+                        
+                    }) {
+                        
+                        Image(systemName: "bookmark")
+                            .font(.title)
+                            .foregroundColor(self.tab == 2 ? .white : Color.white.opacity(0.25))
+                        
+                    }
+                    
+                    Spacer(minLength: 0)
+                    
+                    Button(action: {
+                        
+                        self.tab = 3
+                        
+                    }) {
+                        
+                        Image(systemName: "person")
+                            .font(.title)
+                            .foregroundColor(self.tab == 3 ? .white : Color.white.opacity(0.25))
+                        
+                    }
+                }
+                .padding(.horizontal, 30)
+                .padding(.top,25)
+                // for no safearea phones padding will be 15 at bottom...
+                .padding(.bottom, self.bottom! == 0 ? 15 : self.bottom! + 10)
+                .background(navyBlueColor)
+                .clipShape(CShape())
             }
+            .frame(
+                alignment: .bottomLeading
+            )
+            .edgesIgnoringSafeArea(.bottom)
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
-
-// Custom Shape..
-
-struct TabButtonCustomShape: Shape {
+ 
+struct CShape : Shape {
     
     func path(in rect: CGRect) -> Path {
         
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.bottomLeft,.bottomRight], cornerRadii: CGSize(width: 10, height: 10))
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 45, height: 45))
         
         return Path(path.cgPath)
     }
 }
-
-
-class ModelView : ObservableObject{
-    
-    @Published var isOrderLoad = false
-    @Published var isRestaurantLoad = false
-    @Published var isRewardLoad = false
-    
-    init() {
-        
-        // load initial data
-        print("Home Data Loaded")
-    }
-    
-    func loadOrders(){
-        
-        print("order Loaded")
-        isOrderLoad = true
-    }
-    
-    func loadRestaurant(){
-        
-        print("Restaurant Loaded")
-        isRestaurantLoad = true
-    }
-    
-    func loadReward(){
-        
-        print("reward Loaded")
-        isRewardLoad = true
-    }
-}
-
 ////
 struct AppTabbedView: View {
 
@@ -226,15 +202,7 @@ struct AppTabbedView: View {
     }
 }
 
-struct CShape : Shape {
-    
-    func path(in rect: CGRect) -> Path {
-        
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 45, height: 45))
-        
-        return Path(path.cgPath)
-    }
-}
+
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {

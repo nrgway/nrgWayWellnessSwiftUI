@@ -15,6 +15,7 @@ struct CustomToolBarView: View {
             .resizable()
             .frame(maxWidth: .infinity)
             .frame(height: 80)
+            .background(navyBlueColor.opacity(0.0))
  
         
             //.background(Color.)
