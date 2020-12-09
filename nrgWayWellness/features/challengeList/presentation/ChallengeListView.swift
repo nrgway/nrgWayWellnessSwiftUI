@@ -1,0 +1,135 @@
+//
+//  ChallengeListView.swift
+//  nrgWayWellness
+//
+//  Created by Hosein Alimoradi on 9/7/1399 AP.
+//  Copyright © 1399 wellness. All rights reserved.
+//
+
+import SwiftUI
+
+struct ChallengeListView  : View {
+    
+    @Binding var show : Bool
+    
+    @ObservedObject var viewModel: ChallengeViewModel
+    
+    //var data: InstructorEntity
+    
+    var body: some View {
+        VStack(){
+            
+            HStack(){
+                Button(action: {
+                    
+                    self.show.toggle()
+                    
+                }) {
+                    Image("Back").renderingMode(.original)
+                        .padding(8)
+                }
+                Spacer()
+            }
+            .padding(.leading,8)
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            
+            content.onAppear { self.viewModel.send(event: .onAppear) }
+            
+            Spacer()
+            
+        }
+        
+    }
+    
+    private var content: some View {
+        switch viewModel.state {
+        case .idle:
+            return Color.clear.eraseToAnyView()
+            
+        case .loading:
+            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
+            
+        case .error(let error):
+            return Text(error.localizedDescription).eraseToAnyView()
+            
+        case .instructorMoviesloaded(let instructorVideos):
+            return list(of: instructorVideos).eraseToAnyView()
+        }
+    }
+    
+    private func list(of instructorVideos: [InstructorVideoEntity]) -> some View {
+                
+        let y =
+            VStack(){
+                ScrollView(.vertical){
+                    VStack(){
+                        
+                        //InstructorProfileView(data: data)
+                        
+                        Spacer()
+                        
+                        InstructorVideoListView(instructorVideos: instructorVideos)
+                    }
+                }
+            }
+        
+        return y
+    } 
+    
+}
+
+
+
+
+
+
+
+//struct ChallengeListView: View {
+//    @Binding var show : Bool
+//    @ObservedObject var viewModel = BreweriesViewModel()
+//
+//    var body: some View {
+//
+//        VStack() {
+//            VStack() {
+//                HStack(){
+//
+//                    Button(action: {
+//
+//                        self.show.toggle()
+//
+//                    }) {
+//
+//                        Image("Back").renderingMode(.original)
+//                            .padding(8)
+//                    }
+//
+//                    Spacer()
+//
+//                }
+//                .padding(.leading,8)
+//                .navigationBarTitle("")
+//                .navigationBarHidden(true)
+//                .navigationBarBackButtonHidden(true)
+//
+//                VStack(){
+//                    Text("Yoga Challenges").font(.title)
+//                    //AchivementList()
+//
+//
+//                    List(viewModel.breweries, id: \.self) {
+//                        BreweryView(brewery: $0)
+//                    }.onAppear {
+//                            self.viewModel.fetchBreweries()
+//                    }
+//                }
+//            }
+//
+//        }
+//
+//    }
+//}
+
+ 

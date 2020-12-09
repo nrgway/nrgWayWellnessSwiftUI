@@ -17,7 +17,10 @@ struct ChallengesCellView: View {
         
         ZStack{
             
-            NavigationLink(destination: ChallengeListView(show: self.$show), isActive: self.$show) {
+            NavigationLink(destination: ChallengeListView(show: self.$show,
+                                                          viewModel: ChallengeViewModel()
+                                                          //, data: instructor
+            ), isActive: self.$show) {
                 
                 Text("")
             }

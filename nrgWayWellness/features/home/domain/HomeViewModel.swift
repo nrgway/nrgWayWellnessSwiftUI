@@ -95,18 +95,71 @@ extension HomeViewModel {
     static func whenLoading() -> Feedback<State, Event> {
         Feedback { (state: State) -> AnyPublisher<Event, Never> in
             guard case .loading = state else { return Empty().eraseToAnyPublisher() }
+            let numbersPub = PassthroughSubject<Event, Never>()
+            var result: AnyPublisher<Event, Never>
             
-            return WebAPI.getInstructors()
+            var instractorlist : AnyPublisher<ResInstructors<InstructorListData>, Error>
+            
+//            let x = WebAPI.getInstructors()
+//                 .map { $0.data.map(InstructorEntity.init)}
+//                 .map(Event.onInstructorsLoaded)
+//                 .catch { Just(Event.onFailedToLoadInstructors($0)) }
+//                 .eraseToAnyPublisher()
+            
+           let members = WebAPI.getInstructors()
                 .map { $0.data.map(InstructorEntity.init)}
                 .map(Event.onInstructorsLoaded)
                 .catch { Just(Event.onFailedToLoadInstructors($0)) }
                 .eraseToAnyPublisher()
+            
+//            let repos = WebAPI.getInstructors()
+//                 .map { $0.data.map(InstructorEntity.init)}
+//                 .map(Event.onInstructorsLoaded)
+//                 .catch { Just(Event.onFailedToLoadInstructors($0)) }
+//                 .eraseToAnyPublisher()
+//
+//            let cancellable = members
+//                .zip(repos)
+//                .sink(receiveCompletion: { _ in },
+//                      receiveValue: { (members, repos) in
+//                        print(members, repos)
+//
+//                        instractorlist =
+//                            members.eraseToAnyPublisher()
+//                      }
+//                )
+//
+//            let token = Publishers.Zip(members, repos)
+//                .sink(receiveCompletion: { _ in },
+//                      receiveValue: { (members, repos) in
+//                        print(members, repos)
+//                        let y = members
+//                      })
+//
+//
+//            result = numbersPub
+//                .eraseToAnyPublisher()
+            
+            return members
         }
     }
     
     static func userInput(input: AnyPublisher<Event, Never>) -> Feedback<State, Event> {
         Feedback { _ in input }
     }
+    
+//    func combinedApiRequests() -> AnyPublisher<ResInstructors<InstructorListData>, Error> {
+//
+//        let members = WebAPI.getInstructors()
+//
+//
+//         let repos = WebAPI.getInstructors()
+//
+//
+//       Publishers.Zip(members, repos)
+//                 .map { transform(res1: $0, res2: $1) }
+//                 .eraseToAnyPublisher()
+//    }
     
 }
 

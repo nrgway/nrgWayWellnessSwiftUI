@@ -34,7 +34,7 @@ struct ChallengesView: View {
                     
                     ForEach(challenges){i in
                         ChallengesCellView(data: i)
-                        //FreshCellView(data: i)
+                       
                     }
                 }
             }

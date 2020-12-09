@@ -14,9 +14,6 @@ struct AchivementCard : View {
     var body : some View{
         
         VStack(){
-            
-            
-             
             ZStack{
              
                 NavigationLink(destination: AchivementsView(show: $show), isActive: $show) {
@@ -68,8 +65,6 @@ struct AchivementCard : View {
                 }) {
                 }.padding(.trailing, 0)
             }
-            
-             
         }
     }
 }

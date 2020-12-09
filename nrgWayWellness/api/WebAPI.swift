@@ -13,6 +13,13 @@ import Combine
 enum WebAPI {
     static let jsonURL = "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png"
    
+    
+    // videos come from a different CDN:
+    static let videoURL = "https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com//5fc0f1fb5985b.mov"
+
+    //THere's an "ios streaming" version of that link too...
+    static let videoURLstreaming = "https://e90543a74e77be593c0d-fe6114d9276a31f9b87d53e8397ddd92.iosr.cf5.rackcdn.com"
+
     static let videoBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/")!
     
     static let imageBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/storage")!
@@ -209,9 +216,9 @@ enum WebAPI {
         return agent.run(request!)
     }
     
-    static func getGetVideosForCategory() -> AnyPublisher<ResGetInfo, Error> {
+    static func getGetVideosForCategory(id: Int) -> AnyPublisher<ResGetInfo, Error> {
         var request = URLComponents(
-            url: base.appendingPathComponent("categories"),
+            url: base.appendingPathComponent("categories/\(id)/videos"),
             resolvingAgainstBaseURL: true)?
             .makeHTTPS()
             .request

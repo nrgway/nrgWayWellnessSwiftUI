@@ -32,6 +32,8 @@
 		C657B5EB256EC623004D6B93 /* CornersSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657B5EA256EC623004D6B93 /* CornersSignUp.swift */; };
 		C657B5F0256EC644004D6B93 /* CustomShapeSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657B5EF256EC644004D6B93 /* CustomShapeSignUp.swift */; };
 		C657B5F5256EC6A6004D6B93 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657B5F4256EC6A6004D6B93 /* CustomShape.swift */; };
+		C664F276257EB9E4001D8B2F /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F275257EB9E4001D8B2F /* ChallengeViewModel.swift */; };
+		C664F27B257EBA13001D8B2F /* ChallengeVideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F27A257EBA13001D8B2F /* ChallengeVideoEntity.swift */; };
 		C66B07FD25572B6400D911CE /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B07FC25572B6400D911CE /* APICall.swift */; };
 		C66B080225572B9000D911CE /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B080125572B9000D911CE /* CancelBag.swift */; };
 		C66B080725572BBD00D911CE /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B080625572BBD00D911CE /* Helpers.swift */; };
@@ -262,6 +264,8 @@
 		C657B5EA256EC623004D6B93 /* CornersSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornersSignUp.swift; sourceTree = "<group>"; };
 		C657B5EF256EC644004D6B93 /* CustomShapeSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapeSignUp.swift; sourceTree = "<group>"; };
 		C657B5F4256EC6A6004D6B93 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		C664F275257EB9E4001D8B2F /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
+		C664F27A257EBA13001D8B2F /* ChallengeVideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVideoEntity.swift; sourceTree = "<group>"; };
 		C66B07FC25572B6400D911CE /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		C66B080125572B9000D911CE /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		C66B080625572BBD00D911CE /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -601,6 +605,30 @@
 			path = signUp;
 			sourceTree = "<group>";
 		};
+		C664F272257EB933001D8B2F /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C664F27A257EBA13001D8B2F /* ChallengeVideoEntity.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		C664F273257EB93C001D8B2F /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				C664F275257EB9E4001D8B2F /* ChallengeViewModel.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		C664F274257EB944001D8B2F /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C69782762570727500A13D32 /* ChallengeListView.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
 		C66B082525572DE700D911CE /* components */ = {
 			isa = PBXGroup;
 			children = (
@@ -914,7 +942,6 @@
 		C68AA0AB255348DE00F88201 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				C6E6D0B52554B4CF00326093 /* loginDtO */,
 				C68AA0B0255349B500F88201 /* LoginView.swift */,
 				C6BB0432257168F700E1FEF4 /* LoginViewModel.swift */,
 			);
@@ -933,7 +960,9 @@
 		C69782752570723700A13D32 /* challengeList */ = {
 			isa = PBXGroup;
 			children = (
-				C69782762570727500A13D32 /* ChallengeListView.swift */,
+				C664F274257EB944001D8B2F /* presentation */,
+				C664F273257EB93C001D8B2F /* domain */,
+				C664F272257EB933001D8B2F /* data */,
 				C6BB042225713AB800E1FEF4 /* BreweriesViewModel.swift */,
 				C6BB042725713AD200E1FEF4 /* Brewery.swift */,
 				C6BB042C25713AF200E1FEF4 /* BreweryView.swift */,
@@ -1395,6 +1424,7 @@
 		C6E6D10F2554BCB000326093 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C6E6D0B52554B4CF00326093 /* loginDtO */,
 				C6E6D0CC2554B75600326093 /* authResetPassword */,
 				C6E6D0C62554B64C00326093 /* LogOut */,
 				C6E6D0B62554B4E100326093 /* Register */,
@@ -1736,6 +1766,7 @@
 				C6BB041325712B6700E1FEF4 /* InstructorVideoRowEntity.swift in Sources */,
 				C6E6D0EE2554BBC300326093 /* InstructorsRepository.swift in Sources */,
 				C6E6CFC42554819700326093 /* VideosForTrainerDataDTO.swift in Sources */,
+				C664F276257EB9E4001D8B2F /* ChallengeViewModel.swift in Sources */,
 				C657B5A525686D7D004D6B93 /* LatestVideosView.swift in Sources */,
 				C6289B9B256536DF00948CD4 /* PostView.swift in Sources */,
 				C6E6D04325549DD100326093 /* VideosFavoritesDataCreator.swift in Sources */,
@@ -1784,6 +1815,7 @@
 				C66B082C25572E3E00D911CE /* Country.swift in Sources */,
 				C6E6D0122554991800326093 /* ListOfvideosData.swift in Sources */,
 				C6E6CF8C2554667A00326093 /* ResFormulas.swift in Sources */,
+				C664F27B257EBA13001D8B2F /* ChallengeVideoEntity.swift in Sources */,
 				C6289B8C2565328600948CD4 /* SavedMockData.swift in Sources */,
 				C6BB04052571129400E1FEF4 /* InstructorProfileEntity.swift in Sources */,
 				C6BB04002571065500E1FEF4 /* InstructorProfileView.swift in Sources */,

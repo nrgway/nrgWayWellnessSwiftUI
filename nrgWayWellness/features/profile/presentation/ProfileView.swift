@@ -50,7 +50,7 @@ struct ProfileView: View {
 
                     ScrollView {
                         VStack(){
-
+                             
                             AvatarIntroView(getInfoEntity: getInfoEntity)
                                 .padding(.bottom, 4)
                                 .padding(.top, 20)
@@ -79,26 +79,6 @@ struct ProfileView: View {
     }
     
 }
-//    var body: some View {
-//        NavigationView{
-//
-//            VStack(spacing: 15){
-//
-//                AvatarIntroView().padding(.bottom, 4)
-//
-//                Seperator()
-//
-//                PersonalInformation()
-//
-//                AchivementCard()
-//
-//            }.navigationBarBackButtonHidden(true)
-//            .navigationBarTitle("")
-//            .navigationBarHidden(true)
-//
-//        }
-//
-//    }
  
  
 

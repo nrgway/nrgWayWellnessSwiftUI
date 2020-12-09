@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct FinishSignUpView: View {
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var email: String = ""
-    @State private var showSignup = false
     
     @State private var showMain = false
     var body: some View {
@@ -120,7 +121,7 @@ struct FinishSignUpView: View {
                             HStack {
                                 Spacer()
                                 Button(action: {
-                                    self.showMain = true
+                                    self.presentationMode.wrappedValue.dismiss()
                                      
                                 }) {
                                     Text("Previous Step")
@@ -131,9 +132,7 @@ struct FinishSignUpView: View {
                                         .cornerRadius(14)
                                     
                                     
-                                }.sheet(isPresented: self.$showMain) {
-                                    ForgotPasswordView()
-                                }
+                                } 
                                 Button(action: {
                                     self.showMain = true
                                      

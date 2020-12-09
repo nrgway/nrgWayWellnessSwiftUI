@@ -26,8 +26,7 @@ struct NGTInstructorsCellView : View {
         
         ZStack{
             
-            NavigationLink(destination: InstructorDetailsView(show: self.$show, viewModel: InstructorDetailsViewModel(),
-                                                              data: instructor), isActive: self.$show) {
+            NavigationLink(destination: InstructorDetailsView(show: self.$show, viewModel: InstructorDetailsViewModel(),                                                              data: instructor), isActive: self.$show) {
                 Text("")
             }
             

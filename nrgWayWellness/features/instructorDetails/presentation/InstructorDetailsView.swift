@@ -17,21 +17,16 @@ struct InstructorDetailsView: View {
     var body: some View {
         VStack(){
             
-            
             HStack(){
-                
                 Button(action: {
                     
                     self.show.toggle()
                     
                 }) {
-                    
                     Image("Back").renderingMode(.original)
                         .padding(8)
                 }
-                
                 Spacer()
-                
             }
             .padding(.leading,8)
             .navigationBarTitle("")

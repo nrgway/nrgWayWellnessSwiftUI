@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct GetInformationSignUpView: View {
-    @State var email: String = ""
-    @State private var showSignup = false
     
-    @State private var showMain = false
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+   
+    @State var email: String = ""
+    @State private var showFinishSignup = false
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -134,7 +136,7 @@ struct GetInformationSignUpView: View {
                             HStack {
                                 Spacer()
                                 Button(action: {
-                                    self.showMain = true
+                                    self.presentationMode.wrappedValue.dismiss()
                                      
                                 }) {
                                     Text("Previous Step")
@@ -143,13 +145,10 @@ struct GetInformationSignUpView: View {
                                         .frame(width: 160)
                                         .background(navyBlueColor)
                                         .cornerRadius(14)
-                                    
-                                    
-                                }.sheet(isPresented: self.$showMain) {
-                                    //ForgotPasswordView()
                                 }
+                                
                                 Button(action: {
-                                    self.showMain = true
+                                    self.showFinishSignup = true
                                      
                                 }) {
                                     Text("Finish!")
@@ -160,7 +159,7 @@ struct GetInformationSignUpView: View {
                                         .cornerRadius(14)
                                     
                                     
-                                }.sheet(isPresented: self.$showMain) {
+                                }.sheet(isPresented: self.$showFinishSignup) {
                                     FinishSignUpView()
                                 }
                                 
