@@ -7,11 +7,21 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct ChallengesCellView: View {
     
-    var data : ChallengeEntity
+    var category : CategoryEntity
+    
     @State var show = false
+     
+    @State var fullName: String = ""
+    @State var avatarUrl: String = ""
+    
+    init(data : CategoryEntity) {
+        category = data
+        fullName = (data.name ?? "")
+    }
     
     var body : some View {
         
@@ -27,16 +37,20 @@ struct ChallengesCellView: View {
             
             VStack(spacing: 5){
                 
-                Image(data.image)
-                    .resizable()
-                    .cornerRadius(15)
-                    .frame(width: 150, height: 150)
-                    .cornerRadius(5)
-                    .shadow(radius: 5)
-                    .padding(5)
+                category.completeAvatarURL.map { url in
+                    KFImage(url)
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .scaledToFit()
+                        .cornerRadius(5)
+                        .shadow(radius: 5)
+                        .padding(5)
+                }
                 
-                Text(data.name).fontWeight(.semibold)
-                Text(data.name).foregroundColor(.green).fontWeight(.semibold)
+                 
+                
+                Text(category.name ?? "").fontWeight(.semibold)
+                //Text(category.countVideos).foregroundColor(.green).fontWeight(.semibold)
                 
             }.onTapGesture {
                 

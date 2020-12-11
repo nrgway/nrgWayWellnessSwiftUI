@@ -9,6 +9,13 @@
 import SwiftUI
 
 struct ChallengesView: View {
+    
+    var categories : [CategoryEntity]
+    
+    init(data : [CategoryEntity]) {
+        categories = data
+    }
+    
     var body : some View{
         VStack(spacing: 15){
             
@@ -32,8 +39,8 @@ struct ChallengesView: View {
                 
                 HStack(spacing: 15){
                     
-                    ForEach(challenges){i in
-                        ChallengesCellView(data: i)
+                    ForEach(categories){challenge in
+                        ChallengesCellView(data: challenge)
                        
                     }
                 }
@@ -46,8 +53,4 @@ struct ChallengesView: View {
 }
 
 
-struct ChallengesView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChallengesView()
-    }
-}
+ 

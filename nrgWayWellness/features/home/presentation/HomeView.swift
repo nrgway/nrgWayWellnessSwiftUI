@@ -9,18 +9,58 @@
 import SwiftUI
  
 struct HomeView : View {
-    @ObservedObject var viewModel: HomeViewModel
+    //@ObservedObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel = HomeViewModel()
     //@State var instructors : [InstructorEntity]
     
     var body: some View {
         NavigationView {
-            content
+            list()
                 //.navigationBarTitle("Trending Movies")
                 .navigationBarBackButtonHidden(false)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
         }
-        .onAppear { self.viewModel.send(event: .onAppear) }
+        
+    }
+    
+    private func list() -> some View {
+        
+        VStack(){
+            
+            NavigationView{
+             
+                VStack(){
+                    ScrollView(.vertical, showsIndicators: false) {
+                        
+                        VStack(){
+                            HomeAvatarView()
+                           
+                            WorkoutsView()
+                            
+                            NGTInstructorsView(data: viewModel.instructors)
+                                .onAppear {
+                                self.viewModel.getInstructors()
+                            }
+                            
+                            LatestVideosView(data: viewModel.videos)
+                            
+                            ChallengesView(data: viewModel.categories)
+                                .onAppear {
+                                 
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                     
+                }
+                .navigationBarBackButtonHidden(false)
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                
+            }
+        }
+         
     }
     
     private var content: some View {
@@ -55,9 +95,9 @@ struct HomeView : View {
                             
                             NGTInstructorsView(data: instructorlist)
                             
-                            LatestVideosView()
+                            //LatestVideosView(data: <#[LatestVideoEntity]#>)
                             
-                            ChallengesView()
+                            //ChallengesView(data: instructorlist)
                         }
                     }
                     .padding(.horizontal)
@@ -75,7 +115,7 @@ struct HomeView : View {
 }
 
 
-
+ 
 
 //var body : some View{
 //    VStack(){

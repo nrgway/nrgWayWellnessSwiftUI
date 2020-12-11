@@ -36,22 +36,7 @@ struct NGTInstructorsView: View {
                     }
                 }
             }
-            
-             
         }.padding(.top, 6)
     }
     
 }
-
-//struct NGTInstructorsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NGTInstructorsView()
-//    }
-//}
-
-//var freshitems = [
-//    NGTInstructorEntity(id: 0, name: "Kane", image: "28"),
-//    NGTInstructorEntity(id: 1, name: "Danny", image: "21"),
-//    NGTInstructorEntity(id: 2, name: "Alyson", image: "22"),
-//    NGTInstructorEntity(id: 3, name: "rfgbfd", image: "23")
-//]

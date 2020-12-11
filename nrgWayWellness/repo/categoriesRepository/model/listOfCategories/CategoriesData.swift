@@ -8,50 +8,34 @@
 import Foundation
 
 struct CategoriesData : Codable {
-
-        let createdAt : String?
-        let descriptionField : String?
-        let groupingKey : String?
-        let imgUrl : String?
-        let name : String?
-        let promotionalVideo : String?
-        let promotionalVideoSize : Int?
-        let showDifficulties : Bool?
-        let showInSearch : Bool?
-        let showOnCategories : Bool?
-        let sortingKey : Int?
-        let updatedAt : String?
-
-        enum CodingKeys: String, CodingKey {
-                case createdAt = "created_at"
-                case descriptionField = "description"
-                case groupingKey = "grouping_key"
-                case imgUrl = "img_url"
-                case name = "name"
-                case promotionalVideo = "promotional_video"
-                case promotionalVideoSize = "promotional_video_size"
-                case showDifficulties = "show_difficulties"
-                case showInSearch = "show_in_search"
-                case showOnCategories = "show_on_categories"
-                case sortingKey = "sorting_key"
-                case updatedAt = "updated_at"
-        }
     
-        init(from decoder: Decoder) throws {
-                let values = try decoder.container(keyedBy: CodingKeys.self)
-                createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
-                descriptionField = try values.decodeIfPresent(String.self, forKey: .descriptionField)
-                groupingKey = try values.decodeIfPresent(String.self, forKey: .groupingKey)
-                imgUrl = try values.decodeIfPresent(String.self, forKey: .imgUrl)
-                name = try values.decodeIfPresent(String.self, forKey: .name)
-                promotionalVideo = try values.decodeIfPresent(String.self, forKey: .promotionalVideo)
-                promotionalVideoSize = try values.decodeIfPresent(Int.self, forKey: .promotionalVideoSize)
-                showDifficulties = try values.decodeIfPresent(Bool.self, forKey: .showDifficulties)
-                showInSearch = try values.decodeIfPresent(Bool.self, forKey: .showInSearch)
-                showOnCategories = try values.decodeIfPresent(Bool.self, forKey: .showOnCategories)
-                sortingKey = try values.decodeIfPresent(Int.self, forKey: .sortingKey)
-                updatedAt = try values.decodeIfPresent(String.self, forKey: .updatedAt)
-        }
+    let countVideos : Int?
+    let groupingKey : String?
+    let id : Int?
+    let imgUrl : String?
+    let latestVideo : String?
+    let name : String?
+    let sortingKey : Int?
+
+    enum CodingKeys: String, CodingKey {
+            case countVideos = "countVideos"
+            case groupingKey = "grouping_key"
+            case id = "id"
+            case imgUrl = "img_url"
+            case latestVideo = "latest_video"
+            case name = "name"
+            case sortingKey = "sorting_key"
+    }
+
+    init(from decoder: Decoder) throws {
+            let values = try decoder.container(keyedBy: CodingKeys.self)
+            countVideos = try values.decodeIfPresent(Int.self, forKey: .countVideos)
+            groupingKey = try values.decodeIfPresent(String.self, forKey: .groupingKey)
+            id = try values.decodeIfPresent(Int.self, forKey: .id)
+            imgUrl = try values.decodeIfPresent(String.self, forKey: .imgUrl)
+            latestVideo = try values.decodeIfPresent(String.self, forKey: .latestVideo)
+            name = try values.decodeIfPresent(String.self, forKey: .name)
+            sortingKey = try values.decodeIfPresent(Int.self, forKey: .sortingKey)
+    }
 
 }
-

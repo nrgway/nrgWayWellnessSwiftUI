@@ -16,7 +16,6 @@ class BreweriesViewModel: ObservableObject {
     private var task: AnyCancellable?
     
     @Published var breweries: [Brewery] = []
-    
     func fetchBreweries() {
         task = URLSession.shared.dataTaskPublisher(for: URL(string: url)!)
             .map { $0.data }
@@ -26,4 +25,6 @@ class BreweriesViewModel: ObservableObject {
             .receive(on: RunLoop.main)
             .assign(to: \BreweriesViewModel.breweries, on: self)
     }
+    
+     
 }

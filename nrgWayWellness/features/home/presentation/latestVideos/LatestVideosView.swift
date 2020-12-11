@@ -9,6 +9,13 @@
 import SwiftUI
  
 struct LatestVideosView: View {
+    
+    var latestVideos : [LatestVideoEntity]
+    
+    init(data : [LatestVideoEntity]) {
+        latestVideos = data
+    }
+    
     var body : some View{
         VStack(spacing: 5){
             
@@ -50,8 +57,3 @@ struct LatestVideosView: View {
     
 }
 
-struct LatestVideosView_Previews: PreviewProvider {
-    static var previews: some View {
-        LatestVideosView()
-    }
-}

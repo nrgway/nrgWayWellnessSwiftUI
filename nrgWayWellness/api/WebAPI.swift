@@ -113,9 +113,9 @@ enum WebAPI {
     
     
     // MARK: - Videos
-    static func getListOfvideos() -> AnyPublisher<ResListOfvideos, Error> {
+    static func getListOfvideos() -> AnyPublisher<ResListOfvideos<ListOfvideosData>, Error> {
         var request = URLComponents(
-            url: base.appendingPathComponent("getInfo"),
+            url: base.appendingPathComponent("videos"),
             resolvingAgainstBaseURL: true)?
             .makeHTTPS()
             .request
@@ -188,7 +188,7 @@ enum WebAPI {
     
     // MARK: - Categories
 
-    static func getCategories() -> AnyPublisher<ResGetInfo, Error> {
+    static func getCategories() -> AnyPublisher<ResCategories<CategoriesData>, Error> {
         var request = URLComponents(
             url: base.appendingPathComponent("categories"),
             resolvingAgainstBaseURL: true)?

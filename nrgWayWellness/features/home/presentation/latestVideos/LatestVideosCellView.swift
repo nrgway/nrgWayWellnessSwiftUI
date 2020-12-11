@@ -7,12 +7,20 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct LatestVideosCellView : View {
     
-    var data : LatestVideoEntity
+    var video : LatestVideoEntity
     @State var show = false
     
+    @State var fullName: String = ""
+    @State var avatarUrl: String = ""
+    
+    init(data : LatestVideoEntity) {
+        video = data
+        fullName = (data.title ?? "")
+    }
     var body : some View {
         
         ZStack{
@@ -21,14 +29,20 @@ struct LatestVideosCellView : View {
 //                
 //                Text("")
 //            }
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 ZStack() {
-                    Image(data.image)
-                        .resizable()
-                        .cornerRadius(10)
-                        .aspectRatio(3/2, contentMode: .fit)
                     
-                    VStack(alignment: .leading) {
+                    video.completeThumbnailURL.map { url in
+                        KFImage(url)
+                            .resizable()
+                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .scaledToFit()
+                            .cornerRadius(5)
+                            .padding(5)
+                    }
+                    
+                    VStack(alignment: .center) {
                         
                         HStack() {
                             
@@ -36,15 +50,14 @@ struct LatestVideosCellView : View {
                                     }) {
                                             Text("Intermediate")
                                                 .font(.system(.headline, design: .rounded))
-                                                .padding(.top,5)
+                                                .padding(.top,10)
                                                 .padding(.bottom,5)
-                                                .padding(.trailing,10)
-                                                .padding(.leading,10)
+                                            
                                                 .foregroundColor(.white)
                                                 .background(lightBrownColor)
                                                 .cornerRadius(8)
                                                  
-                            }.padding(5)
+                            }
                             
                             Spacer()
                             
@@ -53,48 +66,34 @@ struct LatestVideosCellView : View {
                         
                         Spacer()
                             
-                        HStack( ) {
+                        HStack(alignment: .center) {
                             Image("play")
                                 .resizable()
                                 .frame(width: 70, height: 70, alignment: .center)
                         }
-                        .frame(maxWidth: .infinity )
-                       
+                        .frame(maxWidth: .infinity)
                         
                         Spacer()
                         
                         HStack() {
                             
                             // name
-                            Text(data.name)
+                            Text(video.title ?? "")
                                 .foregroundColor(.white)
                                 .font(.headline)
                             
                             Spacer()
                             
                             // post time
-                            Text(data.name)
+                            Text(video.title ?? "")
                                 .foregroundColor(.white)
                                 .font(.subheadline)
-                            
-                             
                         }
-                       
                     }
-                    .padding(.bottom, 10)
-                    .padding(.leading, 10)
-                    .padding(.trailing, 10)
                     .aspectRatio(3/2, contentMode: .fit)
-                   
                 }
-                
-                
             }
-            .padding(5)
-             
-            
             .onTapGesture {
-                
                 self.show.toggle()
             }
             
@@ -103,10 +102,4 @@ struct LatestVideosCellView : View {
 }
  
  
-
-struct LatestVideosCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        LatestVideosCellView(data: latestVideos[0])
-        
-    }
-}
+ 
