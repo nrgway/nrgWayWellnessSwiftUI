@@ -15,13 +15,14 @@ struct HomeView : View {
     
     var body: some View {
         NavigationView {
-            list()
+            content.onAppear {
+                self.viewModel.getInstructors()
+            }
                 //.navigationBarTitle("Trending Movies")
                 .navigationBarBackButtonHidden(false)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
-        }
-        
+        } 
     }
     
     private func list() -> some View {
@@ -39,27 +40,26 @@ struct HomeView : View {
                             WorkoutsView()
                             
                             NGTInstructorsView(data: viewModel.instructors)
-                                .onAppear {
-                                self.viewModel.getInstructors()
-                            }
                             
                             LatestVideosView(data: viewModel.videos)
+                                .padding(.horizontal)
                             
-                            ChallengesView(data: viewModel.categories)
-                                .onAppear {
-                                 
-                            }
+                            ChallengesView(data: viewModel.categories).onAppear {} 
+                            
                         }
+                        //.background(Color.white)
                     }
-                    .padding(.horizontal)
+                    
                      
                 }
+//                .background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
                 .navigationBarBackButtonHidden(false)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
                 
             }
         }
+        
          
     }
     
@@ -74,43 +74,11 @@ struct HomeView : View {
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
             
-        case .instructorsLoaded(let formulas):
-            return list(of: formulas).eraseToAnyView()
+        case .loaded:
+            return list().eraseToAnyView()
         }
     }
-    
-    private func list(of instructorlist: [InstructorEntity]) -> some View {
-        
-        VStack(){
-            
-            NavigationView{
-             
-                VStack(){
-                    ScrollView(.vertical, showsIndicators: false) {
-                        
-                        VStack(){
-                            HomeAvatarView()
-                           
-                            WorkoutsView()
-                            
-                            NGTInstructorsView(data: instructorlist)
-                            
-                            //LatestVideosView(data: <#[LatestVideoEntity]#>)
-                            
-                            //ChallengesView(data: instructorlist)
-                        }
-                    }
-                    .padding(.horizontal)
-                     
-                }
-                .navigationBarBackButtonHidden(false)
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
-                
-            }
-        }
-         
-    }
+     
     
 }
 

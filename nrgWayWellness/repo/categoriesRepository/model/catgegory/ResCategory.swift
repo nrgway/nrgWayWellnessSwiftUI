@@ -8,21 +8,10 @@
 
 import Foundation
 
-struct ResCategory : Codable {
+struct ResCategory<T: Codable> : Codable {
 
-        let data : CategoryData?
+        let data : T
+        let records : Int?
         let status : Bool?
-
-        enum CodingKeys: String, CodingKey {
-                case data = "data"
-                case status = "status"
-        }
-    
-        init(from decoder: Decoder) throws {
-                let values = try decoder.container(keyedBy: CodingKeys.self)
-                data = try CategoryData(from: decoder)
-                status = try values.decodeIfPresent(Bool.self, forKey: .status)
-        }
-
 }
 

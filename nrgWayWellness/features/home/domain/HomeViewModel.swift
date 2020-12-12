@@ -11,7 +11,7 @@ import Combine
 import SwiftUI
 
 final class HomeViewModel: ObservableObject {
-    @Published var state = State.idle
+    @Published var state = State.loading
     
     @Published var instructors: [InstructorEntity] = []
     @Published var categories: [CategoryEntity] = []
@@ -66,7 +66,7 @@ final class HomeViewModel: ObservableObject {
             .sink(receiveCompletion: { _ in },
                   receiveValue: {  categorylist in
                     print(categorylist)
-                    
+                    self.state = State.loaded
                     self.categories = categorylist
                   }
             )
@@ -122,7 +122,7 @@ extension HomeViewModel {
     enum State {
         case idle
         case loading
-        case instructorsLoaded([InstructorEntity])
+        case loaded
         case error(Error)
     }
     

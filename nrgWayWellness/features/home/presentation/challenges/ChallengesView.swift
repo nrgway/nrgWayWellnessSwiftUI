@@ -21,19 +21,14 @@ struct ChallengesView: View {
             
             HStack{
 
-                Text("Challenges").font(.title)
+                Text("CHALLENGES").font(.title)
+                    .foregroundColor(Color.white)
                 
                 Spacer()
                 
-                Button(action: {
-                    
-                }) {
-                    
-                    Text("VIEW ALL")
-                    
-                }.foregroundColor(lightblueColor)
                 
-            }.padding(.vertical, 15)
+                
+            }.padding(15)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 
@@ -46,10 +41,24 @@ struct ChallengesView: View {
                 }
             }
             
+            Spacer().frame(height: 90)
+            
              
         }
+       
+        .background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
+        //.clipShape(ChallengesViewCShape())
     }
     
+    struct ChallengesViewCShape : Shape {
+        
+        func path(in rect: CGRect) -> Path {
+            
+            let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 25, height: 15))
+            
+            return Path(path.cgPath)
+        }
+    }
 }
 
 

@@ -8,10 +8,7 @@
 import Foundation
 
 struct ResCategories<T: Codable>: Codable {
-
         let data : [T]
         let records : Int?
         let status : Bool?
-
-
 }

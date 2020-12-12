@@ -202,9 +202,9 @@ enum WebAPI {
         return agent.run(request!)
     }
     
-    static func getCategory() -> AnyPublisher<ResGetInfo, Error> {
+    static func getCategoryById(id: Int) -> AnyPublisher<ResCategory<CategoryData<CategoryDTO>>, Error> {
         var request = URLComponents(
-            url: base.appendingPathComponent("categories"),
+            url: base.appendingPathComponent("categories/\(id)"),
             resolvingAgainstBaseURL: true)?
             .makeHTTPS()
             .request

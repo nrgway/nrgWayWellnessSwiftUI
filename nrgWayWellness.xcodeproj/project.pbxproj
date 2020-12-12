@@ -36,6 +36,9 @@
 		C664F27B257EBA13001D8B2F /* ChallengeVideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F27A257EBA13001D8B2F /* ChallengeVideoEntity.swift */; };
 		C664F28125834373001D8B2F /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F28025834373001D8B2F /* CategoryEntity.swift */; };
 		C664F29525838224001D8B2F /* LatestVideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F29425838224001D8B2F /* LatestVideoEntity.swift */; };
+		C664F29A2583F2CC001D8B2F /* SpecificCategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F2992583F2CC001D8B2F /* SpecificCategoryEntity.swift */; };
+		C664F29F2583F565001D8B2F /* CategoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F29E2583F565001D8B2F /* CategoryDTO.swift */; };
+		C664F2A725842911001D8B2F /* ChallengeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C664F2A625842911001D8B2F /* ChallengeListView.swift */; };
 		C66B07FD25572B6400D911CE /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B07FC25572B6400D911CE /* APICall.swift */; };
 		C66B080225572B9000D911CE /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B080125572B9000D911CE /* CancelBag.swift */; };
 		C66B080725572BBD00D911CE /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B080625572BBD00D911CE /* Helpers.swift */; };
@@ -107,7 +110,6 @@
 		C69782572570489600A13D32 /* NGTInstructorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69782562570489600A13D32 /* NGTInstructorEntity.swift */; };
 		C697826125704D0A00A13D32 /* WorkoutsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697826025704D0A00A13D32 /* WorkoutsCellView.swift */; };
 		C697826E2570718000A13D32 /* InstructorDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697826D2570718000A13D32 /* InstructorDetailsView.swift */; };
-		C69782772570727500A13D32 /* ChallengeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69782762570727500A13D32 /* ChallengeListView.swift */; };
 		C6AE2F102561485B00DA44C6 /* ColorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2F0F2561485B00DA44C6 /* ColorKit.swift */; };
 		C6AE2F15256148C800DA44C6 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2F14256148C800DA44C6 /* NavigationConfigurator.swift */; };
 		C6AE2F1A256148FB00DA44C6 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE2F19256148FB00DA44C6 /* RoundedImage.swift */; };
@@ -267,6 +269,9 @@
 		C664F27A257EBA13001D8B2F /* ChallengeVideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVideoEntity.swift; sourceTree = "<group>"; };
 		C664F28025834373001D8B2F /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 		C664F29425838224001D8B2F /* LatestVideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestVideoEntity.swift; sourceTree = "<group>"; };
+		C664F2992583F2CC001D8B2F /* SpecificCategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCategoryEntity.swift; sourceTree = "<group>"; };
+		C664F29E2583F565001D8B2F /* CategoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDTO.swift; sourceTree = "<group>"; };
+		C664F2A625842911001D8B2F /* ChallengeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListView.swift; sourceTree = "<group>"; };
 		C66B07FC25572B6400D911CE /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		C66B080125572B9000D911CE /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		C66B080625572BBD00D911CE /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -342,7 +347,6 @@
 		C69782562570489600A13D32 /* NGTInstructorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGTInstructorEntity.swift; sourceTree = "<group>"; };
 		C697826025704D0A00A13D32 /* WorkoutsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCellView.swift; sourceTree = "<group>"; };
 		C697826D2570718000A13D32 /* InstructorDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorDetailsView.swift; sourceTree = "<group>"; };
-		C69782762570727500A13D32 /* ChallengeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListView.swift; sourceTree = "<group>"; };
 		C6AE2F0F2561485B00DA44C6 /* ColorKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorKit.swift; sourceTree = "<group>"; };
 		C6AE2F14256148C800DA44C6 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		C6AE2F19256148FB00DA44C6 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
@@ -605,6 +609,7 @@
 			isa = PBXGroup;
 			children = (
 				C664F27A257EBA13001D8B2F /* ChallengeVideoEntity.swift */,
+				C664F2992583F2CC001D8B2F /* SpecificCategoryEntity.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -620,7 +625,7 @@
 		C664F274257EB944001D8B2F /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C69782762570727500A13D32 /* ChallengeListView.swift */,
+				C664F2A625842911001D8B2F /* ChallengeListView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -1154,6 +1159,7 @@
 			children = (
 				C6E6CFDF255486A000326093 /* ResCategory.swift */,
 				C6E6CFE4255486C400326093 /* CategoryData.swift */,
+				C664F29E2583F565001D8B2F /* CategoryDTO.swift */,
 			);
 			path = catgegory;
 			sourceTree = "<group>";
@@ -1655,6 +1661,7 @@
 				C6E6D01C255499D200326093 /* ResSingleVideo.swift in Sources */,
 				C6E6D0F42554BBF000326093 /* CategoriesRepository.swift in Sources */,
 				C6E6D0A12554B0FE00326093 /* PointsInformationData.swift in Sources */,
+				C664F2A725842911001D8B2F /* ChallengeListView.swift in Sources */,
 				C6E6D0CE2554B7C200326093 /* ResAuthResetPassword.swift in Sources */,
 				C68AA0A52553425700F88201 /* PagesView.swift in Sources */,
 				C6E6D09C2554B02400326093 /* ResPointsInformation.swift in Sources */,
@@ -1697,6 +1704,7 @@
 				C66B080225572B9000D911CE /* CancelBag.swift in Sources */,
 				C6BB04592572AB7500E1FEF4 /* WebAPI.swift in Sources */,
 				C68AA0AA2553443A00F88201 /* UserDefault.swift in Sources */,
+				C664F29F2583F565001D8B2F /* CategoryDTO.swift in Sources */,
 				C6E6CF6C2554623400326093 /* ResAchievements.swift in Sources */,
 				C6E6D0BD2554B58400326093 /* ReqRegister.swift in Sources */,
 				C664F28125834373001D8B2F /* CategoryEntity.swift in Sources */,
@@ -1716,7 +1724,6 @@
 				C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */,
 				C6F5F6CA25646DAC0088CECD /* AchivementType.swift in Sources */,
 				C66B088625575C4C00D911CE /* ImagesInteractor.swift in Sources */,
-				C69782772570727500A13D32 /* ChallengeListView.swift in Sources */,
 				C6E6D1232555556900326093 /* ProfileView.swift in Sources */,
 				C6F5F6DB25648A8B0088CECD /* PersonalInformation.swift in Sources */,
 				C66B083125572F1600D911CE /* MockedModel.swift in Sources */,
@@ -1804,6 +1811,7 @@
 				C657B59A25686B47004D6B93 /* NGTInstructorsCellView.swift in Sources */,
 				C68AA06E25533DA200F88201 /* nrgWayWellness.xcdatamodeld in Sources */,
 				C66B08ED256045D400D911CE /* DetailRow.swift in Sources */,
+				C664F29A2583F2CC001D8B2F /* SpecificCategoryEntity.swift in Sources */,
 				C66B09092560A4D100D911CE /* OnboardingInteractorFake.swift in Sources */,
 				C67158D0257833EB00102C66 /* extentionImage.swift in Sources */,
 				C6DE82EA257C221C00E22B14 /* InstructorDetailsList.swift in Sources */,

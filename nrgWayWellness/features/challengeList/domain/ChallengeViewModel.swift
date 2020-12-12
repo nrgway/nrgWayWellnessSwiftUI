@@ -10,33 +10,55 @@ import SwiftUI
 
 final class ChallengeViewModel: ObservableObject {
     
-    @Published private(set) var state = State.idle
+    @Published private(set) var state = State.loading
+    @Published var challengeVideos: [InstructorVideoEntity] = []
+    @Published var specificCategory: SpecificCategoryEntity? = nil
+    
+    private var challengeVideosAnyCancellable: AnyCancellable?
+    private var specificCategoryAnyCancellable: AnyCancellable?
     
     private var bag = Set<AnyCancellable>()
     
-    private let input = PassthroughSubject<Event, Never>()
-    
-    init() {
-        Publishers.system(
-            initial: state,
-            reduce: Self.reduce,
-            scheduler: RunLoop.main,
-            feedbacks: [
-                Self.whenLoading(),
-                Self.userInput(input: input.eraseToAnyPublisher())
-            ]
-        )
-        .assign(to: \.state, on: self)
-        .store(in: &bag)
+    func getChallengeVideos()  {
+        
+        challengeVideosAnyCancellable = WebAPI.getVideosByInstructor(id:2)
+            .map { $0.data.videos.map(InstructorVideoEntity.init)}
+            .receive(on: RunLoop.main)
+            .eraseToAnyPublisher()
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {  instractorlist in
+                    print(instractorlist)
+                    self.challengeVideos = instractorlist
+                    self.state = State.loaded
+                  }
+            )
+        
+        specificCategoryAnyCancellable = WebAPI.getCategoryById(id: 43)
+            .receive(on: RunLoop.main)
+            .map { $0.data.category}
+            .map(SpecificCategoryEntity.init)
+            .eraseToAnyPublisher()
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {  category in
+                    print(category)
+                    self.specificCategory = category
+                    
+                  }
+            )
+         
+        
+        
+        
     }
+    
+     
+     
     
     deinit {
         bag.removeAll()
     }
     
-    func send(event: Event) {
-        input.send(event)
-    }
+    
 }
 
 // MARK: - Inner Types
@@ -45,62 +67,14 @@ extension ChallengeViewModel {
     enum State {
         case idle
         case loading
-        case instructorMoviesloaded([InstructorVideoEntity])
+        case loaded
         case error(Error)
     }
     
-    enum Event {
-        case onAppear
-        case onSelectInstructorMovie(Int)
-        case onInstructorMoviesLoaded([InstructorVideoEntity])
-        case onFailedToLoadInstructorMovies(Error)
-    }
+    
      
 }
 
 // MARK: - State Machine
 
-extension ChallengeViewModel {
-    static func reduce(_ state: State, _ event: Event) -> State {
-        switch state {
-        case .idle:
-            switch event {
-            case .onAppear:
-                return .loading
-            default:
-                return state
-            }
-        case .loading:
-            switch event {
-            case .onFailedToLoadInstructorMovies(let error):
-                return .error(error)
-                
-            case .onInstructorMoviesLoaded(let instructorVideo):
-                return .instructorMoviesloaded(instructorVideo)
-            default:
-                return state
-            }
-        case .instructorMoviesloaded:
-            return state
-        case .error:
-            return state
-        }
-    }
-    
-    static func whenLoading() -> Feedback<State, Event> {
-        Feedback { (state: State) -> AnyPublisher<Event, Never> in
-            guard case .loading = state else { return Empty().eraseToAnyPublisher() }
-            
-            return WebAPI.getVideosByInstructor(id:2)
-                .map { $0.data.videos.map(InstructorVideoEntity.init)}
-                .map(Event.onInstructorMoviesLoaded)
-                .catch { Just(Event.onFailedToLoadInstructorMovies($0)) }
-                .eraseToAnyPublisher()
-        }
-    }
-    
-    static func userInput(input: AnyPublisher<Event, Never>) -> Feedback<State, Event> {
-        Feedback { _ in input }
-    }
-}
-
+ 

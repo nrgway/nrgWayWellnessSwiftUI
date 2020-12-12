@@ -26,10 +26,10 @@ struct InstructorVideoListView: View {
                 let count = self.data.count
                 let rowCount = ( Double(count) / Double(self.columnCount)).rounded(.up)
                 
-                ForEach(0..<Int(rowCount)) { row in
+                ForEach(0..<Int(rowCount), id: \.self) { row in
                     Spacer(minLength: 8)
                     HStack(spacing: 8) {
-                        ForEach(0..<self.columnCount) { column in
+                        ForEach(0..<self.columnCount, id: \.self) { column in
                             let index = row * columnCount + column
                             if index < count {
                                 
