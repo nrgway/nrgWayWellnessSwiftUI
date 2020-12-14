@@ -26,7 +26,23 @@ struct FormulaEntity: Identifiable {
     let videoUrl : String?
     let workoutName : String?
     
-    var completeAvatarURL: URL? { imageUrl.map { WebAPI.imageBase.appendingPathComponent($0) } }
+    var completeAvatarURL: URL? {
+        if ((imageUrl) != nil) {
+            return  imageUrl.map { WebAPI.imageBase.appendingPathComponent($0) }
+       } else {
+           return URL(string: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png")
+       }
+        
+    }
+    
+    var completeAvatarAsString: String {
+        return  "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png"
+//         if ((imageUrl) != nil) {
+//            return "https://nrg.scdn5.secure.raxcdn.com/storage/" + imageUrl!
+//        } else {
+//            return  "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png"
+//        }
+    }
     
     init(formulaData: FormulaData) {
         

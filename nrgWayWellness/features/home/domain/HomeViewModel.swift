@@ -13,10 +13,13 @@ import SwiftUI
 final class HomeViewModel: ObservableObject {
     @Published var state = State.loading
     
+    @Published var formulas: [FormulaEntity] = []
     @Published var instructors: [InstructorEntity] = []
     @Published var categories: [CategoryEntity] = []
     @Published var videos: [LatestVideoEntity] = []
     
+    
+    private var formulasAnyCancellable: AnyCancellable?
     private var task: AnyCancellable?
     private var categoriesAnyCancellable: AnyCancellable?
     private var videosAnyCancellable: AnyCancellable?
@@ -83,7 +86,17 @@ final class HomeViewModel: ObservableObject {
                   }
             )
         
-        
+        formulasAnyCancellable = WebAPI.getFormulas()
+            .receive(on: RunLoop.main)
+            .map { $0.data.map(FormulaEntity.init)}
+            .eraseToAnyPublisher()
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {  formulalist in
+                    print(formulalist)
+                    
+                    self.formulas = formulalist
+                  }
+            )
         
         
         //

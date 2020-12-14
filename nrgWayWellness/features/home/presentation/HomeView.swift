@@ -37,12 +37,12 @@ struct HomeView : View {
                         VStack(){
                             HomeAvatarView()
                            
-                            WorkoutsView()
+                            WorkoutsView(data: viewModel.formulas)
                             
                             NGTInstructorsView(data: viewModel.instructors)
                             
                             LatestVideosView(data: viewModel.videos)
-                                .padding(.horizontal)
+                               
                             
                             ChallengesView(data: viewModel.categories).onAppear {} 
                             

@@ -62,7 +62,7 @@ struct ChallengeListView: View {
                     VStack(){
                         
                         //InstructorProfileView(data: data)
-                        
+                        SpecificCategoryView(data: viewModel.specificCategory!)
                         Spacer()
                         
                         InstructorVideoListView(instructorVideos: viewModel.challengeVideos)

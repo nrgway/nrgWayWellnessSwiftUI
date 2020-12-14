@@ -9,7 +9,7 @@ import Foundation
 
 struct ResSingleVideo : Codable {
 
-        let data : SingleVideoData?
+        let data : SingleVideoData
         let status : Bool?
 
         enum CodingKeys: String, CodingKey {

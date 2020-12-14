@@ -15,12 +15,12 @@ enum WebAPI {
    
     
     // videos come from a different CDN:
-    static let videoURL = "https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com//5fc0f1fb5985b.mov"
+    static let videoURL = "https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com/5fc0f1fb5985b.mov"
 
     //THere's an "ios streaming" version of that link too...
     static let videoURLstreaming = "https://e90543a74e77be593c0d-fe6114d9276a31f9b87d53e8397ddd92.iosr.cf5.rackcdn.com"
 
-    static let videoBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/")!
+    static let videoBase = URL(string: "https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com")!
     
     static let imageBase = URL(string: "https://nrg.scdn5.secure.raxcdn.com/storage")!
     
@@ -127,9 +127,9 @@ enum WebAPI {
         return agent.run(request!)
     }
     
-    static func getVideo() -> AnyPublisher<ResSingleVideo, Error> {
+    static func getVideo(id: Int) -> AnyPublisher<ResSingleVideo, Error> {
         var request = URLComponents(
-            url: base.appendingPathComponent("getInfo"),
+            url: base.appendingPathComponent("videos/\(id)"),
             resolvingAgainstBaseURL: true)?
             .makeHTTPS()
             .request
@@ -139,6 +139,20 @@ enum WebAPI {
         request?.setValue(token, forHTTPHeaderField: "Authorization" )
         
         return agent.run(request!)
+    }
+    
+    static func getVideoURLRequest(id: Int) -> URLRequest {
+        var request = URLComponents(
+            url: base.appendingPathComponent("videos/\(id)"),
+            resolvingAgainstBaseURL: true)?
+            .makeHTTPS()
+            .request
+         
+        request?.httpMethod = "GET"
+        request?.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request?.setValue(token, forHTTPHeaderField: "Authorization" )
+        
+        return request!
     }
     
     static func getVideosFavorites() -> AnyPublisher<ResVideosFavorites, Error> {

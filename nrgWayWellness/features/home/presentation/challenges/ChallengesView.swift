@@ -17,11 +17,13 @@ struct ChallengesView: View {
     }
     
     var body : some View{
-        VStack(spacing: 15){
+        VStack(){
             
             HStack{
 
-                Text("CHALLENGES").font(.title)
+                Text("CHALLENGES")
+                    .font(.system(size: 24))
+                    .padding(.leading, 8)
                     .foregroundColor(Color.white)
                 
                 Spacer()

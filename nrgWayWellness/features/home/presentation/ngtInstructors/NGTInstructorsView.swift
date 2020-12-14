@@ -20,8 +20,9 @@ struct NGTInstructorsView: View {
             
             HStack{
                 Text("NGT Instructors")
-                    .font(.title)
+                    .font(.system(size: 24))
                     .foregroundColor(grayHomeTitileColor)
+                    .padding(.leading, 8) 
                 
                 Spacer()
             }
@@ -36,7 +37,8 @@ struct NGTInstructorsView: View {
                     }
                 }
             }
-        }.padding(.top, 6)
+        }
+        .padding(.top, 16)
     }
     
 }

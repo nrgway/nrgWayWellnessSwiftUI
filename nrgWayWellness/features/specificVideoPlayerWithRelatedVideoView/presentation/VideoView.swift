@@ -203,9 +203,11 @@ struct VideoPlayerContainerView : View {
 }
 
 // This is the main SwiftUI view for this app, containing a single PlayerContainerView
-//"https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+//"https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com/5fb4f718f19f8.mov"
 struct VideoView: View {
+    let videoURL: URL
+    
     var body: some View {
-        VideoPlayerContainerView(url: URL(string: "https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com")!)
+        VideoPlayerContainerView(url: videoURL)
     }
 }

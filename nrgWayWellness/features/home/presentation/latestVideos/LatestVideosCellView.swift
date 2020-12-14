@@ -16,30 +16,49 @@ struct LatestVideosCellView : View {
     
     @State var fullName: String = ""
     @State var avatarUrl: String = ""
+    @State var difficultyTitle = "Beginner"
     
     init(data : LatestVideoEntity) {
         video = data
         fullName = (data.title ?? "")
+        
+        
+        switch data.difficultyId {
+        
+        case 1:
+            difficultyTitle = "Beginner"
+            
+        case 2:
+            difficultyTitle = "Intermediate"
+            
+        case 3:
+            difficultyTitle = "Advanced"
+            
+        default:
+            difficultyTitle = "Beginner"
+        }
+        
     }
+    
+    
     var body : some View {
         
         ZStack{
             
-//            NavigationLink(destination: InstructorDetailsView(show: self.$show), isActive: self.$show) {
-//                
-//                Text("")
-//            }
+            NavigationLink(destination: SpecificVideoPlayerWithRelatedVideoView(show: self.$show), isActive: self.$show) {
+                Text("")
+            }
             VStack(alignment: .center) {
                 ZStack() {
                     
                     video.completeThumbnailURL.map { url in
                         KFImage(url)
                             .resizable()
-                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            //.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            //.frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .scaledToFit()
                             .cornerRadius(5)
-                            .padding(5)
+                            //.padding(5)
                     }
                     
                     VStack(alignment: .center) {
@@ -47,25 +66,25 @@ struct LatestVideosCellView : View {
                         HStack() {
                             
                             Button(action: {
-                                    }) {
-                                            Text("Intermediate")
-                                                .font(.system(.headline, design: .rounded))
-                                                .padding(.top,10)
-                                                .padding(.bottom,5)
-                                            
-                                                .foregroundColor(.white)
-                                                .background(lightBrownColor)
-                                                .cornerRadius(8)
-                                                 
+                            }) {
+                                
+                                Text(difficultyTitle)
+                                    .font(.system(size: 10))
+                                    .padding(5)
+                                    .foregroundColor(.white)
+                                    .background(lightBrownColor)
+                                    .cornerRadius(8)
+                                
                             }
                             
                             Spacer()
                             
                             
                         }
+                        .padding(25)
                         
                         Spacer()
-                            
+                        
                         HStack(alignment: .center) {
                             Image("play")
                                 .resizable()
@@ -80,26 +99,30 @@ struct LatestVideosCellView : View {
                             // name
                             Text(video.title ?? "")
                                 .foregroundColor(.white)
-                                .font(.headline)
+                                .font(.system(size: 10))
                             
                             Spacer()
                             
                             // post time
                             Text(video.title ?? "")
                                 .foregroundColor(.white)
-                                .font(.subheadline)
+                                .font(.system(size: 10))
                         }
+                        .padding(25)
                     }
-                    .aspectRatio(3/2, contentMode: .fit)
+                    //.aspectRatio(3/2, contentMode: .fit)
                 }
             }
+            .aspectRatio(3/2, contentMode: .fit)
+            
             .onTapGesture {
                 self.show.toggle()
             }
             
         }
+        //.aspectRatio(3/2, contentMode: .fit)
     }
 }
- 
- 
- 
+
+
+

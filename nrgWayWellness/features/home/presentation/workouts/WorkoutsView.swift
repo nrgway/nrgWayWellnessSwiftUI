@@ -9,13 +9,21 @@
 import SwiftUI
 
 struct WorkoutsView: View {
+    
+    var formulas : [FormulaEntity]
+    
+    init(data : [FormulaEntity]) {
+        formulas = data
+    }
+    
     var body: some View {
         VStack(){
             HStack{
 
                 Text("Workouts")
-                    .font(.title)
+                    .font(.system(size: 24))
                     .foregroundColor(grayHomeTitileColor)
+                    .padding(.leading, 8)
                 
                 Spacer()
                 
@@ -27,9 +35,8 @@ struct WorkoutsView: View {
                 
                 HStack(spacing: 8){
                     
-                    ForEach(workouts){i in
+                    ForEach(formulas) { i in
                         WorkoutsCellView(data: i)
-                        
                     }
                 }
             }
@@ -39,11 +46,5 @@ struct WorkoutsView: View {
     }
 }
  
-
-
-struct WorkoutsView_Previews: PreviewProvider {
-    static var previews: some View {
-        WorkoutsView()
-    }
-}
+ 
 

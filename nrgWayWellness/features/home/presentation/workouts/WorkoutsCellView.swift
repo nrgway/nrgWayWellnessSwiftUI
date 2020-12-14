@@ -8,36 +8,52 @@
 
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct WorkoutsCellView : View {
     
-    var data : WorkoutEntity
+    var data : FormulaEntity
+    
     @State var show = false
     
     var body : some View {
         
-        ZStack{
+        ZStack(alignment: .center){
             
-//            NavigationLink(destination: InstructorDetailsView(show: self.$show), isActive: self.$show) {
-//                
-//                Text("")
-//            }
+//                data.completeAvatarURL.map { url in
+//                    KFImage(url)
+//                        .resizable()
+//                        .frame(width: 100, height: 100)
+//                        .aspectRatio(contentMode: .fit)
+//                        .clipShape(Circle())
+//                        .overlay(Circle().stroke(Color.white, lineWidth: 1))
+//                        .padding(5)
+//                }
             
-            VStack(){
-                
-                Image(data.image)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.white, lineWidth: 1))
-                 
-                
-            }.onTapGesture {
-                
-                self.show.toggle()
-            }
             
+            KFImage(URL(string: data.completeAvatarAsString))
+                .resizable()
+                .frame(width: 100, height: 100)
+                .aspectRatio(contentMode: .fit)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.white, lineWidth: 1))
+            
+            
+            Text(data.name ?? "")
+                .font(.system(size: 10))
+                .foregroundColor(Color.white)
+            
+//                Image(data.image)
+//                    .resizable()
+//                    .frame(width: 100, height: 100)
+//                    .aspectRatio(contentMode: .fit)
+//                    .clipShape(Circle())
+//                    .overlay(Circle().stroke(Color.white, lineWidth: 1))
+             
+            
+        }.onTapGesture {
+            
+            self.show.toggle()
         }
     }
 }

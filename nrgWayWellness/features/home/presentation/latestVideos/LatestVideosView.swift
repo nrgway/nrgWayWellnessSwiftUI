@@ -17,42 +17,43 @@ struct LatestVideosView: View {
     }
     
     var body : some View{
-        VStack(spacing: 5){
+        ZStack(alignment: .top){
             
             HStack{
 
                 Text("Latest Videos")
-                    .font(.title)
+                    .font(.system(size: 24))
                     .foregroundColor(grayHomeTitileColor)
+                    .padding(.leading, 8)
                 
                 Spacer()
                 
                 Button(action: {
-                    
                 }) {
-                    
                     Text("VIEW ALL")
-                    
-                }.foregroundColor(lightblueColor)
-                
-                
-            }.padding(.trailing, 5)
-            .padding(.leading,5)
+                }
+                .font(.system(size: 14))
+                .padding(.trailing, 8)
+                .foregroundColor(lightblueColor)
+            }
             
-            
-            ScrollView(.horizontal, showsIndicators: false) {
+            VStack {
+                Spacer(minLength: 8)
                 
-                HStack(spacing: 8){
+                ScrollView(.horizontal, showsIndicators: false) {
                     
-                    ForEach(latestVideos){i in
-                        LatestVideosCellView(data: i)
-                    
+                    HStack(){
+                        ForEach(latestVideos){i in
+                            LatestVideosCellView(data: i)
+                        }
                     }
                 }
-            }.aspectRatio(3/2, contentMode: .fit)
-            
+                .aspectRatio(3/2, contentMode: .fit)
+                .padding(4)
+            }
              
         }
+        .padding(.top, 16)
     }
     
 }

@@ -48,7 +48,10 @@ let loginSecondBlueUIColor = UIColor(named: "loginSecondBlueColor")
 let grayHomeTitileColor = Color("grayHomeTitile")
 let grayHomeTitileUIColor = UIColor(named: "grayHomeTitile")
 
- 
+let challengItemColor = Color("challengItemColor")
+let challengItemUIColor = UIColor(named: "challengItemColor")
+
+
 //extension Color {
 //    public static var navyBlueColor: Color {
 //        return Color(red: 4.0/255.0, green: 54.0/255.0, blue: 89/255.0, opacity: 1.0)
