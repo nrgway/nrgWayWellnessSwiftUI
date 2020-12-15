@@ -225,6 +225,8 @@
 		C6F5F6CA25646DAC0088CECD /* AchivementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6C925646DAC0088CECD /* AchivementType.swift */; };
 		C6F5F6D0256480B90088CECD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6CF256480B90088CECD /* DetailView.swift */; };
 		C6F5F6DB25648A8B0088CECD /* PersonalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6DA25648A8B0088CECD /* PersonalInformation.swift */; };
+		C6FDF9202588AB9F00D7A880 /* RelatedVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */; };
+		C6FDF9252588AC8500D7A880 /* RelatedVideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -466,6 +468,8 @@
 		C6F5F6C925646DAC0088CECD /* AchivementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementType.swift; sourceTree = "<group>"; };
 		C6F5F6CF256480B90088CECD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		C6F5F6DA25648A8B0088CECD /* PersonalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformation.swift; sourceTree = "<group>"; };
+		C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoListView.swift; sourceTree = "<group>"; };
+		C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -663,6 +667,8 @@
 			children = (
 				C6DE82F4257CB9FD00E22B14 /* VideoView.swift */,
 				C689A3F92577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift */,
+				C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */,
+				C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -1681,6 +1687,7 @@
 				C697823B256F955600A13D32 /* FinishSignUpView.swift in Sources */,
 				C66B081625572C3400D911CE /* NetworkingHelpers.swift in Sources */,
 				C6BB04632572AC4C00E1FEF4 /* extensionPublisher.swift in Sources */,
+				C6FDF9252588AC8500D7A880 /* RelatedVideoCellView.swift in Sources */,
 				C664F2B625857FF0001D8B2F /* SingleVideoDataCategoryPivot.swift in Sources */,
 				C657B5B325686DF6004D6B93 /* ChallengesView.swift in Sources */,
 				C68AA06925533DA200F88201 /* AppDelegate.swift in Sources */,
@@ -1700,6 +1707,7 @@
 				C68AA0A12553423200F88201 /* PageViewController.swift in Sources */,
 				C67FD3372562ABAF00D261F3 /* AvatarIntroView.swift in Sources */,
 				C6E6D01C255499D200326093 /* ResSingleVideo.swift in Sources */,
+				C6FDF9202588AB9F00D7A880 /* RelatedVideoListView.swift in Sources */,
 				C6E6D0F42554BBF000326093 /* CategoriesRepository.swift in Sources */,
 				C6E6D0A12554B0FE00326093 /* PointsInformationData.swift in Sources */,
 				C664F2A725842911001D8B2F /* ChallengeListView.swift in Sources */,

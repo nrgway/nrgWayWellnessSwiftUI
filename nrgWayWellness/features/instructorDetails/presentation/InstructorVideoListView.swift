@@ -15,7 +15,6 @@ struct InstructorVideoListView: View {
         data = instructorVideos
     }
      
-    
     private let columnCount: Int = 2
     
     var body : some View {
@@ -28,7 +27,7 @@ struct InstructorVideoListView: View {
                 
                 ForEach(0..<Int(rowCount), id: \.self) { row in
                     Spacer(minLength: 8)
-                    HStack(spacing: 8) {
+                    HStack(spacing: 4) {
                         ForEach(0..<self.columnCount, id: \.self) { column in
                             let index = row * columnCount + column
                             if index < count {
@@ -44,8 +43,6 @@ struct InstructorVideoListView: View {
                     
                 }.frame(maxWidth: .infinity)
             }
-            
-            
         }
         .padding()
         .animation(.spring())

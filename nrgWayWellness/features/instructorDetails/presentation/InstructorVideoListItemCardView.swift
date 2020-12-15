@@ -13,63 +13,112 @@ struct InstructorVideoListItemCardView: View {
     
     
     @State var show  = false
+    @State var difficultyTitle = "Beginner"
     
     var data: InstructorVideoEntity
     
     init(instructorVideo: InstructorVideoEntity) {
         data = instructorVideo
+        
+        switch data.difficultyId {        
+        case 1:
+            difficultyTitle = "Beginner"
+            
+        case 2:
+            difficultyTitle = "Intermediate"
+            
+        case 3:
+            difficultyTitle = "Advanced"
+            
+        default:
+            difficultyTitle = "Beginner"
+        }
+        
     }
      
     var body : some View {
         
-        VStack(spacing: 8){
+        ZStack{
             
-            NavigationLink(destination: SpecificVideoPlayerWithRelatedVideoView(show: $show), isActive: $show) {
-                
-                data.completeAvatarURL.map { url in
-                    KFImage(url)
-                        .resizable()
+            NavigationLink(destination: SpecificVideoPlayerWithRelatedVideoView(show: self.$show), isActive: self.$show) {
+                Text("")
+            }
+            VStack {
+                ZStack() {
+                    
+                    data.completeAvatarURL.map { url in
+                        KFImage(url)
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(5) 
+                    }
+                    
+                    VStack(alignment: .center) {
                         
-                        .renderingMode(.original)
-                        .aspectRatio(3/2, contentMode: .fit)
-//                        .frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25)
-                        .scaledToFit()
-                        .cornerRadius(22)
-
+                        HStack() {
+                            
+                            Button(action: {
+                            }) {
+                                
+                                Text(difficultyTitle)
+                                    .font(.system(size: 5))
+                                    .padding(3)
+                                    .foregroundColor(.white)
+                                    .background(lightBrownColor)
+                                    .cornerRadius(8)
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            
+                        }
+                        .padding(.top, 5)
+                        .padding(.leading, 5)
+                        
+                        Spacer()
+                        
+                        HStack(alignment: .center) {
+                            Image("play")
+                                .resizable()
+                                .frame(width: 30, height: 30, alignment: .center)
+                        }
+                        .frame(maxWidth: .infinity)
+                        
+                        Spacer()
+                        
+                        HStack() {
+                            Spacer()
+                            // post time
+                            Text(String(data.length ?? 0))
+                                .foregroundColor(.white)
+                                .font(.system(size: 10))
+                        }
+                        .padding(.bottom, 5)
+                        .padding(.trailing, 5)
+                       // .padding(25)
+                    }
+                    //.aspectRatio(3/2, contentMode: .fit)
                 }
                 
-//                KFImage(URL(string: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png"))
-//                    .resizable()
-//                    .renderingMode(.original)
-//                    .frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25)
-//                    .scaledToFit()
-//                    .cornerRadius(22)
-                 
+                HStack(alignment: .lastTextBaseline) {
+                    
+                    
+                    Text(data.title ?? "")
+                        .lineLimit(1)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(grayColor)
+                        .font(.system(size: 10))
+                    
+                }
+                .padding(.bottom, 5)
+            }
+            //.aspectRatio(3/2, contentMode: .fit)
+            
+            .onTapGesture {
+                self.show.toggle()
             }
             
-            HStack{
-                
-                VStack(alignment: .leading, spacing: 4){
-                
-                    Text(data.title ?? "")
-                        .fontWeight(.regular)
-                        .foregroundColor(grayColor)
-                    
-//                    Text(data.).foregroundColor(grayColor)
-//                        .padding(.bottom, 5)
-                    
-                }
-                
-                Spacer()
-                
-                Button(action: {
-                    
-                }) {
-                    
-                     
-                    
-                }.padding(.trailing, 15)
-            }
         }
     }
 }

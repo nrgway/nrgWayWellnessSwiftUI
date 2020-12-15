@@ -58,14 +58,6 @@ struct InstructorDetailsView: View {
     }
     
     private func list(of instructorVideos: [InstructorVideoEntity]) -> some View {
-        //        let x =  List(instructorVideos) { formula in
-        //            NavigationLink(
-        //                destination: VideoPlayerView(),
-        //                //destination: MovieDetailView(viewModel: MovieDetailViewModel(movieID: movie.id)),
-        //                label: { FormulaCardView(formula: formula) }
-        //            )
-        //        }
-        
         let y =
             VStack(){
                 ScrollView(.vertical){
@@ -88,56 +80,6 @@ struct InstructorDetailsView: View {
         
         return y
     }
-    
-    
-    //    struct InstructorDetailsList: View {
-    //        let instructorVideos: [InstructorVideoEntity]
-    //
-    //        init(data: [InstructorVideoEntity]) {
-    //            instructorVideos = data
-    //        }
-    //
-    //        var body: some View {
-    //            VStack(){
-    //                VStack(){
-    //                    HStack(){
-    //
-    //                        Button(action: {
-    //
-    //                            self.show.toggle()
-    //
-    //                        }) {
-    //
-    //                            Image("Back").renderingMode(.original)
-    //                                .padding(8)
-    //                        }
-    //
-    //                        Spacer()
-    //
-    //                    }
-    //                    .padding(.leading,8)
-    //                    .navigationBarTitle("")
-    //                    .navigationBarHidden(true)
-    //                    .navigationBarBackButtonHidden(true)
-    //
-    //                    VStack(){
-    //
-    //                        InstructorProfileView(data: data)
-    //
-    //                        Spacer()
-    //
-    //                        InstructorVideoListView()
-    //
-    //
-    //                    }
-    //                }
-    //
-    //
-    //            }
-    //        }
-    //    }
-    
-    
 }
 
 
