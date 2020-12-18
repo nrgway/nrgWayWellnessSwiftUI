@@ -47,7 +47,7 @@ struct InstructorDetailsView: View {
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
+            return LoadingView().eraseToAnyView()
             
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
@@ -70,7 +70,6 @@ struct InstructorDetailsView: View {
                         Spacer()
                         
                         InstructorVideoListView(instructorVideos: instructorVideos)
-                        
                         
                     }
                 }

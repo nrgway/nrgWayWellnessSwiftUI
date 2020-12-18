@@ -44,6 +44,16 @@ struct FormulaEntity: Identifiable {
 //        }
     }
     
+    var completeVideoUrl: URL? {
+        return URL(string: "https://nrg.scdn5.secure.raxcdn.com/storage/images/categories/5f4d8de328972.jpg")
+//        if ((imageUrl) != nil) {
+//            return  imageUrl.map { WebAPI.imageBase.appendingPathComponent($0) }
+//       } else {
+//           return URL(string: "https://nrg.scdn5.secure.raxcdn.com/storage/images/categories/5f4d8de328972.jpg")
+//       }
+        
+    }
+    
     init(formulaData: FormulaData) {
         
         cardioName = formulaData.cardioName

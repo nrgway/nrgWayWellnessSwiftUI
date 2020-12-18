@@ -11,13 +11,13 @@ import Alamofire
 
 struct WorkOutView: View {
     @State var show  = false
-    @ObservedObject var viewModel: WorkOutViewModel
-        
+    @ObservedObject var viewModel = WorkOutViewModel()
+    
     var body: some View {
         NavigationView {
             content.navigationBarTitle("")
         }
-        .onAppear { self.viewModel.send(event: .onAppear) }
+        .onAppear { self.viewModel.getFormulas() }
     }
     
     private var content: some View {
@@ -26,22 +26,25 @@ struct WorkOutView: View {
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
+            return LoadingView().eraseToAnyView()
+            
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
-        case .loaded(let formulas):
-            return list(of: formulas).eraseToAnyView()
+            
+        case .loaded:
+            return list().eraseToAnyView()
         }
     }
     
-    private func list(of formulas: [FormulaEntity]) -> some View {
-        return List(formulas) { formula in
-            NavigationLink(
-                destination: SpecificVideoPlayerWithRelatedVideoView(show: $show),
-                //destination: MovieDetailView(viewModel: MovieDetailViewModel(movieID: movie.id)),
-                label: { FormulaCardView(formula: formula) }
-            )
+    private func list() -> some View {
+        
+        let v = VStack {
+            WorkoutStepperView()
+            FormulaListView(data: viewModel.formulas)
         }
+         
+        return v
+        
     }
     
 }

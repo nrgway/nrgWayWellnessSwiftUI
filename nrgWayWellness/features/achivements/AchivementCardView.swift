@@ -17,9 +17,13 @@ struct AchivementCardView: View {
         
         VStack(spacing: 8){
             
-            NavigationLink(destination: DetailView(show: $show), isActive: $show) {
+            NavigationLink(destination: SpecificVideoPlayerWithRelatedVideoView(show: $show), isActive: $show) {
                 
-                Image("21").renderingMode(.original).resizable().frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25).cornerRadius(15)
+                Image("21")
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25).cornerRadius(15)
+                
             }
             
             HStack{
@@ -39,7 +43,8 @@ struct AchivementCardView: View {
                     
                 }) {
                     
-                    Image("option").renderingMode(.original)
+                    Image("option")
+                        .renderingMode(.original)
                     
                 }.padding(.trailing, 15)
             }

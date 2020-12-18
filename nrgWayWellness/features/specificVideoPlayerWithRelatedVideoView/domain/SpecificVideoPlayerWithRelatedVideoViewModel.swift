@@ -14,12 +14,24 @@ final class SpecificVideoPlayerWithRelatedVideoViewModel: ObservableObject {
     
     @Published private(set) var state = State.loading
     @Published var video: VideoEntity? = nil
-    
+    @Published var latestVideos: [LatestVideoEntity] = []
     private var specificVideoAnyCancellable: AnyCancellable?
-    
+    private var videosAnyCancellable: AnyCancellable?
     private var bag = Set<AnyCancellable>()
     
-    func getVideo()  {
+    func getLatestVideo()  {
+        
+        videosAnyCancellable = WebAPI.getListOfvideos()
+            .receive(on: RunLoop.main)
+            .map { $0.data.map(LatestVideoEntity.init)}
+            .eraseToAnyPublisher()
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {  videolist in
+                    print(videolist)
+                    self.state = State.loaded
+                    self.latestVideos = videolist
+                  }
+            )
         
         //        specificVideoAnyCancellable = WebAPI.getVideo(id:77)
         //

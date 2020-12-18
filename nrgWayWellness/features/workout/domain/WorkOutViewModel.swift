@@ -10,33 +10,32 @@ import Combine
 import SwiftUI
 
 final class WorkOutViewModel: ObservableObject {
-    @Published private(set) var state = State.idle
-    
+    @Published var state = State.loading
+    @Published var formulas: [FormulaEntity] = []
+    private var formulasAnyCancellable: AnyCancellable?
     private var bag = Set<AnyCancellable>()
     
-    private let input = PassthroughSubject<Event, Never>()
-    
-    init() {
-        Publishers.system(
-            initial: state,
-            reduce: Self.reduce,
-            scheduler: RunLoop.main,
-            feedbacks: [
-                Self.whenLoading(),
-                Self.userInput(input: input.eraseToAnyPublisher())
-            ]
-        )
-        .assign(to: \.state, on: self)
-        .store(in: &bag)
+    func getFormulas() {
+        formulasAnyCancellable = WebAPI.getFormulas()
+            .receive(on: RunLoop.main)
+            .map { $0.data.map(FormulaEntity.init)}
+            .eraseToAnyPublisher()
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {  formulalist in
+                    print(formulalist)
+                    self.state = State.loaded
+                    self.formulas = formulalist
+                  }
+            )
     }
+    
+     
     
     deinit {
         bag.removeAll()
     }
     
-    func send(event: Event) {
-        input.send(event)
-    }
+     
 }
 
 // MARK: - Inner Types
@@ -45,60 +44,9 @@ extension WorkOutViewModel {
     enum State {
         case idle
         case loading
-        case loaded([FormulaEntity])
+        case loaded
         case error(Error)
     }
-    
-    enum Event {
-        case onAppear
-        case onSelectMovie(Int)
-        case onMoviesLoaded([FormulaEntity])
-        case onFailedToLoadMovies(Error)
-    }
-     
 }
 
-// MARK: - State Machine
 
-extension WorkOutViewModel {
-    static func reduce(_ state: State, _ event: Event) -> State {
-        switch state {
-        case .idle:
-            switch event {
-            case .onAppear:
-                return .loading
-            default:
-                return state
-            }
-        case .loading:
-            switch event {
-            case .onFailedToLoadMovies(let error):
-                return .error(error)
-            case .onMoviesLoaded(let formula):
-                return .loaded(formula)
-            default:
-                return state
-            }
-        case .loaded:
-            return state
-        case .error:
-            return state
-        }
-    }
-    
-    static func whenLoading() -> Feedback<State, Event> {
-        Feedback { (state: State) -> AnyPublisher<Event, Never> in
-            guard case .loading = state else { return Empty().eraseToAnyPublisher() }
-            
-            return WebAPI.getFormulas()
-                .map { $0.data.map(FormulaEntity.init)}
-                .map(Event.onMoviesLoaded)
-                .catch { Just(Event.onFailedToLoadMovies($0)) }
-                .eraseToAnyPublisher()
-        }
-    }
-    
-    static func userInput(input: AnyPublisher<Event, Never>) -> Feedback<State, Event> {
-        Feedback { _ in input }
-    }
-}

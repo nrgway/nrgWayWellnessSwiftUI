@@ -227,6 +227,10 @@
 		C6F5F6DB25648A8B0088CECD /* PersonalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6DA25648A8B0088CECD /* PersonalInformation.swift */; };
 		C6FDF9202588AB9F00D7A880 /* RelatedVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */; };
 		C6FDF9252588AC8500D7A880 /* RelatedVideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */; };
+		C6FDF92A2589439500D7A880 /* SpecificVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF9292589439500D7A880 /* SpecificVideoView.swift */; };
+		C6FDF930258A2DBF00D7A880 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF92F258A2DBF00D7A880 /* LoadingView.swift */; };
+		C6FDF935258A41EE00D7A880 /* FormulaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF934258A41EE00D7A880 /* FormulaListView.swift */; };
+		C6FDF93B258A951100D7A880 /* WorkoutStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF93A258A951100D7A880 /* WorkoutStepperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -470,6 +474,10 @@
 		C6F5F6DA25648A8B0088CECD /* PersonalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformation.swift; sourceTree = "<group>"; };
 		C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoListView.swift; sourceTree = "<group>"; };
 		C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoCellView.swift; sourceTree = "<group>"; };
+		C6FDF9292589439500D7A880 /* SpecificVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificVideoView.swift; sourceTree = "<group>"; };
+		C6FDF92F258A2DBF00D7A880 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C6FDF934258A41EE00D7A880 /* FormulaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaListView.swift; sourceTree = "<group>"; };
+		C6FDF93A258A951100D7A880 /* WorkoutStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStepperView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -669,6 +677,7 @@
 				C689A3F92577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift */,
 				C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */,
 				C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */,
+				C6FDF9292589439500D7A880 /* SpecificVideoView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -692,6 +701,7 @@
 				C67FD3402562BDC300D261F3 /* ProductCard.swift */,
 				C657B5912568510F004D6B93 /* RoundedCorner.swift */,
 				C624BB702572F3E600982074 /* CustomToolBarView.swift */,
+				C6FDF92F258A2DBF00D7A880 /* LoadingView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -907,8 +917,10 @@
 		C689A3E8257784C0006C43BA /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C6FDF939258A949500D7A880 /* steps */,
 				C6E6D127255555BF00326093 /* WorkOutView.swift */,
 				C689A3F425778FA1006C43BA /* FormulaCardView.swift */,
+				C6FDF934258A41EE00D7A880 /* FormulaListView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -1530,6 +1542,14 @@
 			path = detail;
 			sourceTree = "<group>";
 		};
+		C6FDF939258A949500D7A880 /* steps */ = {
+			isa = PBXGroup;
+			children = (
+				C6FDF93A258A951100D7A880 /* WorkoutStepperView.swift */,
+			);
+			path = steps;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1694,6 +1714,7 @@
 				C6BB0433257168F700E1FEF4 /* LoginViewModel.swift in Sources */,
 				C657B5AD25686DAF004D6B93 /* LatestVideosCellView.swift in Sources */,
 				C66B08A8255FF97800D911CE /* extensionInt.swift in Sources */,
+				C6FDF930258A2DBF00D7A880 /* LoadingView.swift in Sources */,
 				C664F29525838224001D8B2F /* LatestVideoEntity.swift in Sources */,
 				C6E6CFF52554882300326093 /* VideosForCategoryDataCreator.swift in Sources */,
 				C65680462586732B001F60D0 /* VideoEntity.swift in Sources */,
@@ -1762,6 +1783,7 @@
 				C664F28125834373001D8B2F /* CategoryEntity.swift in Sources */,
 				C624BB712572F3E600982074 /* CustomToolBarView.swift in Sources */,
 				C66B09042560A29D00D911CE /* OnboardingIntractable.swift in Sources */,
+				C6FDF93B258A951100D7A880 /* WorkoutStepperView.swift in Sources */,
 				C68AA0AD2553499700F88201 /* SignUpView.swift in Sources */,
 				C68AA0A82553440100F88201 /* DataStore.swift in Sources */,
 				C6978240256F982800A13D32 /* GetInformationSignUpView.swift in Sources */,
@@ -1774,6 +1796,7 @@
 				C6E6CFFC255495F000326093 /* ResVideosLog.swift in Sources */,
 				C6DE82F5257CB9FD00E22B14 /* VideoView.swift in Sources */,
 				C6DE82C5257A8D0800E22B14 /* UrlImageView.swift in Sources */,
+				C6FDF935258A41EE00D7A880 /* FormulaListView.swift in Sources */,
 				C6E6CFB125547D9A00326093 /* InstructorData.swift in Sources */,
 				C6F5F6CA25646DAC0088CECD /* AchivementType.swift in Sources */,
 				C66B088625575C4C00D911CE /* ImagesInteractor.swift in Sources */,
@@ -1786,6 +1809,7 @@
 				C6E6D128255555BF00326093 /* WorkOutView.swift in Sources */,
 				C6DE82DA257C11EB00E22B14 /* InstructorDetailsViewModel.swift in Sources */,
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
+				C6FDF92A2589439500D7A880 /* SpecificVideoView.swift in Sources */,
 				C66B08A3255FF94B00D911CE /* extensionString.swift in Sources */,
 				C6289B912565330C00948CD4 /* User.swift in Sources */,
 				C6DE82BB257A2EEB00E22B14 /* InstructorEntity.swift in Sources */,

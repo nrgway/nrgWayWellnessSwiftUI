@@ -13,28 +13,28 @@ struct MainTabView: View {
     @State private var selection = 0
     var body: some View {
         ZStack(alignment: .top) {
-            
-            
+
+
             TabbedView()
+            //AppTabbedView()
                    ZStack() {
-                       
-                    
+
+
                     //.background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
-                    
-                    
-                    
+
+
+
                     Rectangle()
                      .foregroundColor(navyBlueColor.opacity(0.0))
                      .background(CustomToolBarView())
                         .edgesIgnoringSafeArea(.top)
                         .frame(height: 20)
                    }
-           
-            
+
+
         }
-        //AppTabbedView()
         
-        
+        //TabbedView()
     }
 }
 
@@ -73,23 +73,15 @@ struct TabbedView : View {
                 ProfileView(viewModel: ProfileViewModel())
             }
             
-             
             
             VStack{
-                 
-                
                 HStack{
-                    
                     Button(action: {
-                        
                         self.tab = 0
-                        
                     }) {
-                        
                         Image(systemName: "house.fill")
                             .font(.title)
                             .foregroundColor(self.tab == 0 ? .white : Color.white.opacity(0.25))
-                        
                     }
                     
                     Spacer(minLength: 0)

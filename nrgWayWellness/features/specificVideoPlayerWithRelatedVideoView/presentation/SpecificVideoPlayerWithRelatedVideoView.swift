@@ -38,7 +38,7 @@ struct SpecificVideoPlayerWithRelatedVideoView: View {
             .padding(15)
         
             //content.onAppear { self.viewModel.getVideo(id: 77) }
-            content.onAppear { self.getVideo(id: 77) }
+            content.onAppear { self.viewModel.getLatestVideo() }
             
         }
         
@@ -79,7 +79,7 @@ struct SpecificVideoPlayerWithRelatedVideoView: View {
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
+            return LoadingView().eraseToAnyView()
             
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
@@ -93,12 +93,42 @@ struct SpecificVideoPlayerWithRelatedVideoView: View {
     private func list() -> some View {
         
         let y = VStack() {
-            Text(viewModel.video?.title ?? /*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//            Text(viewModel.video?.title ?? /*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//
+//            if((viewModel.video?.completeUrlHighAsURL) != nil) {
+//                VideoView(videoURL: (viewModel.video?.completeUrlHighAsURL)!)
+//                    .aspectRatio(3/2, contentMode: .fit)
+//            }
             
-            if((viewModel.video?.completeUrlHighAsURL) != nil) {
-                VideoView(videoURL: (viewModel.video?.completeUrlHighAsURL)!)
-                    .aspectRatio(3/2, contentMode: .fit)
+          
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                
+                VStack() {
+                    
+                    ZStack{
+//                        Image("")
+//                            .resizable()
+//                            .background(Color.black)
+                            
+                        VideoView()
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                                
+                    }
+                    .background(Color.black)
+                    .aspectRatio(1, contentMode: .fit)
+                    .cornerRadius(10)
+                    .padding(5)
+                    
+                    SpecificVideoView()
+                    
+                    RelatedVideoListView(data: viewModel.latestVideos)
+                    
+                    Spacer(minLength: 100)
+                }
+                
             }
+           
            
         }
              

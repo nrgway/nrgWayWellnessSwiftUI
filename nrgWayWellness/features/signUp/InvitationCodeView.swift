@@ -67,13 +67,7 @@ struct InvitationCodeView: View {
                                 .padding(.trailing, 10)
                                 .font(.system(size: 20, weight: .regular, design: .default))
                             Spacer()
-                            
                         }
-                        
-                        
-                        
-                        
-                        
                     }
                     .padding(.trailing, 20)
                     .padding(.leading, 20)
@@ -93,8 +87,6 @@ struct InvitationCodeView: View {
                             .padding(.vertical, 10)
                             .padding(.horizontal, 25)
                             .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
-                            
-                            
                             .padding(.top, 10)
                         
                     }

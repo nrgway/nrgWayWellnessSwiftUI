@@ -29,6 +29,17 @@ let lightGrayUIColor = UIColor(named: "lightGray")
 let lightGrayColor2 = Color("lightGray2")
 let lightGrayUIColor2 = UIColor(named: "lightGray2")
 
+let gray3a3a3aColor = Color("gray3a3a3a")
+let gray3a3a3aUIColor = UIColor(named: "gray3a3a3a")
+
+let gray525252Color = Color("gray525252")
+let gray525252UIColor = UIColor(named: "gray525252")
+
+let grayaeaeaeColor = Color("grayaeaeae")
+let grayaeaeaeUIColor = UIColor(named: "grayaeaeae")
+
+let grayd6d8e7Color = Color("grayd6d8e7")
+let grayd6d8e7UIColor = UIColor(named: "grayd6d8e7")
 
 
 let grayColor = Color("gray")
@@ -50,6 +61,10 @@ let grayHomeTitileUIColor = UIColor(named: "grayHomeTitile")
 
 let challengItemColor = Color("challengItemColor")
 let challengItemUIColor = UIColor(named: "challengItemColor")
+
+
+let lightRedColor = Color("lightRedColor")
+let lightRedUIColor = UIColor(named: "lightRedColor")
 
 
 //extension Color {

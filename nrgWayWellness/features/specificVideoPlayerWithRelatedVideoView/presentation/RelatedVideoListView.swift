@@ -7,17 +7,49 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct RelatedVideoListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+   
+   var latestVideos : [LatestVideoEntity]
+   
+   init(data : [LatestVideoEntity]) {
+       latestVideos = data
+   }
+   
+   var body : some View{
+       ZStack(alignment: .top){
+           
+           HStack{
 
-struct RelatedVideoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        RelatedVideoListView()
-    }
+               Text("SIMILLAR VIDEOS")
+                   .font(.system(size: 24))
+                   .foregroundColor(navyBlueColor)
+                   .padding(.leading, 8)
+               
+               Spacer()
+           }
+           
+           VStack {
+               Spacer(minLength: 8)
+               
+               ScrollView(.horizontal, showsIndicators: false) {
+                   
+                   HStack(){
+                       ForEach(latestVideos){i in
+                         RelatedVideoCellView(data: i)
+                       }
+                   }
+               }
+               .aspectRatio(3/2, contentMode: .fit)
+               .padding(4)
+           }
+        Spacer(minLength: 50)
+            
+       }
+       .padding(.top, 16)
+   }
+   
 }
 
 

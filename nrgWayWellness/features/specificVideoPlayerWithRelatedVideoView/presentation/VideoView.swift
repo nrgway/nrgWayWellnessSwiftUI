@@ -27,7 +27,7 @@ class VideoPlayerUIView: UIView {
         
         super.init(frame: .zero)
     
-        backgroundColor = .lightGray
+        backgroundColor = UIColor.black
         playerLayer.player = player
         layer.addSublayer(playerLayer)
         
@@ -122,16 +122,21 @@ struct VideoPlayerControlsView : View {
             Button(action: togglePlayPause) {
                 Image(systemName: playerPaused ? "play" : "pause")
                     .padding(.trailing, 10)
+                    .foregroundColor(.white)
             }
             // Current video time
             Text("\(Utility.formatSecondsToHMS(videoPos * videoDuration))")
+                .foregroundColor(.white)
             // Slider for seeking / showing video progress
             Slider(value: $videoPos, in: 0...1, onEditingChanged: sliderEditingChanged)
             // Video duration
             Text("\(Utility.formatSecondsToHMS(videoDuration))")
+                .foregroundColor(.white)
         }
         .padding(.leading, 10)
         .padding(.trailing, 10)
+        .padding(.top, 1)
+        .padding(.bottom, 10)
     }
     
     private func togglePlayPause() {
@@ -190,6 +195,7 @@ struct VideoPlayerContainerView : View {
                             videoDuration: $videoDuration,
                             seeking: $seeking,
                             player: player)
+            
             VideoPlayerControlsView(videoPos: $videoPos,
                                     videoDuration: $videoDuration,
                                     seeking: $seeking,
@@ -205,9 +211,11 @@ struct VideoPlayerContainerView : View {
 // This is the main SwiftUI view for this app, containing a single PlayerContainerView
 //"https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com/5fb4f718f19f8.mov"
 struct VideoView: View {
-    let videoURL: URL
+    //let videoURL: URL
+    
+    let x = URL(string: "https://84de22e500fa5ce9268e-fe6114d9276a31f9b87d53e8397ddd92.ssl.cf5.rackcdn.com/5fb4f718f19f8.mov")
     
     var body: some View {
-        VideoPlayerContainerView(url: videoURL)
+        VideoPlayerContainerView(url: x!)
     }
 }

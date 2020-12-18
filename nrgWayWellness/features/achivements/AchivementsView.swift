@@ -20,8 +20,8 @@ struct AchivementsView: View {
                         self.show.toggle()
                         
                     }) {
-                        
-                        Image("Back").renderingMode(.original)
+                        Image("Back")
+                            .renderingMode(.original)
                             .padding(8)
                     }
                     
@@ -32,7 +32,6 @@ struct AchivementsView: View {
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
-                
                 VStack(){
                     Text("Achievements").font(.title)
                     AchivementList()

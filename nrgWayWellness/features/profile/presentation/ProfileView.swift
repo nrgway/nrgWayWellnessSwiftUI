@@ -28,7 +28,7 @@ struct ProfileView: View {
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return spinner.eraseToAnyView()
+            return LoadingView().eraseToAnyView()
             
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()

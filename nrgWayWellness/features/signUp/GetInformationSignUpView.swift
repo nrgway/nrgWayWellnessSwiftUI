@@ -53,7 +53,7 @@ struct GetInformationSignUpView: View {
                         
                         VStack {
                             
-                            TextField("Password", text: $email)
+                            TextField("First Name", text: $email)
                                 .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
                                 .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
                                 .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
@@ -67,7 +67,7 @@ struct GetInformationSignUpView: View {
                                 .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
                             .padding(.top, 10)
                             
-                            TextField("Password Confirmation", text: $email)
+                            TextField("Last Name", text: $email)
                                 .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
                                 .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
                                 .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
@@ -81,7 +81,7 @@ struct GetInformationSignUpView: View {
                                 .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
                             .padding(.top, 10)
                             
-                            TextField("Password", text: $email)
+                            TextField("Email", text: $email)
                                 .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
                                 .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
                                 .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
@@ -97,7 +97,7 @@ struct GetInformationSignUpView: View {
                             
                             
                             
-                            TextField("Password", text: $email)
+                            TextField("Cell Phone", text: $email)
                                 .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
                                 .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
                                 .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
@@ -110,7 +110,7 @@ struct GetInformationSignUpView: View {
                                 .padding(.horizontal, 25)
                                 .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
                             .padding(.top, 10)
-                            TextField("Password", text: $email)
+                            TextField("Difficulty Level", text: $email)
                                 .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
                                 .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
                                 .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
@@ -151,7 +151,7 @@ struct GetInformationSignUpView: View {
                                     self.showFinishSignup = true
                                      
                                 }) {
-                                    Text("Finish!")
+                                    Text("Next Step")
                                         .foregroundColor(Color.white)
                                         .padding(.vertical)
                                         .frame(width: 160)
