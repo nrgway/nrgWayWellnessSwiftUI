@@ -66,7 +66,7 @@ struct TabbedView : View {
             if(tab == 0) {
                 HomeView(viewModel: HomeViewModel())
             } else if (tab == 1) {
-                SavedView()
+                FavoriteVideosView()
             } else if (tab == 2) {
                 WorkOutView(viewModel: WorkOutViewModel())
             } else   {
@@ -168,7 +168,7 @@ struct AppTabbedView: View {
                 }
                 .tag(0)
          
-            SavedView()
+            FavoriteVideosView()
                 .tabItem {
                     Image(systemName: "bookmark")
                     //Text("saved")

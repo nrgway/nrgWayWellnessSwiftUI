@@ -11,7 +11,6 @@ import KingfisherSwiftUI
 
 struct InstructorVideoListItemCardView: View {
     
-    
     @State var show  = false
     @State var difficultyTitle = "Beginner"
     

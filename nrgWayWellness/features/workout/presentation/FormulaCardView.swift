@@ -4,7 +4,7 @@
 //
 //  Created by Hosein Alimoradi on 9/12/1399 AP.
 //  Copyright © 1399 AP wellness. All rights reserved.
-//
+// ShimmerFormulaCardView
 
 import SwiftUI
 import Alamofire
@@ -63,10 +63,7 @@ struct FormulaCardView: View {
                             }.padding(5)
                             
                             Spacer()
-                            
-                            Image("close")
-                                .resizable()
-                                .frame(width: 30, height: 30)
+                             
                             
                         }
                         
@@ -101,12 +98,9 @@ struct FormulaCardView: View {
                 .cornerRadius(5)
                 .aspectRatio(3/2, contentMode: .fit)
                 
-                
-                // post content
                 HStack() {
                     
-                    // avatar
-                    
+                    // avata
                     formulaEntity.completeAvatarURL.map { url in
                                             KFImage(URL(string: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png"))
                                                 .resizable()

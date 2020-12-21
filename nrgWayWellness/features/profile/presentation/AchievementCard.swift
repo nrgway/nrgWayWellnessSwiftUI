@@ -11,6 +11,8 @@ import SwiftUI
 struct AchivementCard : View {
     
     @State var show  = false
+    
+    
     var body : some View{
         
         VStack(){

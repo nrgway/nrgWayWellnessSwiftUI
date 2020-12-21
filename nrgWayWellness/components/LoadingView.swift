@@ -12,7 +12,8 @@ struct LoadingView: View {
     var body: some View {
         VStack {
             Spacer()
-            Spinner(isAnimating: true, style: .large)
+            //Spinner(isAnimating: true, style: .large)
+            CircleLoader()
             Spacer()
         }
         

@@ -26,7 +26,8 @@ struct WorkOutView: View {
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return LoadingView().eraseToAnyView()
+            return shimmerList().eraseToAnyView()
+                //LoadingView().eraseToAnyView()
             
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
@@ -41,6 +42,22 @@ struct WorkOutView: View {
         let v = VStack {
             WorkoutStepperView()
             FormulaListView(data: viewModel.formulas)
+        }
+         
+        return v
+        
+    }
+    
+    
+    private func shimmerList() -> some View {
+        
+        let v = VStack {
+            ShimmerWorkoutStepperView()
+                .padding(30)
+            
+            ForEach(0...6,id: \.self){_ in
+                ShimmerFormulaCardView()
+            } 
         }
          
         return v

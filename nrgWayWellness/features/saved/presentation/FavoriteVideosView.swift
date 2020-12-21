@@ -4,11 +4,11 @@
 //
 //  Created by Hosein Alimoradi on 8/16/1399 AP.
 //  Copyright © 1399 wellness. All rights reserved.
-//
+//FavoriteVideosViewModel
 
 import SwiftUI
 
-struct SavedView: View {
+struct FavoriteVideosView: View {
     /// posts
     let posts = SavedMockData.posts()
     
@@ -34,8 +34,8 @@ struct SavedView: View {
     }
 }
 
-struct SavedView_Previews: PreviewProvider {
+struct FavoriteVideosView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedView()
+        FavoriteVideosView()
     }
 }
