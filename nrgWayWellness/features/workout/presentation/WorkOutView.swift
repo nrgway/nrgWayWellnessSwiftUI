@@ -52,12 +52,8 @@ struct WorkOutView: View {
     private func shimmerList() -> some View {
         
         let v = VStack {
-            ShimmerWorkoutStepperView()
-                .padding(30)
+             ShimmerFormulaListView() 
             
-            ForEach(0...6,id: \.self){_ in
-                ShimmerFormulaCardView()
-            } 
         }
          
         return v

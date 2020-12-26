@@ -4,7 +4,7 @@
 //
 //  Created by Hosein Alimoradi on 9/7/1399 AP.
 //  Copyright © 1399 wellness. All rights reserved.
-//
+// ShimmerWorkoutsCellView
 
 
 import SwiftUI
@@ -42,13 +42,6 @@ struct WorkoutsCellView : View {
             Text(data.name ?? "")
                 .font(.system(size: 10))
                 .foregroundColor(Color.white)
-            
-//                Image(data.image)
-//                    .resizable()
-//                    .frame(width: 100, height: 100)
-//                    .aspectRatio(contentMode: .fit)
-//                    .clipShape(Circle())
-//                    .overlay(Circle().stroke(Color.white, lineWidth: 1))
              
             
         }.onTapGesture {

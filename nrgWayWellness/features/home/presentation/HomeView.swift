@@ -63,13 +63,49 @@ struct HomeView : View {
          
     }
     
+    private func shimmerList() -> some View {
+        
+        VStack(){
+            
+            NavigationView{
+             
+                VStack(){
+                    ScrollView(.vertical, showsIndicators: false) {
+                        
+                        VStack(){
+                            Spacer(minLength: 50)
+                            ShimmerWorkoutsView()
+                            
+                            ShimmerNGTInstructorsView()
+                            
+                            Spacer(minLength: 25)
+                            ShimmerLatestVideosView()
+                            
+                            ShimmerLatestVideosView()
+                            
+                        }
+                    }
+                    
+                     
+                }
+//                .background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
+                .navigationBarBackButtonHidden(false)
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                
+            }
+        }
+        
+         
+    }
+    
     private var content: some View {
         switch viewModel.state {
         case .idle:
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return LoadingView().eraseToAnyView()
+            return shimmerList().eraseToAnyView()
             
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()

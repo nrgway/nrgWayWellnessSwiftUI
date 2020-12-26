@@ -17,8 +17,6 @@ struct InstructorProfileView: View {
     
     var body: some View {
         VStack(){
-            //Image(systemName: "person.crop.circle")
-            //UrlImageView(urlString: WebAPI.jsonURL)
              
             data.completeAvatarURL.map { url in
                 KFImage(url)
@@ -30,8 +28,6 @@ struct InstructorProfileView: View {
                     .shadow(radius: 5)
             }
             
-            
-            //instructorEntity.firstName ??
             let fullName: String = (data.firstName ?? "") + " " + (data.lastName ?? "")
             Text(fullName).font(.title)
             

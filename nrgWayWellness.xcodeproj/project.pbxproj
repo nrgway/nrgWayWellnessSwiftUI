@@ -151,6 +151,13 @@
 		C6DE82EF257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */; };
 		C6DE82F5257CB9FD00E22B14 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82F4257CB9FD00E22B14 /* VideoView.swift */; };
 		C6DE82FA257CBAA800E22B14 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE82F9257CBAA800E22B14 /* Utility.swift */; };
+		C6DF4F7C2595F5C100E47B25 /* ShimmerFormulaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF4F7B2595F5C100E47B25 /* ShimmerFormulaListView.swift */; };
+		C6DF4F832596338E00E47B25 /* ShimmerWorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF4F822596338E00E47B25 /* ShimmerWorkoutsView.swift */; };
+		C6DF4F882596353800E47B25 /* ShimmerWorkoutsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF4F872596353800E47B25 /* ShimmerWorkoutsCellView.swift */; };
+		C6DF4F8E25966F2F00E47B25 /* ShimmerNGTInstructorsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF4F8D25966F2F00E47B25 /* ShimmerNGTInstructorsCellView.swift */; };
+		C6DF4F9325966F4B00E47B25 /* ShimmerNGTInstructorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF4F9225966F4B00E47B25 /* ShimmerNGTInstructorsView.swift */; };
+		C6DF4F992596735E00E47B25 /* ShimmerLatestVideosCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF4F982596735E00E47B25 /* ShimmerLatestVideosCellView.swift */; };
+		C6DF4F9E2596737E00E47B25 /* ShimmerLatestVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF4F9D2596737E00E47B25 /* ShimmerLatestVideosView.swift */; };
 		C6E6CF6C2554623400326093 /* ResAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF6B2554623400326093 /* ResAchievements.swift */; };
 		C6E6CF74255462A000326093 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF73255462A000326093 /* AchievementData.swift */; };
 		C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */; };
@@ -223,6 +230,8 @@
 		C6E6D12D255555E500326093 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D12C255555E500326093 /* HomeView.swift */; };
 		C6E6D1322555602E00326093 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D1312555602E00326093 /* CircleImageView.swift */; };
 		C6E6D137255561BC00326093 /* SocialMediaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D136255561BC00326093 /* SocialMediaListView.swift */; };
+		C6F4EDCC2597DFB700A9A27A /* ShimmerInstructorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDCB2597DFB700A9A27A /* ShimmerInstructorProfileView.swift */; };
+		C6F4EDD12597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDD02597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift */; };
 		C6F5F6BB256459BC0088CECD /* AchivementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BA256459BC0088CECD /* AchivementList.swift */; };
 		C6F5F6C02564616B0088CECD /* AchivementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */; };
 		C6F5F6C525646D8B0088CECD /* AchivementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6C425646D8B0088CECD /* AchivementRow.swift */; };
@@ -406,6 +415,13 @@
 		C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorVideoListItemCardView.swift; sourceTree = "<group>"; };
 		C6DE82F4257CB9FD00E22B14 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		C6DE82F9257CBAA800E22B14 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		C6DF4F7B2595F5C100E47B25 /* ShimmerFormulaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerFormulaListView.swift; sourceTree = "<group>"; };
+		C6DF4F822596338E00E47B25 /* ShimmerWorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerWorkoutsView.swift; sourceTree = "<group>"; };
+		C6DF4F872596353800E47B25 /* ShimmerWorkoutsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerWorkoutsCellView.swift; sourceTree = "<group>"; };
+		C6DF4F8D25966F2F00E47B25 /* ShimmerNGTInstructorsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerNGTInstructorsCellView.swift; sourceTree = "<group>"; };
+		C6DF4F9225966F4B00E47B25 /* ShimmerNGTInstructorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerNGTInstructorsView.swift; sourceTree = "<group>"; };
+		C6DF4F982596735E00E47B25 /* ShimmerLatestVideosCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerLatestVideosCellView.swift; sourceTree = "<group>"; };
+		C6DF4F9D2596737E00E47B25 /* ShimmerLatestVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerLatestVideosView.swift; sourceTree = "<group>"; };
 		C6E6CF6B2554623400326093 /* ResAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResAchievements.swift; sourceTree = "<group>"; };
 		C6E6CF73255462A000326093 /* AchievementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
 		C6E6CF78255463DF00326093 /* ResFormulaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResFormulaVideo.swift; sourceTree = "<group>"; };
@@ -478,6 +494,8 @@
 		C6E6D12C255555E500326093 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C6E6D1312555602E00326093 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		C6E6D136255561BC00326093 /* SocialMediaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaListView.swift; sourceTree = "<group>"; };
+		C6F4EDCB2597DFB700A9A27A /* ShimmerInstructorProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerInstructorProfileView.swift; sourceTree = "<group>"; };
+		C6F4EDD02597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerInstructorVideoListView.swift; sourceTree = "<group>"; };
 		C6F5F6BA256459BC0088CECD /* AchivementList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementList.swift; sourceTree = "<group>"; };
 		C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementCardView.swift; sourceTree = "<group>"; };
 		C6F5F6C425646D8B0088CECD /* AchivementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementRow.swift; sourceTree = "<group>"; };
@@ -577,6 +595,7 @@
 		C657B5A325686D29004D6B93 /* latestVideos */ = {
 			isa = PBXGroup;
 			children = (
+				C6DF4F97259671FF00E47B25 /* shimmers */,
 				C657B5AC25686DAF004D6B93 /* LatestVideosCellView.swift */,
 				C657B5A425686D7D004D6B93 /* LatestVideosView.swift */,
 			);
@@ -595,6 +614,7 @@
 		C657B5BF25686E9A004D6B93 /* ngtInstructors */ = {
 			isa = PBXGroup;
 			children = (
+				C6DF4F8C25966EEA00E47B25 /* shimmers */,
 				C69782562570489600A13D32 /* NGTInstructorEntity.swift */,
 				C657B59925686B47004D6B93 /* NGTInstructorsCellView.swift */,
 				C657B59E25686B5E004D6B93 /* NGTInstructorsView.swift */,
@@ -605,6 +625,7 @@
 		C657B5C025686FC9004D6B93 /* workouts */ = {
 			isa = PBXGroup;
 			children = (
+				C6DF4F812596336E00E47B25 /* shimmers */,
 				C697826025704D0A00A13D32 /* WorkoutsCellView.swift */,
 				C697824C2570461500A13D32 /* WorkoutsView.swift */,
 			);
@@ -952,12 +973,11 @@
 		C689A3E8257784C0006C43BA /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C6DF4F802596304900E47B25 /* shimmersView */,
 				C6FDF939258A949500D7A880 /* steps */,
 				C6E6D127255555BF00326093 /* WorkOutView.swift */,
 				C689A3F425778FA1006C43BA /* FormulaCardView.swift */,
 				C6FDF934258A41EE00D7A880 /* FormulaListView.swift */,
-				C69E6BA1259131AA009F4EB5 /* ShimmerFormulaCardView.swift */,
-				C69E6BA625913CF1009F4EB5 /* ShimmerWorkoutStepperView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -1134,6 +1154,7 @@
 		C6DE82CB257AA55500E22B14 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C6F4EDCA2597DECD00A9A27A /* shimmers */,
 				C697826D2570718000A13D32 /* InstructorDetailsView.swift */,
 				C6BB04042571129400E1FEF4 /* InstructorProfileEntity.swift */,
 				C6BB03FF2571065500E1FEF4 /* InstructorProfileView.swift */,
@@ -1145,6 +1166,43 @@
 				C6DE82EE257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift */,
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		C6DF4F802596304900E47B25 /* shimmersView */ = {
+			isa = PBXGroup;
+			children = (
+				C6DF4F7B2595F5C100E47B25 /* ShimmerFormulaListView.swift */,
+				C69E6BA625913CF1009F4EB5 /* ShimmerWorkoutStepperView.swift */,
+				C69E6BA1259131AA009F4EB5 /* ShimmerFormulaCardView.swift */,
+			);
+			path = shimmersView;
+			sourceTree = "<group>";
+		};
+		C6DF4F812596336E00E47B25 /* shimmers */ = {
+			isa = PBXGroup;
+			children = (
+				C6DF4F822596338E00E47B25 /* ShimmerWorkoutsView.swift */,
+				C6DF4F872596353800E47B25 /* ShimmerWorkoutsCellView.swift */,
+			);
+			path = shimmers;
+			sourceTree = "<group>";
+		};
+		C6DF4F8C25966EEA00E47B25 /* shimmers */ = {
+			isa = PBXGroup;
+			children = (
+				C6DF4F8D25966F2F00E47B25 /* ShimmerNGTInstructorsCellView.swift */,
+				C6DF4F9225966F4B00E47B25 /* ShimmerNGTInstructorsView.swift */,
+			);
+			path = shimmers;
+			sourceTree = "<group>";
+		};
+		C6DF4F97259671FF00E47B25 /* shimmers */ = {
+			isa = PBXGroup;
+			children = (
+				C6DF4F982596735E00E47B25 /* ShimmerLatestVideosCellView.swift */,
+				C6DF4F9D2596737E00E47B25 /* ShimmerLatestVideosView.swift */,
+			);
+			path = shimmers;
 			sourceTree = "<group>";
 		};
 		C6E6CF6A255461F800326093 /* achievementRepository */ = {
@@ -1573,6 +1631,15 @@
 			path = profile;
 			sourceTree = "<group>";
 		};
+		C6F4EDCA2597DECD00A9A27A /* shimmers */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4EDCB2597DFB700A9A27A /* ShimmerInstructorProfileView.swift */,
+				C6F4EDD02597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift */,
+			);
+			path = shimmers;
+			sourceTree = "<group>";
+		};
 		C6F5F6CE256480A20088CECD /* detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1770,6 +1837,7 @@
 				C624BB8A2573AC3400982074 /* GetInfoDataStatusDTO.swift in Sources */,
 				C6E6CFEB255487BB00326093 /* ResVideosForCategory.swift in Sources */,
 				C657B5EB256EC623004D6B93 /* CornersSignUp.swift in Sources */,
+				C6F4EDCC2597DFB700A9A27A /* ShimmerInstructorProfileView.swift in Sources */,
 				C697823B256F955600A13D32 /* FinishSignUpView.swift in Sources */,
 				C66B081625572C3400D911CE /* NetworkingHelpers.swift in Sources */,
 				C6BB04632572AC4C00E1FEF4 /* extensionPublisher.swift in Sources */,
@@ -1844,6 +1912,7 @@
 				C657B5F5256EC6A6004D6B93 /* CustomShape.swift in Sources */,
 				C6E6CFE0255486A000326093 /* ResCategory.swift in Sources */,
 				C66B080225572B9000D911CE /* CancelBag.swift in Sources */,
+				C6DF4F882596353800E47B25 /* ShimmerWorkoutsCellView.swift in Sources */,
 				C6BB04592572AB7500E1FEF4 /* WebAPI.swift in Sources */,
 				C68AA0AA2553443A00F88201 /* UserDefault.swift in Sources */,
 				C664F29F2583F565001D8B2F /* CategoryDTO.swift in Sources */,
@@ -1877,6 +1946,7 @@
 				C6E6CF79255463DF00326093 /* ResFormulaVideo.swift in Sources */,
 				C6DE82EF257C3AAE00E22B14 /* InstructorVideoListItemCardView.swift in Sources */,
 				C6E6D128255555BF00326093 /* WorkOutView.swift in Sources */,
+				C6DF4F8E25966F2F00E47B25 /* ShimmerNGTInstructorsCellView.swift in Sources */,
 				C6DE82DA257C11EB00E22B14 /* InstructorDetailsViewModel.swift in Sources */,
 				C68AA06B25533DA200F88201 /* SceneDelegate.swift in Sources */,
 				C6FDF92A2589439500D7A880 /* SpecificVideoView.swift in Sources */,
@@ -1895,6 +1965,7 @@
 				C68AA09F2553420800F88201 /* PageControl.swift in Sources */,
 				C6F5F6D0256480B90088CECD /* DetailView.swift in Sources */,
 				C6AE2F1A256148FB00DA44C6 /* RoundedImage.swift in Sources */,
+				C6F4EDD12597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift in Sources */,
 				C66B08AD255FF9E100D911CE /* extensionStringDate.swift in Sources */,
 				C67FD3412562BDC300D261F3 /* ProductCard.swift in Sources */,
 				C6E6D04D25549E9500326093 /* LikeToVideoData.swift in Sources */,
@@ -1908,6 +1979,7 @@
 				C66B08FA2560997400D911CE /* OnboardingRepository.swift in Sources */,
 				C6E6D00D2554989D00326093 /* ResListOfvideos.swift in Sources */,
 				C6E6CFDA2554856100326093 /* CategoriesData.swift in Sources */,
+				C6DF4F9E2596737E00E47B25 /* ShimmerLatestVideosView.swift in Sources */,
 				C67158DA257842C100102C66 /* HomeViewModel.swift in Sources */,
 				C6E6D0762554AB6F00326093 /* GetInfoDataDTO.swift in Sources */,
 				C68AA0B1255349B500F88201 /* LoginView.swift in Sources */,
@@ -1922,6 +1994,7 @@
 				C657B5A525686D7D004D6B93 /* LatestVideosView.swift in Sources */,
 				C6289B9B256536DF00948CD4 /* PostView.swift in Sources */,
 				C6E6D04325549DD100326093 /* VideosFavoritesDataCreator.swift in Sources */,
+				C6DF4F992596735E00E47B25 /* ShimmerLatestVideosCellView.swift in Sources */,
 				C697826125704D0A00A13D32 /* WorkoutsCellView.swift in Sources */,
 				C69E6BA725913CF1009F4EB5 /* ShimmerWorkoutStepperView.swift in Sources */,
 				C68AA0AF255349A600F88201 /* ForgotPasswordView.swift in Sources */,
@@ -1931,6 +2004,7 @@
 				C66B080725572BBD00D911CE /* Helpers.swift in Sources */,
 				C6E6D0AC2554B40400326093 /* ReqLogin.swift in Sources */,
 				C6DE82FA257CBAA800E22B14 /* Utility.swift in Sources */,
+				C6DF4F9325966F4B00E47B25 /* ShimmerNGTInstructorsView.swift in Sources */,
 				C6E6D03E25549DA900326093 /* VideosFavoritesData.swift in Sources */,
 				C6E6D0D32554B80600326093 /* ReqAuthResetPassword.swift in Sources */,
 				C66B0897255FBD0700D911CE /* CountriesWebRepository.swift in Sources */,
@@ -1949,6 +2023,7 @@
 				C6E6D02125549A2700326093 /* SingleVideoData.swift in Sources */,
 				C67FD3462562C4FE00D261F3 /* AchievementCard.swift in Sources */,
 				C68AA0A32553424700F88201 /* Subview.swift in Sources */,
+				C6DF4F7C2595F5C100E47B25 /* ShimmerFormulaListView.swift in Sources */,
 				C6AE2F422562795300DA44C6 /* ScaledBezier.swift in Sources */,
 				C68AA09D255341EF00F88201 /* OnboardingView.swift in Sources */,
 				C68AA0B7255359C000F88201 /* TabbarVC.swift in Sources */,
@@ -1968,6 +2043,7 @@
 				C6E6D0122554991800326093 /* ListOfvideosData.swift in Sources */,
 				C6E6CF8C2554667A00326093 /* ResFormulas.swift in Sources */,
 				C664F27B257EBA13001D8B2F /* ChallengeVideoEntity.swift in Sources */,
+				C6DF4F832596338E00E47B25 /* ShimmerWorkoutsView.swift in Sources */,
 				C6289B8C2565328600948CD4 /* SavedMockData.swift in Sources */,
 				C6BB04052571129400E1FEF4 /* InstructorProfileEntity.swift in Sources */,
 				C6BB04002571065500E1FEF4 /* InstructorProfileView.swift in Sources */,

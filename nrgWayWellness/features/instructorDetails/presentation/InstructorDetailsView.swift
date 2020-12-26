@@ -47,7 +47,7 @@ struct InstructorDetailsView: View {
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return LoadingView().eraseToAnyView()
+            return shimmerList().eraseToAnyView()
             
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
@@ -79,6 +79,32 @@ struct InstructorDetailsView: View {
         
         return y
     }
+    
+    private func  shimmerList() -> some View {
+        let y =
+            VStack(){
+                ScrollView(.vertical){
+                    
+                    
+                    VStack(){
+                        
+                        ShimmerInstructorProfileView()
+                        
+                        Spacer()
+                        
+                        ShimmerInstructorVideoListView()
+                        
+                    }
+                }
+                
+                
+            }
+        
+        return y
+    }
+    
+    
+    
 }
 
 
