@@ -18,25 +18,28 @@ struct SpecificCategoryView: View {
     var body: some View {
         VStack(){
             
-            
-            Text((data.name ?? "")).font(.title)
+            HStack{
+                Text((data.name ?? "")).font(.title)
+                Spacer()
+            }
             
             data.completeImageUrlAsURL.map { url in
                 KFImage(url)
                     .resizable()
                     .renderingMode(.original)
-                    .aspectRatio(3/2, contentMode: .fit)
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .aspectRatio(3/2, contentMode: .fill) 
                     .scaledToFit()
                     .cornerRadius(22)
+                    .padding(.top, 5)
             }
-            
-            
-            Text(data.descriptionField ?? "")
+              
+            Text(data.descriptionField?.htmlStripped ?? "")
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(alignment: .center)
                 .font(.system(size: 12))
-                .padding(15)
-            
+                .padding(.top, 15)
+ 
             
         }
     }

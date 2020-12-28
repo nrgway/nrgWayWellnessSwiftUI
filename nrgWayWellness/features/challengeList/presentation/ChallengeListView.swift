@@ -11,6 +11,7 @@ import SwiftUI
 struct ChallengeListView: View {
     
     @Binding var show : Bool
+    @Binding var id : Int
     @ObservedObject var viewModel = ChallengeViewModel()
     
     var body: some View {
@@ -32,7 +33,7 @@ struct ChallengeListView: View {
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             
-            content.onAppear { self.viewModel.getChallengeVideos() }
+            content.onAppear { self.viewModel.getChallengeVideos(id: self.id) }
             
             Spacer()
             
@@ -45,7 +46,7 @@ struct ChallengeListView: View {
             return Color.clear.eraseToAnyView()
             
         case .loading:
-            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
+            return shimmerList().eraseToAnyView()
             
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
@@ -54,22 +55,41 @@ struct ChallengeListView: View {
             return list().eraseToAnyView()
         }
     }
+    
     private func list() -> some View {
         
         let y =
             VStack(){
                 ScrollView(.vertical){
                     VStack(){
-                        
-                        //InstructorProfileView(data: data)
+                         
                         SpecificCategoryView(data: viewModel.specificCategory!)
-                        Spacer()
                         
                         InstructorVideoListView(instructorVideos: viewModel.challengeVideos)
                         
                     }
                 }
             }
+            .padding(15)
+        
+        return y
+    }
+    
+    private func shimmerList() -> some View {
+        
+        let y =
+            VStack(){
+                ScrollView(.vertical){
+                    VStack(){
+                         
+                        ShimmerSpecificCategoryView()
+                        
+                        ShimmerInstructorVideoListView()
+                        
+                    }
+                }
+            }
+            .padding(15)
         
         return y
     }

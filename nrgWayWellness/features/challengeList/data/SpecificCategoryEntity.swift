@@ -16,7 +16,7 @@ struct SpecificCategoryEntity : Identifiable {
     let imgUrl : String?
     let name : String?
     let promotionalVideo : String?
-    let promotionalVideoSize : String?
+    let promotionalVideoSize : Int?
     let showDifficulties : Int?
     let showInSearch : Int?
     let showOnCategories : Int?

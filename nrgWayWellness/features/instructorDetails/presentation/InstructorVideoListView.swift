@@ -44,8 +44,7 @@ struct InstructorVideoListView: View {
                 }.frame(maxWidth: .infinity)
             }
         }
-        .padding()
-        .animation(.spring())
+          
         
     }
 }

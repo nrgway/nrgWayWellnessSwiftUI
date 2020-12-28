@@ -17,7 +17,7 @@ struct CategoryDTO : Codable {
         let imgUrl : String?
         let name : String?
         let promotionalVideo : String?
-        let promotionalVideoSize : String?
+        let promotionalVideoSize : Int?
         let showDifficulties : Int?
         let showInSearch : Int?
         let showOnCategories : Int?
@@ -49,7 +49,7 @@ struct CategoryDTO : Codable {
                 imgUrl = try values.decodeIfPresent(String.self, forKey: .imgUrl)
                 name = try values.decodeIfPresent(String.self, forKey: .name)
                 promotionalVideo = try values.decodeIfPresent(String.self, forKey: .promotionalVideo)
-                promotionalVideoSize = try values.decodeIfPresent(String.self, forKey: .promotionalVideoSize)
+                promotionalVideoSize = try values.decodeIfPresent(Int.self, forKey: .promotionalVideoSize)
                 showDifficulties = try values.decodeIfPresent(Int.self, forKey: .showDifficulties)
                 showInSearch = try values.decodeIfPresent(Int.self, forKey: .showInSearch)
                 showOnCategories = try values.decodeIfPresent(Int.self, forKey: .showOnCategories)

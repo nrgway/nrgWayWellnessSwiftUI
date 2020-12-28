@@ -1,52 +1,19 @@
 //
-//  ShimmerInstructorProfileView.swift
+//  ShimmerSpecificCategoryView.swift
 //  nrgWayWellness
 //
-//  Created by Hosein Alimoradi on 10/7/1399 AP.
+//  Created by Hosein Alimoradi on 10/8/1399 AP.
 //  Copyright © 1399 AP wellness. All rights reserved.
 //
 
 import SwiftUI
 
-struct ShimmerInstructorProfileView: View {
+struct ShimmerSpecificCategoryView: View {
     @State var show = false
     var center = (UIScreen.main.bounds.width / 2) + 110
     
-    var body: some View {        
-        
+    var body: some View {
         VStack(){
-            
-            ZStack(alignment: .center){
-                ZStack{
-                    
-                    Color.black.opacity(0.09)
-                    Color.white
-                        .mask(
-                            Rectangle()
-                                .fill(
-                                    LinearGradient(gradient: .init(colors: [.clear,Color.white.opacity(0.48),.clear]), startPoint: .top, endPoint: .bottom)
-                                )
-                                .rotationEffect(.init(degrees: 70))
-                                .offset(x: self.show ? center : -center)
-                        )
-                }
-                .onAppear {
-                    withAnimation(Animation.default.speed(0.15).delay(0).repeatForever(autoreverses: false)){
-                        self.show.toggle()
-                    }
-                }
-                .frame(width: 100, height: 100)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color.white.opacity(0.5), lineWidth: 2))
-                
-            }
-            .padding(.leading, 8)
-            .padding(.top, 2)
-            .padding(.bottom, 2).onTapGesture {
-                
-                self.show.toggle()
-            }
-            
             
             HStack{
                 ZStack{
@@ -75,6 +42,57 @@ struct ShimmerInstructorProfileView: View {
                 
                 
             }
+            
+            ZStack{
+                
+                VStack(alignment: .leading) {
+                    ZStack() {
+                        //cardview
+                        ZStack{
+                            
+                            Color.black.opacity(0.09)
+                            //.frame(height: 200)
+                            //.cornerRadius(10)
+                            
+                            Color.white
+                                //.frame(height: 200)
+                                //.cornerRadius(10)
+                                .mask(
+                                    
+                                    Rectangle()
+                                        .fill(
+                                            
+                                            LinearGradient(gradient: .init(colors: [.clear,Color.white.opacity(0.48),.clear]), startPoint: .top, endPoint: .bottom)
+                                        )
+                                        .rotationEffect(.init(degrees: 70))
+                                        .offset(x: self.show ? center : -center)
+                                    
+                                )
+                        }
+                        .onAppear {
+                            withAnimation(Animation.default.speed(0.15).delay(0).repeatForever(autoreverses: false)){
+                                
+                                self.show.toggle()
+                            }
+                        }
+                        //.scaledToFit()
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                    }
+                    .cornerRadius(5)
+                    .aspectRatio(3/2, contentMode: .fit)
+                }
+                
+                .onTapGesture {
+                    self.show.toggle()
+                }
+                
+            }
+            .padding(.leading, 8)
+            .padding(.trailing, 8)
+            .padding(.top, 8)
+            .padding(.bottom, 8)
+            
+            
             
             VStack {
                 HStack{
@@ -209,14 +227,16 @@ struct ShimmerInstructorProfileView: View {
                     
                     
                 }
-            }.padding(8)
+            }
+             
+ 
             
         }
     }
 }
 
-struct ShimmerInstructorProfileView_Previews: PreviewProvider {
+struct ShimmerSpecificCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        ShimmerInstructorProfileView()
+        ShimmerSpecificCategoryView()
     }
 }

@@ -14,13 +14,11 @@
         var category : CategoryEntity
         
         @State var show = false
-        
-        @State var fullName: String = ""
-        @State var avatarUrl: String = ""
+        @State var id : Int = 28
         
         init(data : CategoryEntity) {
             category = data
-            fullName = (data.name ?? "")
+             
         }
         
         var body : some View {
@@ -28,6 +26,7 @@
             ZStack{
                 
                 NavigationLink(destination: ChallengeListView(show: self.$show,
+                                                              id: self.$id,
                                                               viewModel: ChallengeViewModel()
                                                               //, data: instructor
                 ), isActive: self.$show) {

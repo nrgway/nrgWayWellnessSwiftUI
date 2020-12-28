@@ -232,6 +232,7 @@
 		C6E6D137255561BC00326093 /* SocialMediaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E6D136255561BC00326093 /* SocialMediaListView.swift */; };
 		C6F4EDCC2597DFB700A9A27A /* ShimmerInstructorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDCB2597DFB700A9A27A /* ShimmerInstructorProfileView.swift */; };
 		C6F4EDD12597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDD02597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift */; };
+		C6F4EDD72599A1D000A9A27A /* ShimmerSpecificCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDD62599A1D000A9A27A /* ShimmerSpecificCategoryView.swift */; };
 		C6F5F6BB256459BC0088CECD /* AchivementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BA256459BC0088CECD /* AchivementList.swift */; };
 		C6F5F6C02564616B0088CECD /* AchivementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */; };
 		C6F5F6C525646D8B0088CECD /* AchivementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6C425646D8B0088CECD /* AchivementRow.swift */; };
@@ -496,6 +497,7 @@
 		C6E6D136255561BC00326093 /* SocialMediaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaListView.swift; sourceTree = "<group>"; };
 		C6F4EDCB2597DFB700A9A27A /* ShimmerInstructorProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerInstructorProfileView.swift; sourceTree = "<group>"; };
 		C6F4EDD02597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerInstructorVideoListView.swift; sourceTree = "<group>"; };
+		C6F4EDD62599A1D000A9A27A /* ShimmerSpecificCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerSpecificCategoryView.swift; sourceTree = "<group>"; };
 		C6F5F6BA256459BC0088CECD /* AchivementList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementList.swift; sourceTree = "<group>"; };
 		C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementCardView.swift; sourceTree = "<group>"; };
 		C6F5F6C425646D8B0088CECD /* AchivementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementRow.swift; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 		C664F274257EB944001D8B2F /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C6F4EDD52599A1BC00A9A27A /* shimmers */,
 				C664F2A625842911001D8B2F /* ChallengeListView.swift */,
 				C664F2AB2584A101001D8B2F /* SpecificCategoryView.swift */,
 			);
@@ -1640,6 +1643,14 @@
 			path = shimmers;
 			sourceTree = "<group>";
 		};
+		C6F4EDD52599A1BC00A9A27A /* shimmers */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4EDD62599A1D000A9A27A /* ShimmerSpecificCategoryView.swift */,
+			);
+			path = shimmers;
+			sourceTree = "<group>";
+		};
 		C6F5F6CE256480A20088CECD /* detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1902,6 +1913,7 @@
 				C656804B2586AEE0001F60D0 /* ResSingleVideoEntity.swift in Sources */,
 				C6E6D11E2555517A00326093 /* FavoriteVideosView.swift in Sources */,
 				C6BB04432572AA8600E1FEF4 /* Spinner.swift in Sources */,
+				C6F4EDD72599A1D000A9A27A /* ShimmerSpecificCategoryView.swift in Sources */,
 				C6E6D0852554AD1A00326093 /* UpdateProfileData.swift in Sources */,
 				C6BB041825712C6000E1FEF4 /* InstructorVideoCardView.swift in Sources */,
 				C6E6D1322555602E00326093 /* CircleImageView.swift in Sources */,

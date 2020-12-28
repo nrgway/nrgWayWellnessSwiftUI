@@ -12,6 +12,7 @@ final class ChallengeViewModel: ObservableObject {
     
     @Published private(set) var state = State.loading
     @Published var challengeVideos: [InstructorVideoEntity] = []
+    
     @Published var specificCategory: SpecificCategoryEntity? = nil
     
     private var challengeVideosAnyCancellable: AnyCancellable?
@@ -19,7 +20,7 @@ final class ChallengeViewModel: ObservableObject {
     
     private var bag = Set<AnyCancellable>()
     
-    func getChallengeVideos()  {
+    func getChallengeVideos(id: Int)  {
         
         challengeVideosAnyCancellable = WebAPI.getVideosByInstructor(id:2)
             .map { $0.data.videos.map(InstructorVideoEntity.init)}
@@ -27,32 +28,31 @@ final class ChallengeViewModel: ObservableObject {
             .eraseToAnyPublisher()
             .sink(receiveCompletion: { _ in },
                   receiveValue: {  instractorlist in
-                    print(instractorlist)
+                    //print(instractorlist)
                     self.challengeVideos = instractorlist
-                    self.state = State.loaded
+
                   }
             )
+        print("-------------id--------------------")
+        print(id)
+        print("-------------id--------------------")
         
-        specificCategoryAnyCancellable = WebAPI.getCategoryById(id: 43)
+        specificCategoryAnyCancellable = WebAPI.getCategoryById(id: id)
             .receive(on: RunLoop.main)
             .map { $0.data.category}
             .map(SpecificCategoryEntity.init)
             .eraseToAnyPublisher()
             .sink(receiveCompletion: { _ in },
                   receiveValue: {  category in
+                    print("-------------category--------------------")
                     print(category)
+                    print("-------------category--------------------")
                     self.specificCategory = category
-                    
+                    self.state = State.loaded
                   }
             )
-         
-        
-        
         
     }
-    
-     
-     
     
     deinit {
         bag.removeAll()
