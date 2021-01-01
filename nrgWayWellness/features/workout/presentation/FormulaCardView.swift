@@ -20,8 +20,6 @@ struct FormulaCardView: View {
     
     init(formula: FormulaEntity) {
         formulaEntity = formula
-        
-         
     }
     
     

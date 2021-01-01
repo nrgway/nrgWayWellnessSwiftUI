@@ -9,13 +9,25 @@
 import SwiftUI
 
 struct FavoriteVideoListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    var data : [CategoryEntity]
+    
+    init(favoriteVideos : [CategoryEntity]) {
+        data = favoriteVideos
     }
-}
-
-struct FavoriteVideoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteVideoListView()
+    
+    var body : some View{
+        VStack(){
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                
+                VStack(spacing: 4){
+                    
+                    ForEach(data){favoriteVideo in
+                        FavoriteVideoItemCardView(favoriteVideo: favoriteVideo)
+                    }
+                }
+            }
+        }
     }
+    
 }

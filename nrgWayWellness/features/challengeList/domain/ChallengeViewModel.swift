@@ -11,31 +11,32 @@ import SwiftUI
 final class ChallengeViewModel: ObservableObject {
     
     @Published private(set) var state = State.loading
-    @Published var challengeVideos: [InstructorVideoEntity] = []
-    
+    @Published var categories: [CategoryEntity] = []
     @Published var specificCategory: SpecificCategoryEntity? = nil
-    
-    private var challengeVideosAnyCancellable: AnyCancellable?
+     
     private var specificCategoryAnyCancellable: AnyCancellable?
+    private var categoriesAnyCancellable: AnyCancellable?
+    
+    
     
     private var bag = Set<AnyCancellable>()
     
     func getChallengeVideos(id: Int)  {
         
-        challengeVideosAnyCancellable = WebAPI.getVideosByInstructor(id:2)
-            .map { $0.data.videos.map(InstructorVideoEntity.init)}
+         
+        print("-------------id--------------------")
+        
+        categoriesAnyCancellable = WebAPI.getCategories()
             .receive(on: RunLoop.main)
+            .map { $0.data.map(CategoryEntity.init)}
             .eraseToAnyPublisher()
             .sink(receiveCompletion: { _ in },
-                  receiveValue: {  instractorlist in
-                    //print(instractorlist)
-                    self.challengeVideos = instractorlist
-
+                  receiveValue: {  categorylist in
+                    print(categorylist)
+                    self.state = State.loaded
+                    self.categories = categorylist
                   }
             )
-        print("-------------id--------------------")
-        print(id)
-        print("-------------id--------------------")
         
         specificCategoryAnyCancellable = WebAPI.getCategoryById(id: id)
             .receive(on: RunLoop.main)
@@ -70,11 +71,7 @@ extension ChallengeViewModel {
         case loaded
         case error(Error)
     }
-    
-    
-     
 }
 
 // MARK: - State Machine
 
- 

@@ -233,6 +233,10 @@
 		C6F4EDCC2597DFB700A9A27A /* ShimmerInstructorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDCB2597DFB700A9A27A /* ShimmerInstructorProfileView.swift */; };
 		C6F4EDD12597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDD02597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift */; };
 		C6F4EDD72599A1D000A9A27A /* ShimmerSpecificCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDD62599A1D000A9A27A /* ShimmerSpecificCategoryView.swift */; };
+		C6F4EDDC259DCE3D00A9A27A /* SpecificCategoryVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDDB259DCE3D00A9A27A /* SpecificCategoryVideoListView.swift */; };
+		C6F4EDE1259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDE0259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift */; };
+		C6F4EDEA259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDE9259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift */; };
+		C6F4EDEF259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDEE259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift */; };
 		C6F5F6BB256459BC0088CECD /* AchivementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BA256459BC0088CECD /* AchivementList.swift */; };
 		C6F5F6C02564616B0088CECD /* AchivementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */; };
 		C6F5F6C525646D8B0088CECD /* AchivementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6C425646D8B0088CECD /* AchivementRow.swift */; };
@@ -498,6 +502,10 @@
 		C6F4EDCB2597DFB700A9A27A /* ShimmerInstructorProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerInstructorProfileView.swift; sourceTree = "<group>"; };
 		C6F4EDD02597DFCA00A9A27A /* ShimmerInstructorVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerInstructorVideoListView.swift; sourceTree = "<group>"; };
 		C6F4EDD62599A1D000A9A27A /* ShimmerSpecificCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerSpecificCategoryView.swift; sourceTree = "<group>"; };
+		C6F4EDDB259DCE3D00A9A27A /* SpecificCategoryVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCategoryVideoListView.swift; sourceTree = "<group>"; };
+		C6F4EDE0259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCategoryVideoListItemCardView.swift; sourceTree = "<group>"; };
+		C6F4EDE9259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerFavoriteVideoListView.swift; sourceTree = "<group>"; };
+		C6F4EDEE259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerFavoriteVideoItemCardView.swift; sourceTree = "<group>"; };
 		C6F5F6BA256459BC0088CECD /* AchivementList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementList.swift; sourceTree = "<group>"; };
 		C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementCardView.swift; sourceTree = "<group>"; };
 		C6F5F6C425646D8B0088CECD /* AchivementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementRow.swift; sourceTree = "<group>"; };
@@ -682,6 +690,8 @@
 				C6F4EDD52599A1BC00A9A27A /* shimmers */,
 				C664F2A625842911001D8B2F /* ChallengeListView.swift */,
 				C664F2AB2584A101001D8B2F /* SpecificCategoryView.swift */,
+				C6F4EDDB259DCE3D00A9A27A /* SpecificCategoryVideoListView.swift */,
+				C6F4EDE0259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -947,12 +957,12 @@
 		C67FD34D25630CB200D261F3 /* achivements */ = {
 			isa = PBXGroup;
 			children = (
-				C66AA489258E17BE0065A3E7 /* domain */,
-				C66AA480258D390C0065A3E7 /* presentation */,
-				C66AA47F258D39000065A3E7 /* data */,
 				C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */,
 				C6F5F6C425646D8B0088CECD /* AchivementRow.swift */,
 				C6F5F6C925646DAC0088CECD /* AchivementType.swift */,
+				C66AA47F258D39000065A3E7 /* data */,
+				C66AA489258E17BE0065A3E7 /* domain */,
+				C66AA480258D390C0065A3E7 /* presentation */,
 			);
 			path = achivements;
 			sourceTree = "<group>";
@@ -1613,13 +1623,13 @@
 		C6E6D1122554C12600326093 /* saved */ = {
 			isa = PBXGroup;
 			children = (
-				C6F8ABEB258FA9EA00004B9C /* domain */,
 				C6F8ABEA258FA9E300004B9C /* data */,
+				C6F8ABEB258FA9EA00004B9C /* domain */,
+				C6289B952565333000948CD4 /* Post.swift */,
+				C6289B9A256536DF00948CD4 /* PostView.swift */,
 				C6F8ABE9258FA9D700004B9C /* presentation */,
 				C6289B8B2565328600948CD4 /* SavedMockData.swift */,
 				C6289B902565330C00948CD4 /* User.swift */,
-				C6289B952565333000948CD4 /* Post.swift */,
-				C6289B9A256536DF00948CD4 /* PostView.swift */,
 			);
 			path = saved;
 			sourceTree = "<group>";
@@ -1651,6 +1661,15 @@
 			path = shimmers;
 			sourceTree = "<group>";
 		};
+		C6F4EDE8259F14EF00A9A27A /* shimmers */ = {
+			isa = PBXGroup;
+			children = (
+				C6F4EDE9259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift */,
+				C6F4EDEE259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift */,
+			);
+			path = shimmers;
+			sourceTree = "<group>";
+		};
 		C6F5F6CE256480A20088CECD /* detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1662,6 +1681,7 @@
 		C6F8ABE9258FA9D700004B9C /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C6F4EDE8259F14EF00A9A27A /* shimmers */,
 				C6E6D11D2555517A00326093 /* FavoriteVideosView.swift */,
 				C6F8ABEF258FF97300004B9C /* FavoriteVideoListView.swift */,
 				C6F8ABF4258FFD8500004B9C /* FavoriteVideoItemCardView.swift */,
@@ -1938,6 +1958,7 @@
 				C6F8ABFD2590045F00004B9C /* FavoriteVideosViewModel.swift in Sources */,
 				C68AA0A82553440100F88201 /* DataStore.swift in Sources */,
 				C6978240256F982800A13D32 /* GetInformationSignUpView.swift in Sources */,
+				C6F4EDE1259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift in Sources */,
 				C6BB041D25712E7400E1FEF4 /* InstructorVideoType.swift in Sources */,
 				C664F2AC2584A101001D8B2F /* SpecificCategoryView.swift in Sources */,
 				C68AA0B325534A9200F88201 /* OtherData.swift in Sources */,
@@ -2023,6 +2044,7 @@
 				C6BB042325713AB800E1FEF4 /* BreweriesViewModel.swift in Sources */,
 				C66B082125572CF000D911CE /* WebRepository.swift in Sources */,
 				C697824D2570461600A13D32 /* WorkoutsView.swift in Sources */,
+				C6F4EDEF259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift in Sources */,
 				C68AA07025533DA200F88201 /* CoreContentView.swift in Sources */,
 				C6BB044C2572AB1300E1FEF4 /* ImageCache.swift in Sources */,
 				C6E6D0662554A2F800326093 /* CheckChallengeData.swift in Sources */,
@@ -2030,6 +2052,7 @@
 				C6E6D0E62554BB9400326093 /* FormulaVideoRepository.swift in Sources */,
 				C6F5F6C02564616B0088CECD /* AchivementCardView.swift in Sources */,
 				C689A3F525778FA1006C43BA /* FormulaCardView.swift in Sources */,
+				C6F4EDDC259DCE3D00A9A27A /* SpecificCategoryVideoListView.swift in Sources */,
 				C6E6CF91255466C400326093 /* FormulaData.swift in Sources */,
 				C6F8ABF5258FFD8500004B9C /* FavoriteVideoItemCardView.swift in Sources */,
 				C6E6D02125549A2700326093 /* SingleVideoData.swift in Sources */,
@@ -2066,6 +2089,7 @@
 				C624BB6C2572E6C700982074 /* ImageLoader.swift in Sources */,
 				C6E6D0802554ACAF00326093 /* ResUpdateProfile.swift in Sources */,
 				C66B07FD25572B6400D911CE /* APICall.swift in Sources */,
+				C6F4EDEA259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift in Sources */,
 				C6E6D0C82554B69C00326093 /* ResLogOut .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,6 +43,7 @@ struct AchivementsView: View {
                 .navigationBarHidden(true)
 //                .navigationBarBackButtonHidden(true)
                 VStack(){
+                    Spacer(minLength: 30)
                     Text("Achievements").font(.title)
                     AchivementList(instructorVideos: viewModel.instructors)
                     

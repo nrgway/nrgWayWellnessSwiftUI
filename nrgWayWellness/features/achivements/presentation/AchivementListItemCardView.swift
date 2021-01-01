@@ -30,18 +30,24 @@ struct AchivementListItemCardView: View {
                 Text("")
             }
             VStack {
-                data.completeAvatarURL.map { url in
-                    KFImage(url)
-                        
-                        .resizable()
-                        .renderingMode(.original)
-                        .scaledToFit()
-//                        .frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25)
-                        .aspectRatio(3/2, contentMode: .fill)
-                        .cornerRadius(15)
-                        //.aspectRatio(1/1, contentMode: .fit)
-                         
+                
+                VStack {
+                    data.completeAvatarURL.map { url in
+                        KFImage(url)
+                            
+                            .resizable()
+                            .renderingMode(.original)
+                            .scaledToFit()
+                            //.scaledToFill()
+    //                        .frame(width: UIScreen.main.bounds.width / 2 - 25, height: UIScreen.main.bounds.width / 2 - 25)
+                           
+                            .cornerRadius(15)
+                            //.aspectRatio(1/1, contentMode: .fit)
+                             
+                    }
                 }
+                .aspectRatio(3/2, contentMode: .fill)
+               
                 
                 Text(data.lastName ?? "")
                     .lineLimit(1)

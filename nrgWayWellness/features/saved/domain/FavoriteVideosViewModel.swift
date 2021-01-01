@@ -11,7 +11,7 @@ import SwiftUI
 
 final class FavoriteVideosViewModel: ObservableObject {
     @Published var state = State.loading
-    @Published var instructors: [InstructorEntity] = []
+    @Published var favoriteVideos: [CategoryEntity] = []
     
     private var task: AnyCancellable?
     private var bag = Set<AnyCancellable>()
@@ -21,20 +21,20 @@ final class FavoriteVideosViewModel: ObservableObject {
         bag.removeAll()
     }
     
-    func getInstructors()  {
+    func getFavoriteVideos()  {
         
-        task = WebAPI.getInstructors()
+        task = WebAPI.getCategories()
             .receive(on: RunLoop.main)
-            .map { $0.data.map(InstructorEntity.init)}
+            .map { $0.data.map(CategoryEntity.init)}
             .eraseToAnyPublisher()
-            
             .sink(receiveCompletion: { _ in },
-                  receiveValue: {  instractorlist in
-                    print(instractorlist)
+                  receiveValue: {  categorylist in
+                    print(categorylist)
                     self.state = State.loaded
-                    self.instructors = instractorlist
+                    self.favoriteVideos = categorylist
                   }
             )
+         
         
         
     }

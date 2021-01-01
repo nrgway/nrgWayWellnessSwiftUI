@@ -9,33 +9,57 @@
 import SwiftUI
 
 struct FavoriteVideosView: View {
-    /// posts
-    let posts = SavedMockData.posts()
-    
+    @State var show  = false
+    @ObservedObject var viewModel = FavoriteVideosViewModel()
     
     var body: some View {
-        
-        VStack(){
-            //CustomToolBarView()
-            
-            NavigationView {
-                List {
-      
-                    ForEach(posts) { post in
-                        PostView(post: post)
-                    }
-                }
-                .padding(.leading, -20)
-                .padding(.trailing, -20)
-                .navigationBarTitle(Text("Saved"))
-            }
+//        NavigationView {
+//            content.navigationBarTitle("")
+//        }
+        content.onAppear {
+            self.viewModel.getFavoriteVideos()            
         }
+    }
+    
+    private var content: some View {
+        switch viewModel.state {
+        case .idle:
+            return Color.clear.eraseToAnyView()
+            
+        case .loading:
+            return shimmerList().eraseToAnyView()
+                //LoadingView().eraseToAnyView()
+            
+        case .error(let error):
+            return Text(error.localizedDescription).eraseToAnyView()
+            
+        case .loaded:
+            return list().eraseToAnyView()
+        }
+    }
+    
+    private func list() -> some View {
+        
+        let v = VStack {
+             
+            FavoriteVideoListView(favoriteVideos: viewModel.favoriteVideos)
+                 
+        }
+         
+        return v
         
     }
-}
-
-struct FavoriteVideosView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteVideosView()
+    
+    
+    private func shimmerList() -> some View {
+        
+        let v = VStack {
+            ShimmerFavoriteVideoListView()
+            
+        }
+         
+        return v
+        
     }
+    
 }

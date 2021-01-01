@@ -56,16 +56,20 @@ struct ChallengeListView: View {
         }
     }
     
+    
     private func list() -> some View {
         
         let y =
             VStack(){
                 ScrollView(.vertical){
                     VStack(){
-                         
-                        SpecificCategoryView(data: viewModel.specificCategory!)
                         
-                        InstructorVideoListView(instructorVideos: viewModel.challengeVideos)
+                        if(viewModel.specificCategory != nil) {
+                            SpecificCategoryView(data: viewModel.specificCategory!)
+                        }
+                        
+                        SpecificCategoryVideoListView(categoryVideos: viewModel.categories)
+                        //InstructorVideoListView(instructorVideos: viewModel.challengeVideos)
                         
                     }
                 }
