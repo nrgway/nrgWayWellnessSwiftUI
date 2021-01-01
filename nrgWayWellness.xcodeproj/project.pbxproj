@@ -237,6 +237,7 @@
 		C6F4EDE1259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDE0259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift */; };
 		C6F4EDEA259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDE9259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift */; };
 		C6F4EDEF259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDEE259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift */; };
+		C6F4EDF7259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDF6259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift */; };
 		C6F5F6BB256459BC0088CECD /* AchivementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BA256459BC0088CECD /* AchivementList.swift */; };
 		C6F5F6C02564616B0088CECD /* AchivementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */; };
 		C6F5F6C525646D8B0088CECD /* AchivementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6C425646D8B0088CECD /* AchivementRow.swift */; };
@@ -506,6 +507,7 @@
 		C6F4EDE0259DD43E00A9A27A /* SpecificCategoryVideoListItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCategoryVideoListItemCardView.swift; sourceTree = "<group>"; };
 		C6F4EDE9259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerFavoriteVideoListView.swift; sourceTree = "<group>"; };
 		C6F4EDEE259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerFavoriteVideoItemCardView.swift; sourceTree = "<group>"; };
+		C6F4EDF6259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVideoListEmptyView.swift; sourceTree = "<group>"; };
 		C6F5F6BA256459BC0088CECD /* AchivementList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementList.swift; sourceTree = "<group>"; };
 		C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementCardView.swift; sourceTree = "<group>"; };
 		C6F5F6C425646D8B0088CECD /* AchivementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementRow.swift; sourceTree = "<group>"; };
@@ -1685,6 +1687,7 @@
 				C6E6D11D2555517A00326093 /* FavoriteVideosView.swift */,
 				C6F8ABEF258FF97300004B9C /* FavoriteVideoListView.swift */,
 				C6F8ABF4258FFD8500004B9C /* FavoriteVideoItemCardView.swift */,
+				C6F4EDF6259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -1870,6 +1873,7 @@
 				C657B5EB256EC623004D6B93 /* CornersSignUp.swift in Sources */,
 				C6F4EDCC2597DFB700A9A27A /* ShimmerInstructorProfileView.swift in Sources */,
 				C697823B256F955600A13D32 /* FinishSignUpView.swift in Sources */,
+				C6F4EDF7259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift in Sources */,
 				C66B081625572C3400D911CE /* NetworkingHelpers.swift in Sources */,
 				C6BB04632572AC4C00E1FEF4 /* extensionPublisher.swift in Sources */,
 				C6FDF9252588AC8500D7A880 /* RelatedVideoCellView.swift in Sources */,

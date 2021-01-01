@@ -29,9 +29,14 @@ final class FavoriteVideosViewModel: ObservableObject {
             .eraseToAnyPublisher()
             .sink(receiveCompletion: { _ in },
                   receiveValue: {  categorylist in
-                    print(categorylist)
-                    self.state = State.loaded
-                    self.favoriteVideos = categorylist
+                    if (categorylist.count > 100) {
+                        print(categorylist)
+                        self.state = State.loaded
+                        self.favoriteVideos = categorylist
+                    } else {
+                        self.state = State.empty
+                    }
+                    
                   }
             )
          
@@ -49,6 +54,7 @@ extension FavoriteVideosViewModel {
         case idle
         case loading
         case loaded
+        case empty
         case error(Error)
     }
     

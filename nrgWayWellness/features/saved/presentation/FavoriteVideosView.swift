@@ -35,7 +35,11 @@ struct FavoriteVideosView: View {
             
         case .loaded:
             return list().eraseToAnyView()
+         
+        case .empty:
+            return FavoriteVideoListEmptyView().eraseToAnyView()
         }
+        
     }
     
     private func list() -> some View {
