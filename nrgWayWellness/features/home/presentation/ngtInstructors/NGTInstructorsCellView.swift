@@ -32,19 +32,19 @@ struct NGTInstructorsCellView : View {
             
             VStack(){
                 
-//                instructor.completeAvatarURL.map { url in
-//
-//                    AsyncImage(
-//                        url: url,
-//                        cache: cache,
-//                        placeholder: spinner,
-//                        configuration: { $0.resizable().renderingMode(.original) }
-//                    )
-//                }
-//                .aspectRatio(contentMode: .fit)
-//                .frame(width: 70, height: 70)
-//                .cornerRadius(5)
-//                .shadow(radius: 5)
+                //                instructor.completeAvatarURL.map { url in
+                //
+                //                    AsyncImage(
+                //                        url: url,
+                //                        cache: cache,
+                //                        placeholder: spinner,
+                //                        configuration: { $0.resizable().renderingMode(.original) }
+                //                    )
+                //                }
+                //                .aspectRatio(contentMode: .fit)
+                //                .frame(width: 70, height: 70)
+                //                .cornerRadius(5)
+                //                .shadow(radius: 5)
                 
                 instructor.completeAvatarURL.map { url in
                     KFImage(url)

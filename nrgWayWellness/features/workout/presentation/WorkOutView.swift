@@ -14,10 +14,10 @@ struct WorkOutView: View {
     @ObservedObject var viewModel = WorkOutViewModel()
     
     var body: some View {
-        NavigationView {
-            content.navigationBarTitle("")
-        }
-        .onAppear { self.viewModel.getFormulas() }
+        //        NavigationView {
+        //            content.navigationBarTitle("")
+        //        }
+        content.onAppear { self.viewModel.getFormulas() }
     }
     
     private var content: some View {
@@ -27,8 +27,8 @@ struct WorkOutView: View {
             
         case .loading:
             return shimmerList().eraseToAnyView()
-                //LoadingView().eraseToAnyView()
-            
+        //LoadingView().eraseToAnyView()
+        
         case .error(let error):
             return Text(error.localizedDescription).eraseToAnyView()
             
@@ -40,10 +40,15 @@ struct WorkOutView: View {
     private func list() -> some View {
         
         let v = VStack {
-            WorkoutStepperView()
-            FormulaListView(data: viewModel.formulas)
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(){
+                    Spacer(minLength: 50)
+                    WorkoutStepperView()
+                    FormulaListView(data: viewModel.formulas)
+                }
+            }
         }
-         
+        
         return v
         
     }
@@ -52,10 +57,10 @@ struct WorkOutView: View {
     private func shimmerList() -> some View {
         
         let v = VStack {
-             ShimmerFormulaListView() 
+            ShimmerFormulaListView()
             
         }
-         
+        
         return v
         
     }

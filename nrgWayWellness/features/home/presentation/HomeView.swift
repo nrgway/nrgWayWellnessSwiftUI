@@ -14,86 +14,57 @@ struct HomeView : View {
     //@State var instructors : [InstructorEntity]
     
     var body: some View {
-        NavigationView {
-            content.onAppear {
-                self.viewModel.getInstructors()
-            }
-                //.navigationBarTitle("Trending Movies")
-                .navigationBarBackButtonHidden(false)
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
-        } 
+        content.onAppear {
+            self.viewModel.getInstructors()
+        }
     }
     
     private func list() -> some View {
         
         VStack(){
-            
-            NavigationView{
-             
-                VStack(){
-                    ScrollView(.vertical, showsIndicators: false) {
-                        
-                        VStack(){
-                            HomeAvatarView()
-                           
-                            WorkoutsView(data: viewModel.formulas)
-                            
-                            NGTInstructorsView(data: viewModel.instructors)
-                            
-                            LatestVideosView(data: viewModel.videos)
-                               
-                            
-                            ChallengesView(data: viewModel.categories).onAppear {} 
-                            
-                        }
-                        //.background(Color.white)
-                    }
-                    
-                     
-                }
-//                .background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
-                .navigationBarBackButtonHidden(false)
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
+            ScrollView(.vertical, showsIndicators: false) {
                 
+                VStack(){
+                    HomeAvatarView()
+                   
+                    WorkoutsView(data: viewModel.formulas)
+                    
+                    NGTInstructorsView(data: viewModel.instructors)
+                    
+                    LatestVideosView(data: viewModel.videos)
+                       
+                    
+                    ChallengesView(data: viewModel.categories).onAppear {}
+                    
+                }
+                //.background(Color.white)
             }
+            
+             
         }
-        
          
     }
     
     private func shimmerList() -> some View {
         
         VStack(){
-            
-            NavigationView{
-             
-                VStack(){
-                    ScrollView(.vertical, showsIndicators: false) {
-                        
-                        VStack(){
-                            Spacer(minLength: 50)
-                            ShimmerWorkoutsView()
-                            
-                            ShimmerNGTInstructorsView()
-                            
-                            Spacer(minLength: 25)
-                            ShimmerLatestVideosView()
-                            
-                            ShimmerLatestVideosView()
-                            
-                        }
-                    }
-                    
-                     
-                }
-//                .background(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
-                .navigationBarBackButtonHidden(false)
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
+            ScrollView(.vertical, showsIndicators: false) {
                 
+                VStack(){
+                    Spacer(minLength: 50)
+                    ShimmerWorkoutsView()
+                    
+                    ShimmerNGTInstructorsView()
+                    
+                    Spacer(minLength: 25)
+                    ShimmerLatestVideosView()
+                    
+                    ShimmerLatestVideosView()
+                    
+                }
             }
+            
+             
         }
         
          
