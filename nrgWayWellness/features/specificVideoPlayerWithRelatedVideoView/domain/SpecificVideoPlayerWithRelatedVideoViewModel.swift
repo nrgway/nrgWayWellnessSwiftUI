@@ -9,6 +9,7 @@
 
 import Combine
 import SwiftUI
+import Alamofire
 
 final class SpecificVideoPlayerWithRelatedVideoViewModel: ObservableObject {
     
@@ -18,6 +19,20 @@ final class SpecificVideoPlayerWithRelatedVideoViewModel: ObservableObject {
     private var specificVideoAnyCancellable: AnyCancellable?
     private var videosAnyCancellable: AnyCancellable?
     private var bag = Set<AnyCancellable>()
+    @Published var resSingleVideo: ResSingleVideo?
+    
+    
+    var statusCode = Int.zero
+    
+    func handleResponse<T: Decodable>(_ response: DataResponse<T, AFError>) -> Any? {
+        switch response.result {
+        case .success:
+            return response.value
+        case .failure:
+            return nil
+        }
+    }
+    
     
     func getLatestVideo()  {
         
@@ -56,7 +71,22 @@ final class SpecificVideoPlayerWithRelatedVideoViewModel: ObservableObject {
         
     }
     
-    
+    func getRandomDog() {
+         
+        let url = "https://random.dog/woof.json/ videos/"
+        
+        AF.request(url, method: .get).responseDecodable { [weak self] (response: DataResponse<ResSingleVideo, AFError>) in
+            guard let weakSelf = self else { return }
+            
+            guard let response = weakSelf.handleResponse(response) as? ResSingleVideo else {
+                //weakSelf.  = false
+                return
+            }
+                            
+            
+            weakSelf.resSingleVideo = response
+        }
+    }
     
     
     deinit {

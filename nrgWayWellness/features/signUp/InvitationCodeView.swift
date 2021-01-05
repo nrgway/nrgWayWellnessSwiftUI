@@ -14,41 +14,131 @@ struct InvitationCodeView: View {
     @State private var showSignup = false
     
     @State private var showMain = false
+    
+    var headerView: some View {
+        VStack {
+            
+            HStack {
+                Text("Live in the NRG way!")
+                    .font(Font.system(size:30, design: .default))
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+                Spacer()
+                
+            }
+                                    
+            HStack {
+                Text("Start your daily workout after joining us.")
+                    .font(Font.system(size:15, design: .default))
+                    .foregroundColor(lightGrayColor2)
+                
+                Spacer()
+                
+            }
+        }.frame(height: 280)
+        .padding(.bottom, 60)
+        .padding(.horizontal,20)
+        
+        .background(CustomShapeSignUp().fill(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom)))
+    }
+    
+    var invitationCodeInputView: some View {
+        VStack {
+            
+            CustomTextField(
+                placeholder: Text("Invitation Code").foregroundColor(grayd9d9d9Color),
+                text: $email)
+                .accentColor(lightGrayColor)
+                .frame(width: 320, height: 38)
+                .font(.system(size: 20, weight: .regular, design: .default))
+                .imageScale(.small)
+                .keyboardType(.emailAddress)
+                .autocapitalization(UITextAutocapitalizationType.none)
+                .foregroundColor(navyBlueColor)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 25)
+                .background(RoundedRectangle(cornerRadius: 10).stroke(lightGrayColor, lineWidth: 2))
+                .padding(.top, 10)
+            
+        }
+        .padding(.trailing, 20)
+        .padding(.leading, 20)
+    }
+    
+    var loginInsteadView: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Button(action: {
+                    
+                }) {
+                    Text("I have an account.")
+                        .foregroundColor(lightGrayColor)
+                }
+                
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text(" Login instead.")
+                        .foregroundColor(lightBrownColor)
+                        .foregroundColor(Color("TextColor"))
+                }
+                
+                Spacer()
+            }
+        }
+    }
+    
+    var nextStepButton: some View {
+        HStack {
+            Spacer()
+            
+            Button(action: {
+                self.showMain = true
+                
+            }) {
+                Text("Next Step")
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+                    .frame(width: 320)
+                    .background(navyBlueColor)
+                    .cornerRadius(14)
+                
+                
+            }.sheet(isPresented: self.$showMain) {
+                GetInformationSignUpView()
+            }
+            
+            Spacer()
+            
+            
+        }
+    }
+    
+    var invitationCodeStepperView: some View {
+        HStack {
+            Spacer()
+            
+            InvitationCodeStepperView()
+            
+            Spacer()
+            
+            
+        }.padding(.top, 20)
+    }
+    
+   
     var body: some View {
         
         GeometryReader { geometry in
             ScrollView() {
                 VStack {
                     
-                    
-                    VStack {
-                        
-                        HStack {
-                            Text("Live in the NRG way!")
-                                .font(Font.system(size:30, design: .default))
-                                .foregroundColor(Color.white)
-                                .padding(.vertical)
-                            Spacer()
-                            
-                        }
-                        
-                        
-                        HStack {
-                            Text("Start your daily workout after joining us.")
-                                .font(Font.system(size:15, design: .default))
-                                .foregroundColor(lightGrayColor2)
-                            
-                            Spacer()
-                            
-                        }
-                    }.frame(height: 280)
-                    .padding(.bottom, 60)
-                    .padding(.horizontal,20)
-                    
-                    .background(CustomShapeSignUp().fill(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom)))
-                    //.clipShape(CornersSignUp())
-                    
+                    //headerView
+                    headerView
+                     
                     Spacer()
+                    
                     VStack {
                         
                         ZStack(alignment: .topLeading) {
@@ -73,92 +163,18 @@ struct InvitationCodeView: View {
                     .padding(.leading, 20)
                     
                     Spacer()
-                    VStack {
-                        
-                        TextField("Invitation Code", text: $email)
-                            .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
-                            .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
-                            .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
-                            .font(.system(size: (UIScreen.main.bounds.width * 15) / 414, weight: .regular, design: .default))
-                            .imageScale(.small)
-                            .keyboardType(.emailAddress)
-                            .autocapitalization(UITextAutocapitalizationType.none)
-                            .foregroundColor(navyBlueColor)
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 25)
-                            .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
-                            .padding(.top, 10)
-                        
-                    }
-                    .padding(.trailing, 20)
-                    .padding(.leading, 20)
                     
-                    
-                    
+                    invitationCodeInputView
                     
                     Spacer()
-                    
-                    VStack {
-                        
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                
-                            }) {
-                                Text("I have an account.")
-                                    
-                                    .foregroundColor(lightGrayColor)
-                                
-                                
-                            }
-                            
-                            Button(action: {
-                                self.presentationMode.wrappedValue.dismiss()
-                            }) {
-                                Text(" Login instead.")
-                                    .foregroundColor(lightBrownColor)
-                                    .foregroundColor(Color("TextColor"))
-                            } 
-                            
-                            Spacer()
-                        }
-                        
-                    }
+                     
+                    loginInsteadView
                     
                     VStack(alignment: .trailing) {
-                        HStack {
-                            Spacer()
-                            
-                            Button(action: {
-                                self.showMain = true
-                                
-                            }) {
-                                Text("Next Step")
-                                    .foregroundColor(Color.white)
-                                    .padding(.vertical)
-                                    .frame(width: 320)
-                                    .background(navyBlueColor)
-                                    .cornerRadius(14)
-                                
-                                
-                            }.sheet(isPresented: self.$showMain) {
-                                GetInformationSignUpView()
-                            }
-                            
-                            Spacer()
-                            
-                            
-                        }
                         
-                        HStack {
-                            Spacer()
-                            
-                            InvitationCodeStepperView()
-                            
-                            Spacer()
-                            
-                            
-                        }.padding(.top, 20)
+                        nextStepButton
+                        
+                        invitationCodeStepperView
                         
                     }.padding(.top, 20)
                     .padding(.bottom, 50)

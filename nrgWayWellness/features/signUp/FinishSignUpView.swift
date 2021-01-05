@@ -14,6 +14,134 @@ struct FinishSignUpView: View {
     @State var email: String = ""
     
     @State private var showMain = false
+    
+    var headerView: some View {
+        VStack {
+            
+            HStack {
+                Text("Live in the NRG way!")
+                    .font(Font.system(size:30, design: .default))
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+                Spacer()
+                
+            }
+            
+            
+            HStack {
+                Text("Start your daily workout after joining us.")
+                    .font(Font.system(size:15, design: .default))
+                    .foregroundColor(lightGrayColor2)
+                
+                Spacer()
+                
+            }
+        }.frame(height: 280)
+        .padding(.bottom, 60)
+        .padding(.horizontal,20)
+         
+        .background(CustomShapeSignUp().fill(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom)))
+    }
+    
+    var chooseYourPassword: some View {
+            
+        VStack {
+            
+            ZStack(alignment: .topLeading) {
+                HStack() {
+                    
+                    Image(systemName: "exclamationmark.circle")
+                        .foregroundColor(lightGrayColor)
+                        .padding(.trailing,5)
+                    Spacer()
+                    
+                }
+                 
+                
+                Text("      Please Choose your password. your password should be at least 8 characters.")
+                    .foregroundColor(lightGrayColor)
+                    .padding(.trailing, 10)
+                    .font(.system(size: 20, weight: .regular, design: .default))
+                Spacer()
+                
+            }
+        }
+        .padding(.trailing, 20)
+        .padding(.leading, 20)
+    }
+    
+    var passwordInputView: some View {
+        
+        VStack {
+            CustomTextField(
+                placeholder: Text("Password").foregroundColor(grayd9d9d9Color),
+                text: $email)
+                .accentColor(lightGrayColor)
+                .frame(width: 320, height: 38)
+                .font(.system(size: 20, weight: .regular, design: .default))
+                .keyboardType(.emailAddress)
+                .autocapitalization(UITextAutocapitalizationType.none)
+                .foregroundColor(navyBlueColor)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 25)
+                .background(RoundedRectangle(cornerRadius: 10).stroke(lightGrayColor, lineWidth: 2))
+            .padding(.top, 10)
+            
+            
+            CustomTextField(
+                placeholder: Text("Password Confirmation").foregroundColor(grayd9d9d9Color),
+                text: $email)
+                .accentColor(lightGrayColor)
+                .frame(width: 320, height: 38)
+                .font(.system(size: 20, weight: .regular, design: .default))
+                .keyboardType(.emailAddress)
+                .autocapitalization(UITextAutocapitalizationType.none)
+                .foregroundColor(navyBlueColor)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 25)
+                .background(RoundedRectangle(cornerRadius: 10).stroke(lightGrayColor, lineWidth: 2))
+            .padding(.top, 10)
+            
+        }
+        .padding(.trailing, 20)
+        .padding(.leading, 20)
+        
+    }
+    
+    var finishButton: some View {
+        Button(action: {
+            self.showMain = true
+             
+        }) {
+            Text("Finish!")
+                .foregroundColor(Color.white)
+                .padding(.vertical)
+                .frame(width: 160)
+                .background(navyBlueColor)
+                .cornerRadius(14)
+            
+            
+        }.sheet(isPresented: self.$showMain) {
+             
+        }
+    }
+    
+    var previousStepButton: some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+             
+        }) {
+            Text("Previous Step")
+                .foregroundColor(Color.white)
+                .padding(.vertical)
+                .frame(width: 160)
+                .background(navyBlueColor)
+                .cornerRadius(14)
+            
+            
+        }
+    }
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -21,136 +149,27 @@ struct FinishSignUpView: View {
                     VStack {
                          
 
-                        VStack {
-                            
-                            HStack {
-                                Text("Live in the NRG way!")
-                                    .font(Font.system(size:30, design: .default))
-                                    .foregroundColor(Color.white)
-                                    .padding(.vertical)
-                                Spacer()
-                                
-                            }
-                            
-                            
-                            HStack {
-                                Text("Start your daily workout after joining us.")
-                                    .font(Font.system(size:15, design: .default))
-                                    .foregroundColor(lightGrayColor2)
-                                
-                                Spacer()
-                                
-                            }
-                        }.frame(height: 280)
-                        .padding(.bottom, 60)
-                        .padding(.horizontal,20)
-                         
-                        .background(CustomShapeSignUp().fill(LinearGradient(gradient: .init(colors: [loginFirstBlueColor, loginSecondBlueColor]), startPoint: .top, endPoint: .bottom)))
-                        //.clipShape(CornersSignUp())
+                        headerView
                         
                         Spacer()
-                        VStack {
-                            
-                            ZStack(alignment: .topLeading) {
-                                HStack() {
-                                    
-                                    Image(systemName: "exclamationmark.circle")
-                                        .foregroundColor(lightGrayColor)
-                                        .padding(.trailing,5)
-                                    Spacer()
-                                    
-                                }
-                                 
-                                
-                                Text("      Please Choose your password. your password should be at least 8 characters.")
-                                    .foregroundColor(lightGrayColor)
-                                    .padding(.trailing, 10)
-                                    .font(.system(size: 20, weight: .regular, design: .default))
-                                Spacer()
-                                
-                            }
-                           
-                            
-                            
-                            
-                            
-                        }
-                        .padding(.trailing, 20)
-                        .padding(.leading, 20)
+                       
+                        chooseYourPassword
                         
                         Spacer()
-                        VStack {
-                            
-                            TextField("Password", text: $email)
-                                .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
-                                .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
-                                .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
-                                .font(.system(size: (UIScreen.main.bounds.width * 15) / 414, weight: .regular, design: .default))
-                                 
-                                .keyboardType(.emailAddress)
-                                .autocapitalization(UITextAutocapitalizationType.none)
-                                .foregroundColor(navyBlueColor)
-                                .padding(.vertical, 10)
-                                .padding(.horizontal, 25)
-                                .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
-                            .padding(.top, 10)
-                            
-                            TextField("Password Confirmation", text: $email)
-                                .frame(height: (UIScreen.main.bounds.width * 40) / 414, alignment: .center)
-                                .padding(.leading, (UIScreen.main.bounds.width * 10) / 414)
-                                .padding(.trailing, (UIScreen.main.bounds.width * 10) / 414)
-                                .font(.system(size: (UIScreen.main.bounds.width * 15) / 414, weight: .regular, design: .default))
-                                 
-                                .keyboardType(.emailAddress)
-                                .autocapitalization(UITextAutocapitalizationType.none)
-                                .foregroundColor(navyBlueColor)
-                                .padding(.vertical, 10)
-                                .padding(.horizontal, 25)
-                                .background(Capsule().stroke(lightGrayColor, lineWidth: 2))
-                            .padding(.top, 10)
-                            
-                        }
-                        .padding(.trailing, 20)
-                        .padding(.leading, 20)
-                                               
-                    
+                        
+                        passwordInputView
                         
                         Spacer()
                         
                         VStack(alignment: .trailing) {
                             HStack {
                                 Spacer()
-                                Button(action: {
-                                    self.presentationMode.wrappedValue.dismiss()
-                                     
-                                }) {
-                                    Text("Previous Step")
-                                        .foregroundColor(Color.white)
-                                        .padding(.vertical)
-                                        .frame(width: 160)
-                                        .background(navyBlueColor)
-                                        .cornerRadius(14)
-                                    
-                                    
-                                } 
-                                Button(action: {
-                                    self.showMain = true
-                                     
-                                }) {
-                                    Text("Finish!")
-                                        .foregroundColor(Color.white)
-                                        .padding(.vertical)
-                                        .frame(width: 160)
-                                        .background(navyBlueColor)
-                                        .cornerRadius(14)
-                                    
-                                    
-                                }.sheet(isPresented: self.$showMain) {
-                                     
-                                }
                                 
-                                Spacer()
+                                previousStepButton
                                 
+                                finishButton
+                                
+                                Spacer()                                
                                 
                             }
                             

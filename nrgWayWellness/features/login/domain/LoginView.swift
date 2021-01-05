@@ -244,8 +244,7 @@ struct LoginView: View {
         UserDefaults.standard.set(true, forKey: "Loggedin")
         UserDefaults.standard.synchronize()
         self.settings.loggedIn = true
-    }
-    
+    }    
     
     fileprivate func isValidInputs() -> Bool {
         
