@@ -238,6 +238,7 @@
 		C6F4EDEA259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDE9259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift */; };
 		C6F4EDEF259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDEE259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift */; };
 		C6F4EDF7259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EDF6259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift */; };
+		C6F4EE0225A2038C00A9A27A /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F4EE0125A2038C00A9A27A /* CustomTextFieldView.swift */; };
 		C6F5F6BB256459BC0088CECD /* AchivementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BA256459BC0088CECD /* AchivementList.swift */; };
 		C6F5F6C02564616B0088CECD /* AchivementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */; };
 		C6F5F6C525646D8B0088CECD /* AchivementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5F6C425646D8B0088CECD /* AchivementRow.swift */; };
@@ -248,6 +249,9 @@
 		C6F8ABF0258FF97300004B9C /* FavoriteVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8ABEF258FF97300004B9C /* FavoriteVideoListView.swift */; };
 		C6F8ABF5258FFD8500004B9C /* FavoriteVideoItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8ABF4258FFD8500004B9C /* FavoriteVideoItemCardView.swift */; };
 		C6F8ABFD2590045F00004B9C /* FavoriteVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8ABFC2590045F00004B9C /* FavoriteVideosViewModel.swift */; };
+		C6F9A85325A23F5E000EC8DE /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9A85225A23F5E000EC8DE /* TextArea.swift */; };
+		C6F9A85825A3D57B000EC8DE /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9A85725A3D57B000EC8DE /* Blur.swift */; };
+		C6F9A86325A45596000EC8DE /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9A86225A45596000EC8DE /* LoginEntity.swift */; };
 		C6FDF9202588AB9F00D7A880 /* RelatedVideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */; };
 		C6FDF9252588AC8500D7A880 /* RelatedVideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */; };
 		C6FDF92A2589439500D7A880 /* SpecificVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDF9292589439500D7A880 /* SpecificVideoView.swift */; };
@@ -508,6 +512,7 @@
 		C6F4EDE9259F158F00A9A27A /* ShimmerFavoriteVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerFavoriteVideoListView.swift; sourceTree = "<group>"; };
 		C6F4EDEE259F162900A9A27A /* ShimmerFavoriteVideoItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerFavoriteVideoItemCardView.swift; sourceTree = "<group>"; };
 		C6F4EDF6259F5FDA00A9A27A /* FavoriteVideoListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVideoListEmptyView.swift; sourceTree = "<group>"; };
+		C6F4EE0125A2038C00A9A27A /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		C6F5F6BA256459BC0088CECD /* AchivementList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementList.swift; sourceTree = "<group>"; };
 		C6F5F6BF2564616B0088CECD /* AchivementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementCardView.swift; sourceTree = "<group>"; };
 		C6F5F6C425646D8B0088CECD /* AchivementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementRow.swift; sourceTree = "<group>"; };
@@ -518,6 +523,9 @@
 		C6F8ABEF258FF97300004B9C /* FavoriteVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVideoListView.swift; sourceTree = "<group>"; };
 		C6F8ABF4258FFD8500004B9C /* FavoriteVideoItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVideoItemCardView.swift; sourceTree = "<group>"; };
 		C6F8ABFC2590045F00004B9C /* FavoriteVideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVideosViewModel.swift; sourceTree = "<group>"; };
+		C6F9A85225A23F5E000EC8DE /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		C6F9A85725A3D57B000EC8DE /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		C6F9A86225A45596000EC8DE /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		C6FDF91F2588AB9F00D7A880 /* RelatedVideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoListView.swift; sourceTree = "<group>"; };
 		C6FDF9242588AC8500D7A880 /* RelatedVideoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoCellView.swift; sourceTree = "<group>"; };
 		C6FDF9292589439500D7A880 /* SpecificVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificVideoView.swift; sourceTree = "<group>"; };
@@ -773,6 +781,9 @@
 				C624BB702572F3E600982074 /* CustomToolBarView.swift */,
 				C6FDF92F258A2DBF00D7A880 /* LoadingView.swift */,
 				C6F8ABE3258F66D100004B9C /* CircleLoader.swift */,
+				C6F4EE0125A2038C00A9A27A /* CustomTextFieldView.swift */,
+				C6F9A85225A23F5E000EC8DE /* TextArea.swift */,
+				C6F9A85725A3D57B000EC8DE /* Blur.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -1072,8 +1083,9 @@
 		C68AA0AB255348DE00F88201 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				C68AA0B0255349B500F88201 /* LoginView.swift */,
-				C6BB0432257168F700E1FEF4 /* LoginViewModel.swift */,
+				C6F9A86125A450FF000EC8DE /* data */,
+				C6F9A86025A450F7000EC8DE /* domain */,
+				C6F9A85F25A450EE000EC8DE /* presentation */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -1707,6 +1719,30 @@
 			path = domain;
 			sourceTree = "<group>";
 		};
+		C6F9A85F25A450EE000EC8DE /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6BB0432257168F700E1FEF4 /* LoginViewModel.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		C6F9A86025A450F7000EC8DE /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				C68AA0B0255349B500F88201 /* LoginView.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		C6F9A86125A450FF000EC8DE /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C6F9A86225A45596000EC8DE /* LoginEntity.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		C6FDF939258A949500D7A880 /* steps */ = {
 			isa = PBXGroup;
 			children = (
@@ -1939,10 +1975,12 @@
 				C6BB04432572AA8600E1FEF4 /* Spinner.swift in Sources */,
 				C6F4EDD72599A1D000A9A27A /* ShimmerSpecificCategoryView.swift in Sources */,
 				C6E6D0852554AD1A00326093 /* UpdateProfileData.swift in Sources */,
+				C6F4EE0225A2038C00A9A27A /* CustomTextFieldView.swift in Sources */,
 				C6BB041825712C6000E1FEF4 /* InstructorVideoCardView.swift in Sources */,
 				C6E6D1322555602E00326093 /* CircleImageView.swift in Sources */,
 				C66B081125572C1600D911CE /* Loadable.swift in Sources */,
 				C6AE2F15256148C800DA44C6 /* NavigationConfigurator.swift in Sources */,
+				C6F9A85825A3D57B000EC8DE /* Blur.swift in Sources */,
 				C6E6D12D255555E500326093 /* HomeView.swift in Sources */,
 				C6E6D02625549A5F00326093 /* SingleVideoDataRelatedVideo.swift in Sources */,
 				C657B5F5256EC6A6004D6B93 /* CustomShape.swift in Sources */,
@@ -1994,6 +2032,7 @@
 				C689A3FA2577F21A006C43BA /* SpecificVideoPlayerWithRelatedVideoView.swift in Sources */,
 				C697826E2570718000A13D32 /* InstructorDetailsView.swift in Sources */,
 				C66B088B25575CD000D911CE /* UserPermissionsInteractor.swift in Sources */,
+				C6F9A85325A23F5E000EC8DE /* TextArea.swift in Sources */,
 				C6AE2F102561485B00DA44C6 /* ColorKit.swift in Sources */,
 				C6E6D0012554965C00326093 /* VideosLogData.swift in Sources */,
 				C6E6D02B25549ADB00326093 /* SingleVideoDataCreator.swift in Sources */,
@@ -2086,6 +2125,7 @@
 				C6289B8C2565328600948CD4 /* SavedMockData.swift in Sources */,
 				C6BB04052571129400E1FEF4 /* InstructorProfileEntity.swift in Sources */,
 				C6BB04002571065500E1FEF4 /* InstructorProfileView.swift in Sources */,
+				C6F9A86325A45596000EC8DE /* LoginEntity.swift in Sources */,
 				C6E6D05725549F4700326093 /* ResChallengeVideo.swift in Sources */,
 				C6E6D10B2554BCA800326093 /* AuthRepository.swift in Sources */,
 				C66B08FF2560A0F600D911CE /* OnboardingInteractor.swift in Sources */,

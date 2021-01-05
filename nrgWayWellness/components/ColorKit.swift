@@ -66,6 +66,9 @@ let challengItemUIColor = UIColor(named: "challengItemColor")
 let lightRedColor = Color("lightRedColor")
 let lightRedUIColor = UIColor(named: "lightRedColor")
 
+let grayd9d9d9Color = Color("grayd9d9d9")
+let grayd9d9d9UIColor = UIColor(named: "grayd9d9d9")
+
 
 //extension Color {
 //    public static var navyBlueColor: Color {

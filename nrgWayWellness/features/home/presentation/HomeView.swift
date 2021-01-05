@@ -14,9 +14,17 @@ struct HomeView : View {
     //@State var instructors : [InstructorEntity]
     
     var body: some View {
-        content.onAppear {
-            self.viewModel.getInstructors()
-        }
+        
+        NavigationView {
+                    content.onAppear {
+                        self.viewModel.getInstructors()
+                    }
+                        //.navigationBarTitle("Trending Movies")
+                        .navigationBarBackButtonHidden(false)
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
+                }
+         
     }
     
     private func list() -> some View {

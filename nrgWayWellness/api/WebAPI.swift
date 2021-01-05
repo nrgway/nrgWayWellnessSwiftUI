@@ -35,7 +35,19 @@ enum WebAPI {
 
     // MARK: - Auth
     
-    
+    static func login(username: String, pass: String) -> AnyPublisher<ResLogin, Error> {
+        var request = URLComponents(
+            url: base.appendingPathComponent("auth/login"),
+            resolvingAgainstBaseURL: true)?
+            .makeHTTPS()
+            .request
+         
+        request?.httpMethod = "GET"
+        request?.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        //request?.setValue(token, forHTTPHeaderField: "Authorization" )
+        
+        return agent.run(request!)
+    }
     
     
     

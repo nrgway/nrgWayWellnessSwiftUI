@@ -82,8 +82,3 @@ struct CircleLoader: View {
     }
 }
 
-struct CircleLoader_Previews: PreviewProvider {
-    static var previews: some View {
-        CircleLoader()
-    }
-}
