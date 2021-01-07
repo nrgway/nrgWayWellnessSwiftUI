@@ -10,6 +10,8 @@ import SwiftUI
 
 struct FinishSignUpView: View {
     
+    @EnvironmentObject var settings: UserSettings
+    @ObservedObject var viewModel = SignUpViewModel()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var email: String = ""
     
@@ -25,8 +27,7 @@ struct FinishSignUpView: View {
                     .padding(.vertical)
                 Spacer()
                 
-            }
-            
+            }            
             
             HStack {
                 Text("Start your daily workout after joining us.")
@@ -75,7 +76,7 @@ struct FinishSignUpView: View {
         VStack {
             CustomTextField(
                 placeholder: Text("Password").foregroundColor(grayd9d9d9Color),
-                text: $email)
+                text: $viewModel.password)
                 .accentColor(lightGrayColor)
                 .frame(width: 320, height: 38)
                 .font(.system(size: 20, weight: .regular, design: .default))
@@ -90,7 +91,7 @@ struct FinishSignUpView: View {
             
             CustomTextField(
                 placeholder: Text("Password Confirmation").foregroundColor(grayd9d9d9Color),
-                text: $email)
+                text: $viewModel.passwordAgain)
                 .accentColor(lightGrayColor)
                 .frame(width: 320, height: 38)
                 .font(.system(size: 20, weight: .regular, design: .default))
@@ -107,22 +108,33 @@ struct FinishSignUpView: View {
         .padding(.leading, 20)
         
     }
-    
+     
     var finishButton: some View {
         Button(action: {
-            self.showMain = true
+            if(viewModel.isFinishSignUpViewValid) {
+                startMainPage()
+            }
+            
              
         }) {
-            Text("Finish!")
-                .foregroundColor(Color.white)
-                .padding(.vertical)
-                .frame(width: 160)
-                .background(navyBlueColor)
-                .cornerRadius(14)
-            
-            
-        }.sheet(isPresented: self.$showMain) {
+            if(viewModel.isFinishSignUpViewValid) {
+                Text("Finish!")
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+                    .frame(width: 160)
+                    .background(navyBlueColor)
+                    .cornerRadius(14)
+            } else {
+                Text("Finish!")
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+                    .frame(width: 160)
+                    .background(grayd9d9d9Color)
+                    .cornerRadius(14)
+            }
              
+            
+            
         }
     }
     
@@ -196,6 +208,13 @@ struct FinishSignUpView: View {
         
         
         
+    }
+    
+    private func startMainPage() {
+        self.showMain = true
+        UserDefaults.standard.set(true, forKey: "Loggedin")
+        UserDefaults.standard.synchronize()
+        self.settings.loggedIn = true
     }
 }
 

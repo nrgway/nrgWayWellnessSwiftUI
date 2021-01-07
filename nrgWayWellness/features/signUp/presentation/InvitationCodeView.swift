@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct InvitationCodeView: View {
+    
+    @ObservedObject var viewModel = SignUpViewModel()
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var email: String = ""
     @State private var showSignup = false
@@ -44,10 +47,9 @@ struct InvitationCodeView: View {
     
     var invitationCodeInputView: some View {
         VStack {
-            
             CustomTextField(
                 placeholder: Text("Invitation Code").foregroundColor(grayd9d9d9Color),
-                text: $email)
+                text: $viewModel.invitationCode)
                 .accentColor(lightGrayColor)
                 .frame(width: 320, height: 38)
                 .font(.system(size: 20, weight: .regular, design: .default))
@@ -94,19 +96,29 @@ struct InvitationCodeView: View {
             Spacer()
             
             Button(action: {
-                self.showMain = true
-                
+                if(viewModel.invitationCodeIsValid){
+                    self.showMain = true
+                }
             }) {
-                Text("Next Step")
-                    .foregroundColor(Color.white)
-                    .padding(.vertical)
-                    .frame(width: 320)
-                    .background(navyBlueColor)
-                    .cornerRadius(14)
-                
-                
-            }.sheet(isPresented: self.$showMain) {
-                GetInformationSignUpView()
+                if(viewModel.invitationCodeIsValid) {
+                    Text("Next Step")
+                        .foregroundColor(Color.white)
+                        .padding(.vertical)
+                        .frame(width: 320)
+                        .background(navyBlueColor)
+                        .cornerRadius(14)
+                } else {
+                    Text("Next Step")
+                        .foregroundColor(Color.white)
+                        .padding(.vertical)
+                        .frame(width: 320)
+                        .background(grayd9d9d9Color)
+                        .cornerRadius(14)
+                }
+            }
+            //.disabled(viewModel.invitationCodeIsValid)
+            .sheet(isPresented: self.$showMain) {
+                GetInformationSignUpView()                
             }
             
             Spacer()

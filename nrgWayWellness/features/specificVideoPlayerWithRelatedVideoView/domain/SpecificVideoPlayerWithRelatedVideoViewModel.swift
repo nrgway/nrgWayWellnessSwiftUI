@@ -35,7 +35,7 @@ final class SpecificVideoPlayerWithRelatedVideoViewModel: ObservableObject {
     
     
     func getLatestVideo()  {
-        
+        getRandomDog()
         videosAnyCancellable = WebAPI.getListOfvideos()
             .receive(on: RunLoop.main)
             .map { $0.data.map(LatestVideoEntity.init)}
@@ -73,16 +73,23 @@ final class SpecificVideoPlayerWithRelatedVideoViewModel: ObservableObject {
     
     func getRandomDog() {
          
-        let url = "https://random.dog/woof.json/ videos/"
-        
-        AF.request(url, method: .get).responseDecodable { [weak self] (response: DataResponse<ResSingleVideo, AFError>) in
+        let url = "https://app.nrgway.com/api/v1/videos/77"
+        let headers: HTTPHeaders = [
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+            "Authorization": WebAPI.token
+                ]
+        AF.request(url, method: .get,  headers: headers).responseDecodable { [weak self] (response: DataResponse<ResSingleVideo, AFError>) in
             guard let weakSelf = self else { return }
             
             guard let response = weakSelf.handleResponse(response) as? ResSingleVideo else {
                 //weakSelf.  = false
                 return
             }
-                            
+            print("---------------دیتا------------------")
+                                print(response)
+        
+            print("+++++++++++++++دیتا------------------")
             
             weakSelf.resSingleVideo = response
         }

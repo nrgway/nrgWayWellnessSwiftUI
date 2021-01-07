@@ -11,6 +11,7 @@ import Combine
 import SwiftUI
 
 class LoginViewModel: ObservableObject {
+    
     private let url = "https://app.nrgway.com/api/v1/auth/login" 
     private var loginAnyCancellable: AnyCancellable?
     private var bag = Set<AnyCancellable>()

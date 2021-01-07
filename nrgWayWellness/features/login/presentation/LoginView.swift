@@ -246,28 +246,6 @@ struct LoginView: View {
         self.settings.loggedIn = true
     }    
     
-    fileprivate func isValidInputs() -> Bool {
-        
-//        if self.email == "" {
-//            self.alertMsg = "Email can't be blank."
-//            self.showAlert.toggle()
-//            return false
-//        } else if !self.email.isValidEmail {
-//            self.alertMsg = "Email is not valid."
-//            self.showAlert.toggle()
-//            return false
-//        } else if self.password == "" {
-//            self.alertMsg = "Password can't be blank."
-//            self.showAlert.toggle()
-//            return false
-//        } else if !(self.password.isValidPassword) {
-//            self.alertMsg = "Please enter valid password"
-//            self.showAlert.toggle()
-//            return false
-//        }
-//        
-        return true
-    }
     
 }
 

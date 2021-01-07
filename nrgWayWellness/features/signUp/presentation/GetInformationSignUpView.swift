@@ -10,10 +10,14 @@ import SwiftUI
 
 struct GetInformationSignUpView: View {
     
+    @ObservedObject var viewModel = SignUpViewModel()
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
    
     @State var email: String = ""
     @State private var showFinishSignup = false
+    var difficultyLevels = ["Red", "Green", "Blue", "Tartan"]
+    @State private var selectedDifficultyLevel = 0
     
     var headerView: some View {
         VStack {
@@ -46,7 +50,7 @@ struct GetInformationSignUpView: View {
     var firstNameInputView: some View {
         CustomTextField(
             placeholder: Text("First Name").foregroundColor(grayd9d9d9Color),
-            text: $email)
+            text: $viewModel.firstName)
             .accentColor(lightGrayColor)
             .frame(width: 320, height: 38)
             .font(.system(size: 20, weight: .regular, design: .default))
@@ -63,7 +67,7 @@ struct GetInformationSignUpView: View {
     var lastNameInputView: some View {
         CustomTextField(
             placeholder: Text("Last Name").foregroundColor(grayd9d9d9Color),
-            text: $email)
+            text: $viewModel.lastName)
             .accentColor(lightGrayColor)
             .frame(width: 320, height: 38)
             .font(.system(size: 20, weight: .regular, design: .default))
@@ -79,7 +83,7 @@ struct GetInformationSignUpView: View {
     var emailInputView: some View {
         CustomTextField(
             placeholder: Text("Email").foregroundColor(grayd9d9d9Color),
-            text: $email)
+            text: $viewModel.password)
             .accentColor(lightGrayColor)
             .frame(width: 320, height: 38)
             .font(.system(size: 20, weight: .regular, design: .default))
@@ -95,7 +99,7 @@ struct GetInformationSignUpView: View {
     var cellPhoneInputView: some View {
         CustomTextField(
             placeholder: Text("Cell Phone").foregroundColor(grayd9d9d9Color),
-            text: $email)
+            text: $viewModel.cellPhone)
             .accentColor(lightGrayColor)
             .frame(width: 320, height: 38)
             .font(.system(size: 20, weight: .regular, design: .default))
@@ -109,6 +113,7 @@ struct GetInformationSignUpView: View {
     }
     
     var difficultyLevelInputView: some View {
+        
         CustomTextField(
             placeholder: Text("Difficulty Level").foregroundColor(grayd9d9d9Color),
             text: $email)
@@ -138,21 +143,34 @@ struct GetInformationSignUpView: View {
         }
     }
     
+    
+    
     var nextStepButton: some View {
         Button(action: {
+//            if(viewModel.isGetInformationSignUpViewValid){
+//                self.showFinishSignup = true
+//            }
             self.showFinishSignup = true
-             
         }) {
-            Text("Next Step")
-                .foregroundColor(Color.white)
-                .padding(.vertical)
-                .frame(width: 160)
-                .background(navyBlueColor)
-                .cornerRadius(14)
-            
+             
+            if(viewModel.isGetInformationSignUpViewValid) {
+                Text("Next Step")
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+                    .frame(width: 160)
+                    .background(navyBlueColor)
+                    .cornerRadius(14)
+            } else {
+                Text("Next Step")
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+                    .frame(width: 160)
+                    .background(grayd9d9d9Color)
+                    .cornerRadius(14)
+            }
             
         }.sheet(isPresented: self.$showFinishSignup) {
-            FinishSignUpView()
+            FinishSignUpView() 
         }
     }
     
@@ -175,9 +193,7 @@ struct GetInformationSignUpView: View {
                             
                             cellPhoneInputView
                             
-                            difficultyLevelInputView
-                            
-                            difficultyLevelInputView
+                            difficultyLevelInputView 
                         }
                         .padding(.trailing, 20)
                         .padding(.leading, 20)
